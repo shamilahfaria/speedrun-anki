@@ -37,3 +37,6 @@ protobuf!(stats, "stats");
 protobuf!(sync, "sync");
 protobuf!(tags, "tags");
 protobuf!(ankihub, "ankihub");
+// Speedrun addition. See proto/anki/transfer.proto -- that filename must keep
+// sorting after every upstream proto file so service indices stay stable.
+protobuf!(transfer, "transfer");

@@ -1,0 +1,74 @@
+// Copyright: Ankitects Pty Ltd and contributors
+// License: GNU AGPL, version 3 or later; http://www.gnu.org/licenses/agpl.html
+//
+// Speedrun addition. Transfer-of-learning measurement.
+//
+// FILENAME IS LOAD-BEARING: service indices are the position of the service in
+// the descriptor pool, and proto files are sorted alphabetically before the pool
+// is built (rslib/proto/rust.rs, gather_proto_paths). This file must sort AFTER
+// every upstream proto file so that existing service indices are unchanged --
+// the iOS client hardcodes them (Sources/AnkiProtoBridge/ServiceCatalog.swift).
+// "transfer" sorts after "tags", the last upstream file. Do not rename this to
+// anything that sorts earlier without renumbering the iOS catalog.
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package anki.transfer;
+
+service TransferService {
+  // Compute memory (DOK 1), performance (DOK 2/3) and readiness (DOK 4)
+  // separately, per exam topic, each with a confidence interval.
+  rpc ComputeTransferScores(ComputeTransferScoresRequest) returns (TransferScores);
+}
+
+// Required: proto_gen asserts one Backend service per collection service.
+// Empty body means every method above is auto-delegated to the collection.
+service BackendTransferService {}
+
+message ComputeTransferScoresRequest {
+  // Only count reviews at or after this epoch-millisecond timestamp.
+  // 0 means no lower bound.
+  int64 since_millis = 1;
+  // Give-up rule: minimum graded reviews before a score is emitted at all.
+  uint32 min_reviews = 2;
+  // Give-up rule: minimum distinct cards contributing those reviews.
+  uint32 min_cards = 3;
+}
+
+// A proportion with an interval, or an explicit refusal to score.
+//
+// `sufficient == false` means the engine declined to produce a number because
+// the evidence was too thin. In that case point/lower/upper are all 0 and must
+// not be displayed as a score -- the refusal is the answer.
+message ScoreInterval {
+  double point = 1;
+  double lower = 2;
+  double upper = 3;
+  uint32 observations = 4;
+  uint32 cards = 5;
+  bool sufficient = 6;
+  uint32 needed_observations = 7;
+  uint32 needed_cards = 8;
+}
+
+message TopicScores {
+  string topic = 1;
+  // DOK 1 -- recall of material as trained.
+  ScoreInterval memory = 2;
+  // DOK 2/3 -- performance on transfer probes: reworded and applied variants.
+  ScoreInterval performance = 3;
+  // memory.point - performance.point. The product's whole thesis is that this
+  // is routinely large and routinely hidden. Only meaningful when gap_valid.
+  double gap = 4;
+  // True only when BOTH memory and performance are sufficient. A gap computed
+  // against a refused score is not a gap.
+  bool gap_valid = 5;
+}
+
+message TransferScores {
+  repeated TopicScores topics = 1;
+  // DOK 4 -- projected exam readiness, aggregated across topics.
+  ScoreInterval readiness = 2;
+}

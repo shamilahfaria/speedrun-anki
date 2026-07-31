@@ -46,6 +46,7 @@ pub mod template_filters;
 pub(crate) mod tests;
 pub mod text;
 pub mod timestamp;
+pub mod transfer;
 mod typeanswer;
 pub mod types;
 pub mod undo;
