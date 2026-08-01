@@ -32,6 +32,7 @@ pub mod wilson;
 
 use std::collections::HashMap;
 use std::collections::HashSet;
+use std::sync::Arc;
 
 use wilson::wilson_interval;
 
@@ -66,12 +67,24 @@ pub fn parse_tags(raw: &str) -> (Vec<String>, bool) {
 }
 
 /// One graded review, already attributed to its topics.
+///
+/// `topics` is a shared slice rather than a `Vec<String>` on purpose. A large
+/// collection produces hundreds of thousands of reviews but only a handful of
+/// distinct tag strings -- 20 across a 50,000-card benchmark. Owning the topic
+/// strings per review meant allocating a `Vec` and its `String`s once per row,
+/// which cost roughly three quarters of the total scoring time. Sharing one
+/// parsed result per distinct tag string makes cloning a refcount bump.
 #[derive(Debug, Clone)]
 pub struct GradedReview {
     pub card_id: i64,
-    pub topics: Vec<String>,
+    pub topics: Arc<[Arc<str>]>,
     pub is_probe: bool,
     pub passed: bool,
+}
+
+/// Build a shared topic list. Used by the DB layer's parse cache and by tests.
+pub fn topic_list<S: AsRef<str>>(topics: &[S]) -> Arc<[Arc<str>]> {
+    topics.iter().map(|t| Arc::from(t.as_ref())).collect()
 }
 
 /// The give-up rule, as engine behaviour rather than display logic.
@@ -180,8 +193,8 @@ fn score_reviews<'a>(reviews: impl Iterator<Item = &'a GradedReview>, t: Thresho
 pub fn build_report(reviews: &[GradedReview], t: Thresholds) -> TransferReport {
     let mut by_topic: HashMap<&str, Vec<&GradedReview>> = HashMap::new();
     for r in reviews {
-        for topic in &r.topics {
-            by_topic.entry(topic.as_str()).or_default().push(r);
+        for topic in r.topics.iter() {
+            by_topic.entry(topic.as_ref()).or_default().push(r);
         }
     }
 
@@ -227,7 +240,7 @@ mod test {
     fn review(card_id: i64, topic: &str, is_probe: bool, passed: bool) -> GradedReview {
         GradedReview {
             card_id,
-            topics: vec![topic.to_string()],
+            topics: topic_list(&[topic]),
             is_probe,
             passed,
         }
@@ -341,7 +354,7 @@ mod test {
         // 40 probe reviews with no topic attribution at all.
         reviews.extend((0..40).map(|i| GradedReview {
             card_id: 500 + i,
-            topics: vec![],
+            topics: topic_list::<&str>(&[]),
             is_probe: true,
             passed: true,
         }));
@@ -363,13 +376,13 @@ mod test {
         let reviews = vec![
             GradedReview {
                 card_id: 1,
-                topics: vec!["biochem".into(), "amino_acids".into()],
+                topics: topic_list(&["biochem", "amino_acids"]),
                 is_probe: false,
                 passed: true,
             },
             GradedReview {
                 card_id: 2,
-                topics: vec!["biochem".into(), "amino_acids".into()],
+                topics: topic_list(&["biochem", "amino_acids"]),
                 is_probe: false,
                 passed: false,
             },
