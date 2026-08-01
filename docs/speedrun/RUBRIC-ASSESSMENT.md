@@ -28,14 +28,14 @@ rubric and hiding the unfinished half would misrepresent completion.
 | 1.5 | Phone app as full-featured companion sharing the same engine | **PARTIAL** | Engine sharing is real and proven: iOS submodule pins our fork, CI compiles our `transfer` module into the iOS static library, unsigned IPA produced. **Gap:** no SwiftUI surface displays the scores. "Full-featured companion" is not yet true |
 | 1.6 | Bidirectional sync, offline with reconciliation | **PARTIAL** | Inherited from amgi (sync client, offline-first, merge-on-divergence) and it compiles against our engine. **Gap:** never exercised. No device run, no reconciliation test |
 | 1.7 | AI-generated cards traceable to named sources | **MET** | `Provenance` carries source id, character span, verbatim quote. Enforced by construction — adversarially verified that null/empty/inverted provenance all raise `ProvenanceError` |
-| 1.8 | AI evals **beating** simpler baseline methods | **NOT MET** | The eval exists, is rerunnable and deterministic, with a stated cutoff — but the embedding retriever **loses** to the BM25 baseline (p@1 0.850 vs 0.950). The requirement is to beat the baseline. Reported rather than buried; see §6 |
+| 1.8 | AI evals **beating** simpler baseline methods | **MET, with a caveat that matters** | With real `gemini-embedding-001` embeddings the retriever beats BM25 on every metric — p@1 1.000 vs 0.950, r@3 1.000 vs 0.950, r@5 1.000 vs 0.950. Results committed at `speedrun_ai/results/eval-gemini.json`. **Caveat:** the benchmark is now saturated. A perfect p@1 on 24 passages means the eval has no headroom left and can no longer discriminate between a good retriever and an excellent one; see §6.3 |
 | 1.9 | App must function with AI disabled | **MET** | `NullProvider` path produces cards, marked degraded with a stated reason, each still traceable to a real span |
 | 1.10 | Paraphrase / rewording test distinguishing memory from performance | **PARTIAL** | The *mechanism* exists and is tested (`speedrun::probe` partitions recall from transfer; `memory_and_performance_are_measured_separately`). **Gap:** no experiment has been run on real reworded items to show the distinction holds outside synthetic fixtures |
 | 1.11 | Coverage map dashboard per exam topic | **PARTIAL** | Per-topic table with memory, performance, gap, and evidence counts. **Gap:** topics come from user tags, not from an official exam outline, so it does not yet show *coverage* — what has not been studied at all is invisible |
 | 1.12 | Crash resilience, zero data corruption | **NOT MET** | Not attempted. No crash suite |
 | 1.13 | Ablation test (feature on / off / baseline Anki) validating the thesis | **NOT MET** | Not attempted. This is the single most important missing item — it is the test that could show the product's premise is wrong |
 
-**Functional: 6 MET · 4 PARTIAL · 3 NOT MET (13 items)**
+**Functional: 7 MET · 4 PARTIAL · 2 NOT MET (13 items)**
 
 ---
 
@@ -125,12 +125,18 @@ Brainlift.
    this.
 2. **No calibration.** Intervals are reported without evidence they are
    calibrated. This is the project's own accusation pointed back at it.
-3. **AI evals do not beat the baseline.** BM25 beats the embedding retriever
-   (p@1 0.950 vs 0.850). The likely cause is stated honestly in the code: the
-   default embedder is local feature hashing — lexical underneath, with
-   collision noise on top — on a 24-passage fixture corpus. A real embedding
-   model has never been run because no API key was available. This is a real
-   unmet requirement, not a technicality.
+3. **The retrieval benchmark is saturated and no longer informative.** With real
+   embeddings the requirement is met (p@1 1.000 vs BM25's 0.950), but a perfect
+   score is a warning, not a victory: on 24 passages with 20 queries there is
+   nothing left to measure. Two things follow. First, the *margin* is one query
+   — far too thin to claim embeddings are meaningfully better here. Second, and
+   more important, the queries share vocabulary with their passages, so the
+   benchmark rewards lexical overlap — which is exactly the capability this
+   product argues is the wrong one. A tool whose thesis is *knowledge must
+   survive a change of surface form* should be evaluated on paraphrased
+   queries. Until it is, the eval measures something adjacent to what matters.
+   Fixing this means a larger corpus and deliberately reworded queries, and it
+   is a change that could make our own numbers worse.
 4. **Sync never exercised.** The strongest untested claim in the project.
 5. **Most latency budgets unmeasured**, including the "UI never blocked" one,
    which the pre-optimisation benchmark suggests deserves genuine scrutiny.
@@ -140,8 +146,8 @@ Brainlift.
 
 ## 7. Honest overall position
 
-Counting the whole rubric — Friday and Sunday together — roughly **17 MET, 6
-PARTIAL, 17 NOT MET**.
+Counting the whole rubric — Friday and Sunday together — roughly **18 MET, 6
+PARTIAL, 16 NOT MET**.
 
 That is the correct shape for a Friday early submission whose entire second
 stage is the evidence layer, and it should not be read as a mid-project grade of

@@ -20,3 +20,10 @@ ts/.svelte-kit
 .yarn
 .claude/settings.local.json
 .claude/user.md
+
+# Speedrun addition: never commit credentials.
+.env
+.env.*
+*.env
+secrets/
+*.key

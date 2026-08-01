@@ -1,0 +1,697 @@
+{
+  "corpus_size": 24,
+  "data_cutoff": "2026-08-01",
+  "embedder": "gemini-embedding-001",
+  "embedder_requires_network": true,
+  "ks": [
+    1,
+    3,
+    5
+  ],
+  "query_count": 20,
+  "rows": [
+    {
+      "per_query": [
+        {
+          "hits_at_max_k": [
+            "mcat-bio-01"
+          ],
+          "query_id": "q01",
+          "relevant": [
+            "mcat-bio-01"
+          ],
+          "retrieved": [
+            "mcat-bio-01",
+            "mcat-psych-10",
+            "gmat-quant-03",
+            "mcat-phys-07",
+            "mcat-bio-03"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-bio-03"
+          ],
+          "query_id": "q02",
+          "relevant": [
+            "mcat-bio-03"
+          ],
+          "retrieved": [
+            "mcat-bio-03",
+            "gmat-quant-04",
+            "mcat-chem-05",
+            "mcat-bio-01",
+            "lsat-lr-02"
+          ]
+        },
+        {
+          "hits_at_max_k": [],
+          "query_id": "q03",
+          "relevant": [
+            "mcat-bio-02",
+            "mcat-bio-03"
+          ],
+          "retrieved": [
+            "mcat-bio-01",
+            "gmat-verbal-06",
+            "lsat-lr-05",
+            "gmat-quant-01",
+            "gmat-quant-03"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-bio-04"
+          ],
+          "query_id": "q04",
+          "relevant": [
+            "mcat-bio-04"
+          ],
+          "retrieved": [
+            "mcat-bio-04",
+            "mcat-bio-01",
+            "gmat-quant-03",
+            "mcat-psych-10",
+            "mcat-chem-06"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-chem-05"
+          ],
+          "query_id": "q05",
+          "relevant": [
+            "mcat-chem-05"
+          ],
+          "retrieved": [
+            "mcat-chem-05",
+            "mcat-bio-04",
+            "lsat-rc-07",
+            "gmat-quant-04",
+            "mcat-bio-02"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-chem-06"
+          ],
+          "query_id": "q06",
+          "relevant": [
+            "mcat-chem-06"
+          ],
+          "retrieved": [
+            "mcat-chem-06",
+            "mcat-bio-02",
+            "mcat-psych-09",
+            "mcat-chem-05",
+            "lsat-lr-05"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-phys-07"
+          ],
+          "query_id": "q07",
+          "relevant": [
+            "mcat-phys-07"
+          ],
+          "retrieved": [
+            "mcat-phys-07",
+            "mcat-psych-10",
+            "lsat-rc-07",
+            "gmat-quant-03",
+            "mcat-bio-01"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-phys-08"
+          ],
+          "query_id": "q08",
+          "relevant": [
+            "mcat-phys-08"
+          ],
+          "retrieved": [
+            "mcat-phys-08",
+            "gmat-quant-02",
+            "mcat-chem-05",
+            "gmat-quant-04",
+            "gmat-quant-01"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-psych-09"
+          ],
+          "query_id": "q09",
+          "relevant": [
+            "mcat-psych-09"
+          ],
+          "retrieved": [
+            "mcat-psych-09",
+            "mcat-psych-10",
+            "gmat-quant-03",
+            "mcat-bio-01",
+            "mcat-bio-04"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-psych-10"
+          ],
+          "query_id": "q10",
+          "relevant": [
+            "mcat-psych-10"
+          ],
+          "retrieved": [
+            "mcat-psych-10",
+            "gmat-verbal-06",
+            "mcat-phys-07",
+            "lsat-lr-06",
+            "mcat-bio-01"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "lsat-lr-01",
+            "lsat-lr-02"
+          ],
+          "query_id": "q11",
+          "relevant": [
+            "lsat-lr-01",
+            "lsat-lr-02"
+          ],
+          "retrieved": [
+            "lsat-lr-01",
+            "lsat-lr-03",
+            "lsat-lr-02",
+            "lsat-lr-06",
+            "mcat-psych-09"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "gmat-verbal-07",
+            "lsat-lr-03"
+          ],
+          "query_id": "q12",
+          "relevant": [
+            "gmat-verbal-07",
+            "lsat-lr-03"
+          ],
+          "retrieved": [
+            "lsat-lr-03",
+            "gmat-verbal-07",
+            "gmat-quant-05",
+            "lsat-lr-04",
+            "gmat-quant-02"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "lsat-lr-04"
+          ],
+          "query_id": "q13",
+          "relevant": [
+            "lsat-lr-04"
+          ],
+          "retrieved": [
+            "lsat-lr-04",
+            "lsat-lr-06",
+            "gmat-verbal-07",
+            "gmat-quant-04",
+            "lsat-lr-03"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "lsat-lr-06"
+          ],
+          "query_id": "q14",
+          "relevant": [
+            "lsat-lr-06"
+          ],
+          "retrieved": [
+            "lsat-lr-06",
+            "lsat-lr-05",
+            "lsat-lr-02",
+            "mcat-phys-08",
+            "lsat-lr-03"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "lsat-lr-05"
+          ],
+          "query_id": "q15",
+          "relevant": [
+            "lsat-lr-05"
+          ],
+          "retrieved": [
+            "lsat-lr-05",
+            "mcat-chem-05",
+            "mcat-psych-10",
+            "gmat-quant-03",
+            "mcat-psych-09"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "gmat-quant-01",
+            "gmat-quant-02"
+          ],
+          "query_id": "q16",
+          "relevant": [
+            "gmat-quant-01",
+            "gmat-quant-02"
+          ],
+          "retrieved": [
+            "gmat-quant-01",
+            "gmat-quant-02",
+            "mcat-bio-01",
+            "mcat-bio-02",
+            "gmat-quant-05"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "gmat-quant-03"
+          ],
+          "query_id": "q17",
+          "relevant": [
+            "gmat-quant-03"
+          ],
+          "retrieved": [
+            "gmat-quant-03",
+            "lsat-lr-02",
+            "gmat-quant-05",
+            "mcat-phys-07",
+            "lsat-lr-01"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "gmat-quant-04"
+          ],
+          "query_id": "q18",
+          "relevant": [
+            "gmat-quant-04"
+          ],
+          "retrieved": [
+            "gmat-quant-04",
+            "lsat-lr-03",
+            "lsat-lr-05",
+            "lsat-lr-02",
+            "lsat-lr-01"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "gmat-quant-05"
+          ],
+          "query_id": "q19",
+          "relevant": [
+            "gmat-quant-05"
+          ],
+          "retrieved": [
+            "gmat-quant-05",
+            "gmat-quant-03",
+            "gmat-quant-04",
+            "mcat-bio-01",
+            "lsat-lr-03"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "gmat-verbal-06"
+          ],
+          "query_id": "q20",
+          "relevant": [
+            "gmat-verbal-06"
+          ],
+          "retrieved": [
+            "gmat-verbal-06",
+            "mcat-bio-01",
+            "mcat-chem-06",
+            "mcat-phys-08",
+            "mcat-chem-05"
+          ]
+        }
+      ],
+      "precision_at_k": {
+        "1": 0.95,
+        "3": 0.366667,
+        "5": 0.22
+      },
+      "recall_at_k": {
+        "1": 0.875,
+        "3": 0.95,
+        "5": 0.95
+      },
+      "retriever": "bm25"
+    },
+    {
+      "per_query": [
+        {
+          "hits_at_max_k": [
+            "mcat-bio-01"
+          ],
+          "query_id": "q01",
+          "relevant": [
+            "mcat-bio-01"
+          ],
+          "retrieved": [
+            "mcat-bio-01",
+            "mcat-bio-02",
+            "mcat-bio-03",
+            "mcat-chem-06",
+            "mcat-bio-04"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-bio-03"
+          ],
+          "query_id": "q02",
+          "relevant": [
+            "mcat-bio-03"
+          ],
+          "retrieved": [
+            "mcat-bio-03",
+            "mcat-bio-01",
+            "mcat-bio-04",
+            "mcat-bio-02",
+            "mcat-chem-05"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-bio-02",
+            "mcat-bio-03"
+          ],
+          "query_id": "q03",
+          "relevant": [
+            "mcat-bio-02",
+            "mcat-bio-03"
+          ],
+          "retrieved": [
+            "mcat-bio-02",
+            "mcat-bio-03",
+            "mcat-bio-01",
+            "mcat-chem-06",
+            "mcat-bio-04"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-bio-04"
+          ],
+          "query_id": "q04",
+          "relevant": [
+            "mcat-bio-04"
+          ],
+          "retrieved": [
+            "mcat-bio-04",
+            "mcat-chem-06",
+            "mcat-bio-01",
+            "mcat-chem-05",
+            "mcat-bio-03"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-chem-05"
+          ],
+          "query_id": "q05",
+          "relevant": [
+            "mcat-chem-05"
+          ],
+          "retrieved": [
+            "mcat-chem-05",
+            "mcat-bio-04",
+            "gmat-quant-01",
+            "lsat-lr-06",
+            "mcat-bio-03"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-chem-06"
+          ],
+          "query_id": "q06",
+          "relevant": [
+            "mcat-chem-06"
+          ],
+          "retrieved": [
+            "mcat-chem-06",
+            "lsat-lr-02",
+            "mcat-bio-04",
+            "mcat-psych-10",
+            "mcat-bio-03"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-phys-07"
+          ],
+          "query_id": "q07",
+          "relevant": [
+            "mcat-phys-07"
+          ],
+          "retrieved": [
+            "mcat-phys-07",
+            "mcat-phys-08",
+            "mcat-bio-03",
+            "gmat-quant-02",
+            "lsat-rc-07"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-phys-08"
+          ],
+          "query_id": "q08",
+          "relevant": [
+            "mcat-phys-08"
+          ],
+          "retrieved": [
+            "mcat-phys-08",
+            "gmat-quant-03",
+            "gmat-quant-02",
+            "mcat-chem-05",
+            "gmat-quant-04"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-psych-09"
+          ],
+          "query_id": "q09",
+          "relevant": [
+            "mcat-psych-09"
+          ],
+          "retrieved": [
+            "mcat-psych-09",
+            "mcat-psych-10",
+            "lsat-lr-01",
+            "lsat-rc-07",
+            "lsat-lr-06"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "mcat-psych-10"
+          ],
+          "query_id": "q10",
+          "relevant": [
+            "mcat-psych-10"
+          ],
+          "retrieved": [
+            "mcat-psych-10",
+            "mcat-psych-09",
+            "lsat-lr-05",
+            "lsat-lr-03",
+            "lsat-lr-06"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "lsat-lr-01",
+            "lsat-lr-02"
+          ],
+          "query_id": "q11",
+          "relevant": [
+            "lsat-lr-01",
+            "lsat-lr-02"
+          ],
+          "retrieved": [
+            "lsat-lr-01",
+            "lsat-lr-03",
+            "lsat-lr-02",
+            "gmat-quant-04",
+            "lsat-lr-06"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "gmat-verbal-07",
+            "lsat-lr-03"
+          ],
+          "query_id": "q12",
+          "relevant": [
+            "gmat-verbal-07",
+            "lsat-lr-03"
+          ],
+          "retrieved": [
+            "lsat-lr-03",
+            "gmat-verbal-07",
+            "lsat-lr-01",
+            "lsat-lr-05",
+            "lsat-lr-06"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "lsat-lr-04"
+          ],
+          "query_id": "q13",
+          "relevant": [
+            "lsat-lr-04"
+          ],
+          "retrieved": [
+            "lsat-lr-04",
+            "lsat-lr-06",
+            "gmat-verbal-07",
+            "lsat-lr-03",
+            "lsat-lr-05"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "lsat-lr-06"
+          ],
+          "query_id": "q14",
+          "relevant": [
+            "lsat-lr-06"
+          ],
+          "retrieved": [
+            "lsat-lr-06",
+            "gmat-verbal-07",
+            "lsat-lr-03",
+            "lsat-lr-05",
+            "lsat-lr-04"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "lsat-lr-05"
+          ],
+          "query_id": "q15",
+          "relevant": [
+            "lsat-lr-05"
+          ],
+          "retrieved": [
+            "lsat-lr-05",
+            "gmat-verbal-07",
+            "lsat-lr-06",
+            "lsat-lr-03",
+            "lsat-rc-07"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "gmat-quant-01",
+            "gmat-quant-02"
+          ],
+          "query_id": "q16",
+          "relevant": [
+            "gmat-quant-01",
+            "gmat-quant-02"
+          ],
+          "retrieved": [
+            "gmat-quant-02",
+            "gmat-quant-01",
+            "gmat-quant-03",
+            "gmat-quant-04",
+            "mcat-phys-08"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "gmat-quant-03"
+          ],
+          "query_id": "q17",
+          "relevant": [
+            "gmat-quant-03"
+          ],
+          "retrieved": [
+            "gmat-quant-03",
+            "gmat-quant-02",
+            "lsat-lr-02",
+            "gmat-quant-01",
+            "mcat-phys-08"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "gmat-quant-04"
+          ],
+          "query_id": "q18",
+          "relevant": [
+            "gmat-quant-04"
+          ],
+          "retrieved": [
+            "gmat-quant-04",
+            "lsat-lr-03",
+            "lsat-lr-01",
+            "lsat-lr-06",
+            "gmat-verbal-07"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "gmat-quant-05"
+          ],
+          "query_id": "q19",
+          "relevant": [
+            "gmat-quant-05"
+          ],
+          "retrieved": [
+            "gmat-quant-05",
+            "lsat-lr-04",
+            "lsat-lr-06",
+            "gmat-quant-04",
+            "gmat-quant-01"
+          ]
+        },
+        {
+          "hits_at_max_k": [
+            "gmat-verbal-06"
+          ],
+          "query_id": "q20",
+          "relevant": [
+            "gmat-verbal-06"
+          ],
+          "retrieved": [
+            "gmat-verbal-06",
+            "lsat-rc-07",
+            "lsat-lr-06",
+            "gmat-quant-03",
+            "mcat-psych-09"
+          ]
+        }
+      ],
+      "precision_at_k": {
+        "1": 1.0,
+        "3": 0.4,
+        "5": 0.24
+      },
+      "recall_at_k": {
+        "1": 0.9,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "retriever": "embedding"
+    }
+  ]
+}
