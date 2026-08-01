@@ -15,6 +15,27 @@ the evidence behind it is too thin.
 
 ---
 
+## Where things are
+
+| | |
+|---|---|
+| Thesis, spiky POVs, and what would falsify them | [docs/speedrun/BRAINLIFT.md](docs/speedrun/BRAINLIFT.md) |
+| The problem, in test-takers' own words, with citations | [docs/speedrun/problem-statement.md](docs/speedrun/problem-statement.md) |
+| Scope and pass/fail checks per slice | [docs/speedrun/spec/atoms.md](docs/speedrun/spec/atoms.md) |
+| Decisions and why they were made | [docs/speedrun/DECISION-LEDGER.md](docs/speedrun/DECISION-LEDGER.md) |
+| Known risks | [docs/speedrun/RISKS.md](docs/speedrun/RISKS.md) |
+| Citation reachability check | [scripts/check-sources.sh](scripts/check-sources.sh) |
+| Latency benchmark | [tools/bench_transfer.py](tools/bench_transfer.py) |
+| iOS companion | [shamilahfaria/speedrun-ios](https://github.com/shamilahfaria/speedrun-ios) |
+
+Verify the citations yourself:
+
+```
+bash scripts/check-sources.sh docs/speedrun/problem-statement.md
+```
+
+---
+
 ## Attribution and licence
 
 Speedrun is a fork of **[Anki](https://github.com/ankitects/anki)** by Ankitects
