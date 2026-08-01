@@ -56,12 +56,16 @@ that proves it.
 | Refusals display as refusals, never as 0% | `qt/aqt/transfer.py` (`_score_cell`) | `qt/tests/test_transfer_view.py::test_refusal_is_shown_as_a_refusal` |
 | Existing protobuf service indices are unchanged | `proto/anki/transfer.proto` (filename sorts last) | generated `backend.rs` dispatch table: sync=1, scheduler=13, stats=41, tags=43 unmoved; transfer=45 |
 | Desktop and phone run one engine, not two | iOS `anki-upstream` submodule → this repo, branch `speedrun` | `git submodule status` in the iOS repo pins `a84fb5e` |
+| The iOS companion actually builds against our engine | [speedrun-ios](https://github.com/shamilahfaria/speedrun-ios) CI | Run 30712722654: all steps green, `aarch64-apple-ios` + `-ios-sim` + `-watchos-sim` slices built, 28.2 MB unsigned IPA produced on a clean runner |
+| The build is reproducible on a fresh machine | same CI run | GitHub `macos-26` runner starts from nothing: clones, installs toolchains, builds end to end |
+| Transfer report meets its latency budget | `tools/bench_transfer.py` | 50,000 cards / 400,000 reviews: 441 ms cold (budget 1000 ms), 399 ms warm median (budget 500 ms), p95 403 ms |
 
 Not yet true, and listed here rather than omitted:
 
 | Claim | Status |
 |---|---|
-| iOS companion compiles and syncs | **Source-complete, unbuilt.** No Xcode on the build machine, so no iPhoneOS SDK. |
+| iOS companion **syncs** end to end | **Unverified.** It builds and the engine is wired in, but no device run has exercised bidirectional sync or offline reconciliation. |
+| The iOS app **displays** the three scores | **Not implemented.** The request factory and domain types exist; no SwiftUI surface calls them yet. |
 | Readiness is weighted by the official exam outline | **Not implemented.** Readiness pools probe results across topics and is labelled a floor, not a prediction. |
 | Models are calibrated (Brier / log loss on held-back data) | **Not started.** Sunday scope. |
 | Ablation test validating the thesis | **Not started.** Sunday scope. Failure modes stated in advance in `BRAINLIFT.md`. |
