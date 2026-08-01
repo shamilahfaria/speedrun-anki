@@ -1305,6 +1305,14 @@ title="{}" {}>{}</button>""".format(
     def onPrefs(self) -> None:
         aqt.dialogs.open("Preferences", self)
 
+    def on_transfer_report(self) -> None:
+        "Speedrun addition: memory vs performance vs readiness."
+        if not self.col:
+            return
+        from aqt.transfer import show_transfer_report
+
+        show_transfer_report(self)
+
     def on_upgrade_downgrade(self) -> None:
         if not askUser(tr.qt_misc_open_anki_launcher()):
             return
@@ -1429,6 +1437,13 @@ title="{}" {}>{}</button>""".format(
         if not launcher_executable():
             m.action_upgrade_downgrade.setVisible(False)
         qconnect(m.actionPreferences.triggered, self.onPrefs)
+
+        # Speedrun addition. Registered programmatically rather than added to the
+        # Qt Designer form, to keep our change out of a generated file.
+        action_transfer = QAction("Transfer Report", self)
+        action_transfer.setShortcut(QKeySequence("Shift+T"))
+        qconnect(action_transfer.triggered, self.on_transfer_report)
+        m.menuTools.addAction(action_transfer)
 
         # View
         qconnect(
