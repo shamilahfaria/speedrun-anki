@@ -1,0 +1,108 @@
+{
+  "name": "speedrun-retrieval-fixture-queries",
+  "version": 1,
+  "data_cutoff": "2026-08-01",
+  "labelling_note": "Relevance was judged by hand against corpus.json v1 on the cutoff date. A passage is labelled relevant when it contains enough to answer the query, not merely when it shares vocabulary with it. Labels are binary and complete for this corpus.",
+  "queries": [
+    {
+      "id": "q01",
+      "text": "where in the cell does glycolysis happen and how much ATP does it yield",
+      "relevant_ids": ["mcat-bio-01"]
+    },
+    {
+      "id": "q02",
+      "text": "what happens to ATP synthesis if a drug collapses the proton gradient",
+      "relevant_ids": ["mcat-bio-03"]
+    },
+    {
+      "id": "q03",
+      "text": "which processes take place inside the mitochondria",
+      "relevant_ids": ["mcat-bio-02", "mcat-bio-03"]
+    },
+    {
+      "id": "q04",
+      "text": "how does a competitive inhibitor change Km and Vmax",
+      "relevant_ids": ["mcat-bio-04"]
+    },
+    {
+      "id": "q05",
+      "text": "what is the pH at the half equivalence point of a weak acid titration",
+      "relevant_ids": ["mcat-chem-05"]
+    },
+    {
+      "id": "q06",
+      "text": "which substitution mechanism inverts configuration at the reacting carbon",
+      "relevant_ids": ["mcat-chem-06"]
+    },
+    {
+      "id": "q07",
+      "text": "why does the pressure drop where a pipe narrows",
+      "relevant_ids": ["mcat-phys-07"]
+    },
+    {
+      "id": "q08",
+      "text": "what happens to total resistance when another resistor is added in parallel",
+      "relevant_ids": ["mcat-phys-08"]
+    },
+    {
+      "id": "q09",
+      "text": "does matching the study context at recall improve memory",
+      "relevant_ids": ["mcat-psych-09"]
+    },
+    {
+      "id": "q10",
+      "text": "why is spaced practice with self testing better than cramming and re-reading",
+      "relevant_ids": ["mcat-psych-10"]
+    },
+    {
+      "id": "q11",
+      "text": "sufficient versus necessary conditions and which inference from a conditional is valid",
+      "relevant_ids": ["lsat-lr-01", "lsat-lr-02"]
+    },
+    {
+      "id": "q12",
+      "text": "how do I check whether an assumption is required by the argument",
+      "relevant_ids": ["lsat-lr-03", "gmat-verbal-07"]
+    },
+    {
+      "id": "q13",
+      "text": "what alternative explanations undermine an argument from correlation to cause",
+      "relevant_ids": ["lsat-lr-04"]
+    },
+    {
+      "id": "q14",
+      "text": "how do I weaken a conclusion drawn from a survey of respondents",
+      "relevant_ids": ["lsat-lr-06"]
+    },
+    {
+      "id": "q15",
+      "text": "a term that changes meaning between premises is which flaw",
+      "relevant_ids": ["lsat-lr-05"]
+    },
+    {
+      "id": "q16",
+      "text": "why is averaging two averages or two speeds directly wrong",
+      "relevant_ids": ["gmat-quant-01", "gmat-quant-02"]
+    },
+    {
+      "id": "q17",
+      "text": "does a twenty percent increase then a twenty percent decrease return the original number",
+      "relevant_ids": ["gmat-quant-03"]
+    },
+    {
+      "id": "q18",
+      "text": "when is a data sufficiency statement insufficient on its own",
+      "relevant_ids": ["gmat-quant-04"]
+    },
+    {
+      "id": "q19",
+      "text": "how do I test whether a large integer is divisible by three",
+      "relevant_ids": ["gmat-quant-05"]
+    },
+    {
+      "id": "q20",
+      "text": "should the verb agree with the noun inside the modifying phrase",
+      "relevant_ids": ["gmat-verbal-06"]
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "name": "speedrun-retrieval-fixture-corpus",
+  "version": 1,
+  "data_cutoff": "2026-08-01",
+  "cutoff_note": "Passages were hand-written for this fixture set and frozen on the cutoff date. Nothing here is scraped, and no passage describes material published after that date. Relevance labels in queries.json were assigned against this frozen snapshot.",
+  "passages": [
+    {
+      "id": "mcat-bio-01",
+      "exam": "MCAT",
+      "section": "Biology",
+      "title": "Glycolysis",
+      "text": "Glycolysis takes place in the cytosol and does not require oxygen. One molecule of glucose is split into two molecules of pyruvate, with a net yield of two ATP and two NADH. The rate-limiting step is catalysed by phosphofructokinase-1, which is inhibited by high levels of ATP and citrate and activated by AMP and fructose-2,6-bisphosphate."
+    },
+    {
+      "id": "mcat-bio-02",
+      "exam": "MCAT",
+      "section": "Biology",
+      "title": "Citric acid cycle",
+      "text": "The citric acid cycle operates in the mitochondrial matrix. Each acetyl-CoA that enters the cycle releases two molecules of carbon dioxide and generates three NADH, one FADH2, and one GTP. Because one glucose produces two acetyl-CoA, these totals double when counted per molecule of glucose."
+    },
+    {
+      "id": "mcat-bio-03",
+      "exam": "MCAT",
+      "section": "Biology",
+      "title": "Oxidative phosphorylation",
+      "text": "The electron transport chain pumps protons out of the mitochondrial matrix into the intermembrane space, building an electrochemical gradient across the inner membrane. ATP synthase allows protons to flow back down that gradient and uses the energy released to phosphorylate ADP. An uncoupler such as 2,4-dinitrophenol dissipates the gradient, so electron transport continues while ATP synthesis falls and the energy is lost as heat."
+    },
+    {
+      "id": "mcat-bio-04",
+      "exam": "MCAT",
+      "section": "Biochemistry",
+      "title": "Enzyme kinetics and inhibition",
+      "text": "Michaelis-Menten kinetics describe an enzyme whose velocity approaches Vmax as substrate concentration rises. Km is the substrate concentration at half of Vmax, and a lower Km means a higher affinity for substrate. A competitive inhibitor raises the apparent Km but leaves Vmax unchanged, because added substrate can outcompete it. A noncompetitive inhibitor lowers Vmax and leaves Km unchanged."
+    },
+    {
+      "id": "mcat-chem-05",
+      "exam": "MCAT",
+      "section": "General Chemistry",
+      "title": "Buffers and titration",
+      "text": "The Henderson-Hasselbalch equation states that pH equals pKa plus the logarithm of the ratio of conjugate base to weak acid. A buffer resists changes in pH most effectively when that ratio is close to one, which happens when the pH is near the pKa. At the half-equivalence point of a weak acid titration, half the acid has been neutralised and the pH equals the pKa."
+    },
+    {
+      "id": "mcat-chem-06",
+      "exam": "MCAT",
+      "section": "Organic Chemistry",
+      "title": "SN1 and SN2 substitution",
+      "text": "An SN2 reaction proceeds in a single concerted step with backside attack, so the configuration at the electrophilic carbon inverts and the rate depends on the concentrations of both substrate and nucleophile. An SN1 reaction forms a carbocation intermediate first, so its rate depends only on the substrate, tertiary substrates react fastest, and the product is typically a racemic mixture because the nucleophile can attack either face."
+    },
+    {
+      "id": "mcat-phys-07",
+      "exam": "MCAT",
+      "section": "Physics",
+      "title": "Fluid flow",
+      "text": "For an ideal fluid the continuity equation holds that volume flow rate stays constant, so narrowing a pipe forces the fluid to speed up. Bernoulli's equation then requires that where the speed increases the pressure falls. This is why a constriction in a horizontal tube shows a lower static pressure than the wider segments upstream and downstream of it."
+    },
+    {
+      "id": "mcat-phys-08",
+      "exam": "MCAT",
+      "section": "Physics",
+      "title": "Series and parallel circuits",
+      "text": "In a series circuit the same current flows through every element and the resistances add directly. In a parallel circuit every branch sees the same voltage and the reciprocals of the resistances add, so the total resistance is always smaller than the smallest individual branch. Adding another resistor in parallel therefore lowers total resistance and increases the current drawn from the source."
+    },
+    {
+      "id": "mcat-psych-09",
+      "exam": "MCAT",
+      "section": "Psychology",
+      "title": "Encoding specificity",
+      "text": "The encoding specificity principle holds that retrieval succeeds more often when the cues available at recall match those present during encoding. Context-dependent memory shows this effect for external surroundings and state-dependent memory shows it for internal conditions. Deeper semantic processing of meaning produces stronger retention than shallow processing of surface features, which is the core claim of the levels-of-processing framework."
+    },
+    {
+      "id": "mcat-psych-10",
+      "exam": "MCAT",
+      "section": "Psychology",
+      "title": "Spacing and testing effects",
+      "text": "The spacing effect shows that study sessions distributed across time produce better long-term retention than the same total time massed into a single session. The testing effect shows that actively retrieving information strengthens memory more than re-reading it does. Both effects are larger on delayed tests than on immediate ones, which is why massed re-reading feels productive while performing poorly later."
+    },
+    {
+      "id": "lsat-lr-01",
+      "exam": "LSAT",
+      "section": "Logical Reasoning",
+      "title": "Sufficient and necessary conditions",
+      "text": "A sufficient condition guarantees that its consequent holds, while a necessary condition must hold for the consequent to occur at all. In the statement that if a student passes then the student studied, passing is sufficient for having studied and studying is necessary for passing. Treating a necessary condition as though it were sufficient produces the fallacy of affirming the consequent."
+    },
+    {
+      "id": "lsat-lr-02",
+      "exam": "LSAT",
+      "section": "Logical Reasoning",
+      "title": "Contrapositive, converse, inverse",
+      "text": "The contrapositive of a conditional statement negates and reverses its two terms, and it is always logically equivalent to the original statement. From the claim that if P then Q, one may validly infer that if not Q then not P. The converse, if Q then P, and the inverse, if not P then not Q, do not follow from the original."
+    },
+    {
+      "id": "lsat-lr-03",
+      "exam": "LSAT",
+      "section": "Logical Reasoning",
+      "title": "Necessary versus sufficient assumptions",
+      "text": "A necessary assumption question asks for a premise the argument depends on, and the standard check is the negation test: if negating the candidate destroys the argument, it was necessary. A sufficient assumption question instead asks for a premise that would make the conclusion follow if it were added. A necessary assumption need not be strong enough to prove the conclusion on its own."
+    },
+    {
+      "id": "lsat-lr-04",
+      "exam": "LSAT",
+      "section": "Logical Reasoning",
+      "title": "Correlation and causation",
+      "text": "An argument that infers a causal claim from a correlation is open to three standard objections: the causation may run in the opposite direction, some third factor may produce both observed effects, or the correlation may be coincidental. Strengthening such an argument therefore means ruling out those alternative explanations rather than piling up more correlational evidence."
+    },
+    {
+      "id": "lsat-lr-05",
+      "exam": "LSAT",
+      "section": "Logical Reasoning",
+      "title": "Common reasoning flaws",
+      "text": "Frequently tested flaws include equivocation, in which a key term shifts meaning between premises, the straw man, which refutes a distorted version of an opponent's position, and circular reasoning, which assumes the conclusion among its own premises. Naming the flaw correctly depends on describing the gap between the evidence offered and the conclusion drawn from it."
+    },
+    {
+      "id": "lsat-lr-06",
+      "exam": "LSAT",
+      "section": "Logical Reasoning",
+      "title": "Surveys and sampling",
+      "text": "A survey supports a general conclusion only when the sample is representative of the population it describes. Self-selected respondents, samples that are too small, and questions worded to invite a particular answer all undermine the inference. Showing that the sample was drawn from an unusual subgroup is a standard way to weaken a statistical argument."
+    },
+    {
+      "id": "lsat-rc-07",
+      "exam": "LSAT",
+      "section": "Reading Comprehension",
+      "title": "Finding the main point",
+      "text": "The main point of a passage is the claim the author is defending, not simply the topic the passage discusses. Viewpoint markers such as however, admittedly, and the standard view signal where the author separates their own position from one they are merely reporting. An answer choice can be true and still be wrong for a main point question if its scope is narrower than the passage as a whole."
+    },
+    {
+      "id": "gmat-quant-01",
+      "exam": "GMAT",
+      "section": "Quantitative",
+      "title": "Weighted averages",
+      "text": "In a weighted average each value contributes in proportion to its weight, so the result always falls between the smallest and largest values and sits closer to the value carrying the greater weight. Averaging two group averages directly is correct only when the two groups are the same size, which is the trap most weighted average problems are built around."
+    },
+    {
+      "id": "gmat-quant-02",
+      "exam": "GMAT",
+      "section": "Quantitative",
+      "title": "Rates and combined work",
+      "text": "Rates combine by addition. If one machine finishes a job in four hours and another finishes it in six, their rates are one quarter and one sixth of the job per hour, which sum to five twelfths per hour, so working together they finish in twelve fifths of an hour. Average speed over a round trip is total distance divided by total time, never the average of the two speeds."
+    },
+    {
+      "id": "gmat-quant-03",
+      "exam": "GMAT",
+      "section": "Quantitative",
+      "title": "Successive percent change",
+      "text": "A percent increase followed by a decrease of the same percent does not return the original value. Raising 100 by twenty percent gives 120, and reducing 120 by twenty percent gives 96. Successive percent changes multiply rather than add, so the combined effect here is 1.2 times 0.8, which is 0.96, a net loss of four percent."
+    },
+    {
+      "id": "gmat-quant-04",
+      "exam": "GMAT",
+      "section": "Data Sufficiency",
+      "title": "Judging sufficiency",
+      "text": "Data sufficiency asks only whether a statement pins down a unique answer, not what that answer turns out to be. Each statement must be evaluated on its own first, and the two are combined only if neither is sufficient alone. A statement that leaves two possible values for the quantity asked about is insufficient, even when one of those values looks more plausible."
+    },
+    {
+      "id": "gmat-quant-05",
+      "exam": "GMAT",
+      "section": "Quantitative",
+      "title": "Number properties and divisibility",
+      "text": "The product of any two consecutive integers is even, because one of the two must be even. An integer is divisible by three when the sum of its digits is divisible by three, and by nine when that digit sum is divisible by nine. The prime factorisation also fixes the number of divisors: add one to each exponent and multiply the results."
+    },
+    {
+      "id": "gmat-verbal-06",
+      "exam": "GMAT",
+      "section": "Verbal",
+      "title": "Agreement and modifiers",
+      "text": "In sentence correction the verb must agree with the grammatical subject rather than with a noun sitting inside an intervening modifier. In the sentence the box of old letters was found, the subject is box, so the singular verb is correct. A modifying phrase opening a sentence must attach to the noun that immediately follows it, or the modifier is left dangling."
+    },
+    {
+      "id": "gmat-verbal-07",
+      "exam": "GMAT",
+      "section": "Verbal",
+      "title": "Assumptions behind a plan",
+      "text": "A critical reasoning assumption is an unstated premise that the argument depends on. In an argument recommending a plan, the assumption is usually that nothing will prevent the plan from reaching its goal. Weakening that argument means naming a factor that would block the plan even if every stated premise is granted."
+    }
+  ]
+}
