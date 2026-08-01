@@ -121,4 +121,27 @@ cd pylib && pytest tests/test_transfer.py                # Python across the FFI
 cd qt   && pytest tests/test_transfer_view.py            # display honesty
 ```
 
+```
+pytest speedrun_ai/tests                                 # AI slice, no key needed
+python -m speedrun_ai.eval                               # retrieval comparison
+```
+
 The transfer report is under **Tools → Transfer Report** (`Shift+T`).
+
+### Known upstream test failures
+
+`pylib/tests/test_schedv3.py` fails three tests — `test_button_spacing`,
+`test_nextIvl`, `test_failmult` — on this base. These are **pre-existing in stock
+Anki 25.09.2 and are not caused by this fork.** Verified by building the
+unmodified base commit in a separate worktree and running the same suite:
+
+| tree | result |
+|---|---|
+| stock 25.09.2 | 3 failed, 86 passed |
+| this fork | 3 failed, 90 passed |
+
+Same three failures; the four extra passes are `tests/test_transfer.py`.
+
+Note also that `test_schedv3.py` cannot be run in isolation — it hits an import
+ordering problem in `anki.models` that only resolves when the full `tests/`
+directory runs. This is also true of the unmodified base.
