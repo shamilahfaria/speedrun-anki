@@ -1,6 +1,18 @@
 # Speedrun
 
-A study tool for MCAT/LSAT/GMAT preparation, forked from Anki.
+**Exam: the MCAT.** Scored 472–528, four sections of 118–132.
+
+Chosen because the thesis needs a wide gap to measure. The MCAT pairs a very
+large fact base with passage-based reasoning, so it is the exam where "I know
+this material" and "I can use this material on a passage I have never seen" come
+apart most visibly — and where coverage across a big official outline is itself
+part of the difficulty. An exam with almost nothing to memorise would make the
+memory score trivial; an exam that is pure recall would make the transfer score
+trivial. The MCAT makes neither trivial.
+
+All scores below are reported on the real 472–528 scale, or withheld.
+
+A study tool for MCAT preparation, forked from Anki.
 
 It measures three things separately and shows the distance between them:
 
