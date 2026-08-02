@@ -132,6 +132,57 @@ he had read that somewhere between 90 and 95 was generally optimal. The target w
 never connected to any exam outcome.
 <https://forums.ankiweb.net/t/optimizing-fsrs-settings-for-high-stakes-neet-ug-2027-exam-11-month-timeline/69981>
 
+## The gap, in MCAT students' own words
+
+An earlier version of this document recorded that the most on-point testimony —
+someone describing a finished deck alongside a flat score — could not be reached,
+because Reddit is blocked to the usual fetchers. It has since been retrieved
+directly. Every quote below was re-fetched and string-matched against the raw
+page.
+
+A student who had finished content review and matured the Jacksparrow and AnKing
+decks reports full-length scores "in the low 500s."
+<https://old.reddit.com/r/Mcat/comments/1s3jntm/should_i_quit/>
+
+Another, four full-lengths in at 493, 500, 496 and 500, describes having "4,000
+Anki cards to review."
+<https://old.reddit.com/r/Mcat/comments/1upen54/4_fls_in_still_stuck_at_500_test_end_of_july_4000/>
+
+The clearest statement of the gap itself comes from a student who had finished
+the Kaplan books and matured 80% of their deck: they have "a lot of isolated
+facts memorized from Anki," but cannot apply them when a question "requires
+integrating multiple ideas."
+<https://old.reddit.com/r/Mcat/comments/1lou4yd/struggling_with_the_big_picture_after_content/>
+
+And the calibration failure named directly — a student reports that their deck
+"gave me a false sense of security by the time I got into practice questions,"
+in a thread where another writes that decks are "not good at all for building the
+critical thinking that the MCAT tests."
+<https://old.reddit.com/r/Mcat/comments/1k69rhy/any_success_with_anking/>
+
+## A second failure, which the research literature frames differently
+
+Anki users describe a distinct problem: passing the card without knowing the
+fact. The maintainer of one of the most-used community resources calls it
+"pattern matching" — "memorizing what the answer looks like rather than the
+actual information," which "can lead to situations where someone can 'recall' the
+answer in Anki but not in real life."
+<https://old.reddit.com/r/Anki/comments/1ge2aui/note_types_to_avoid_pattern_matching/>
+
+Learners report the cue they are actually using. One describes recognising "the
+position of the cloze, a particular line break, the length of the text, or the
+words immediately surrounding the blank."
+<https://old.reddit.com/r/Anki/comments/1va7i4g/how_can_i_stop_memorizing_the_appearance_of_my/>
+Another: "I found myself often knowing the answer because I recognize the card,
+not because I understood the question it asked."
+<https://old.reddit.com/r/Anki/comments/1d6zst5/card_text_randomizer_a_way_to_learn_the_concept/>
+
+This matters because it is a *different* failure from the transfer gap, and it is
+the one a reworded probe detects directly. A student who answers the original
+card and fails a reworded version of the same fact has not revealed a limit of
+transfer; they have revealed that the original success was a property of the
+card's surface, not of their knowledge.
+
 ## The pain, stated plainly
 
 They are measuring one thing and staking their future on another, and nothing in
@@ -161,14 +212,30 @@ Reachability is separately checked by `scripts/check-sources.sh`, which confirms
 the URLs resolve. That is a weaker guarantee and does not overlap with this one —
 a live URL under a false claim passes it.
 
-## What we could not learn
+## What we still could not learn
 
-The evidence sweep could not reach Reddit — r/Mcat, r/LSAT, r/GMAT and
-r/medschoolanki are where repetition users discuss this most directly, and they
-were unreachable from this environment. Consequently, the single most on-point
-first-person account — someone stating that their retention stayed above 90% while
-their scored result did not move — was not found in a readable primary source.
-The pattern is documented secondhand by companies selling preparation material,
-which is marketing about a product rather than testimony, and was deliberately
-excluded. This is a real hole in the evidence and closing it requires a
+The Reddit gap recorded here previously is now closed; those accounts are quoted
+above and were independently re-verified against the raw pages.
+
+One specific thing was still not found, and it is the claim this product would
+most like to be able to make: **no post states a numeric retention figure and a
+disappointing full-length score together.** Searches for "true retention" and
+"90% retention" in r/Mcat returned nothing usable. Students report matured decks,
+card counts, and finished content review alongside flat scores — but they do not
+report the retention percentage itself, which suggests the number may matter less
+to them in practice than this document's argument assumes. That is a finding
+worth sitting with rather than explaining away.
+
+Reddit's search does not reliably support exact-phrase queries, so absence here is
+weak evidence of absence.
+
+CARS-specific testimony is also thin. No verbatim account was found of a student
+completing a deck and seeing no CARS movement, which is unsurprising given CARS
+has almost nothing to put on a card — but it means the section of the MCAT where
+our thesis should be *most* visible is the section we have the least testimony
+about.
+
+The older gap, retained for the record: prep-company blog posts describe the
+pattern secondhand. They are marketing about a product rather than testimony and
+were deliberately excluded. Closing the remaining questions requires a
 Reddit-capable path, not more searching.

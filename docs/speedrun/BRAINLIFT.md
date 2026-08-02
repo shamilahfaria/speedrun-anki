@@ -299,7 +299,47 @@ and §9 has not been run.
 
 ## 8. Teardown of existing tools
 
-*Pending — see `teardown.md`. Recorded as secondhand evidence: these tools were
-researched from public documentation and user reports rather than used, and every
-claim is labelled with its provenance. §2 asks for behaviour observed first-hand,
-so this section is weaker than the brief requires and is marked as such.*
+Full teardown of six MCAT tools in [`teardown.md`](teardown.md), with every claim
+labelled **[VENDOR DOC]**, **[VENDOR DATA]**, **[USER REPORT]** or **[CANNOT
+DETERMINE]**. Recorded as **secondhand**: researched from public documentation and
+user reports rather than used first-hand. §2 asks for behaviour observed by
+studying on them, so this is weaker than the brief requires.
+
+**The single finding that most changes this document:**
+
+> The MCAT reports every section score with a **±1 confidence band** and the total
+> with **±2**, and states the bands are "intended to discourage distinctions
+> between applicants with similar scores."
+>
+> **Not one of the six tools publishes a confidence interval, standard error, or
+> score band on its own primary metric.** The products are more confident than the
+> exam they predict.
+
+Three more that survive scrutiny:
+
+- **Blueprint's own published data**, re-derived from their 54-student table:
+  mean absolute error against official MCAT scores of **7.2 points**; 65% of
+  students off by ≥5; worst single miss **33 points** — a diagnostic reading
+  **472**, the literal floor of the scale, against an official **505**. Reported
+  to students as a point estimate.
+- **Not one tool rewords an item.** Zero item-variation features across six
+  vendors. Every "retest" mechanism is verbatim repetition, all of which inflate
+  the metric being reported as progress, and none warns that second-pass numbers
+  aren't comparable to first-pass.
+- **Calibration is absent everywhere.** Kaplan outsources it to a paper error log
+  it tells students to keep by hand. Blueprint's "Popular Opinion" hint shows the
+  most-selected answer before the student commits, which corrupts it outright.
+
+**What the teardown does *not* support**, and this constrains POV 3: UWorld,
+Blueprint, Kaplan and Jack Westin all *do* score performance on novel passages.
+The gap is not measurement of transfer. It is that nobody reports uncertainty,
+varies an item, or checks a prediction against an outcome.
+
+**A second failure the transfer framing missed.** Students report passing cards by
+recognising the card — "memorizing what the answer looks like rather than the
+actual information," in the words of the author of a widely-used community
+resource. That is not a limit of transfer; it is evidence the original success was
+a property of the card's surface. A reworded probe detects it directly, and no
+tool on the market has one. This partially answers the standing objection that
+near-transfer probes measure "memory with extra steps" — they also measure
+whether the memory was ever about the content.
