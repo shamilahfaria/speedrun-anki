@@ -1,0 +1,106 @@
+Speedrun BrainLift — Honest measurement for MCAT prep
+	Purpose
+		MCAT students plateau while every number their tools show them goes up. The metrics measure recall of trained material; the exam measures reasoning on unseen passages. Nothing connects the two.
+		This BrainLift identifies who to trust on learning science, states what the evidence supports at the confidence it actually earns, and records which widely-repeated claims are false — including four of my own.
+		In scope
+			MCAT only, scored on the real 472–528 scale
+			What study instruments are structurally blind to
+			Engine behaviour that refuses to report what it cannot support
+		Not in scope
+			Other exams. The thesis was originally generalised to LSAT/GMAT and that was wrong — the LSAT has almost nothing worth putting on a flashcard.
+			Replacing AAMC full-lengths. They are among the highest-validity predictors in consumer education.
+			Writing curriculum, predicting admissions, or proving score gains in one week.
+	Experts
+		Category 1: Retrieval practice and transfer
+			Steven C. Pan
+				Who: Assistant Professor, National University of Singapore. Lead author of the definitive transfer meta-analysis.
+				Focus: When test-enhanced learning transfers to novel problems, and when it does not.
+				Why follow: Pan & Rickard (2018) is the only synthesis that separates transfer from retention — 192 effect sizes, N=10,382. Its finding is conditional, not promotional: transfer collapses toward zero without response congruency or elaborated retrieval practice. He thanks the entire testing-effect establishment in the acknowledgements and published the null-ish intercept anyway.
+				Where: https://pdf.retrievalpractice.org/transfer/Pan_Rickard_2018.pdf — funded by APA Early Graduate Student Researcher Award + NSF Graduate Research Fellowship. No commercial tie.
+			Christopher A. Rowland
+				Who: Author of the 2014 testing-effect meta-analysis, Colorado State.
+				Focus: Retrieval practice vs restudy, and the moderators that govern it.
+				Why follow: g=0.50 headline, independently corroborated at 0.51 by a separate team (Adesope). His feedback moderator is the number that matters: 0.73 with feedback vs 0.39 without.
+				Where: Psychological Bulletin 140(6), 1432–1463. Funding not stated; no commercial tie.
+		Category 2: Metacognition and calibration
+			Asher Koriat and Robert Bjork
+				Who: Originators of the "illusion of competence" account.
+				Focus: Why self-assessments of learning are systematically wrong, and in which direction.
+				Why follow: They identified the mechanism — judgments are made with the answer visible, and the exam removes it. This is the cleanest explanation of why a student's own confidence is the least reliable instrument they own.
+				Where: https://bjorklab.psych.ucla.edu/wp-content/uploads/sites/13/2016/07/Koriat_RBjork_2005.pdf
+			John Dunlosky
+				Who: Kent State; lead author of the field's definitive practice-recommendation review.
+				Focus: Which study techniques actually generalise beyond the lab.
+				Why follow: Only two of ten techniques earned "high utility" — practice testing and distributed practice. Rereading and highlighting rated low. Note the intellectual stake: the two techniques rated highest are the authors' own research areas, and that is not itemised in their blanket no-conflicts declaration.
+				Where: Psychological Science in the Public Interest 14(1). Funded by the James S. McDonnell Foundation.
+		Category 3: Meta-science — how much to believe any of this
+			Matthew A. Kraft
+				Who: Brown University. Author of the effect-size benchmarks the field now uses.
+				Focus: What magnitude actually counts as meaningful in education.
+				Why follow: From 1,942 effect sizes across 747 RCTs — under 0.05 small, 0.05–0.20 medium, 0.20 or above LARGE. Cohen's 0.2/0.5/0.8 come from 1960s lab studies on undergraduates and do not apply here. Also: studies under 100 students have median 0.24; studies over 2,000 have median 0.03.
+				Where: Educational Researcher 49(4), 241–253. Funding not stated.
+			Brooke Macnamara
+				Who: Case Western Reserve. Co-author of the mindset and deliberate-practice meta-analyses.
+				Focus: Testing whether celebrated effects survive scale and bias correction.
+				Why follow: Her mindset meta-analysis (N=97,672) found the highest-quality subset at d=0.02, CI crossing zero. She also built a formal moderator for whether authors profit from books promoting the effect they study — and found those effects significantly larger. Preregistered, public data, no funder recorded.
+				Where: Psychological Bulletin, 2023.
+		Category 4: Spaced-repetition systems — what they actually claim
+			Piotr Woźniak
+				Who: Creator of SuperMemo and the SM-2 algorithm every flashcard tool descends from.
+				Focus: Two-component memory — retrievability versus stability.
+				Why follow: SM-2 has one state variable and no probability of recall anywhere in it. He calls its origin "trial-and-error." Useful because it shows how little the original algorithm ever claimed.
+				Where: https://super-memory.com/english/ol/sm2.htm
+			Jarrett Ye and the FSRS maintainers
+				Who: Authors of the scheduler now built into Anki.
+				Focus: Difficulty–Stability–Retrievability modelling, benchmarked on ~350M reviews.
+				Why follow: They publish their own limitations — difficulty is "a crude heuristic" that "doesn't take R into account" — and their optimal-retention objective is explicitly time-efficiency: minutes studied divided by summed recall probability, every card weighted equally, no exam model anywhere. Note both they and SuperMemo grade with rulers they built; neither has published on the other's terms.
+				Where: https://github.com/open-spaced-repetition/fsrs4anki/wiki/The-optimal-retention
+			Damien Elmes
+				Who: Author of Anki.
+				Focus: Scheduling and what desired retention means.
+				Why follow: Anki's documentation is scrupulously scoped — desired retention governs "how likely you are to remember cards when they are scheduled for a review." One card, at its next due date. The overclaim happens downstream, in what learners infer and what prep marketing implies.
+				Where: https://docs.ankiweb.net/deck-options.html
+	SpikyPOVs
+		Truths
+			A percentage cannot distinguish a lucky guess from knowledge, and that blindness covers roughly a third of a student's correct answers. 38–40% of correct multiple-choice responses are rated guess or low-confidence.
+			Feedback on a correct-but-guessed item doubles retention: .40 to .85. The highest-value review target is the answer you got right and shouldn't have.
+			The AAMC has collected per-question confidence data since October 2022. Four years on, no student anywhere reports having used it to change how they study. The signal exists; nothing connects it to anything.
+			Retrieval practice works, and feedback roughly doubles its effect — g=0.73 with, 0.39 without. Feedback is the whole ballgame, and it is cheap.
+			Transfer is conditional, not automatic. Without response congruency or elaborated retrieval practice, the bias-corrected estimate is approximately zero and possibly negative.
+			Retention optimisation is time-efficiency optimisation. FSRS minimises study minutes per unit of recall probability, weights every card equally, and models no exam, deadline, or topic weight. It was never a readiness claim.
+			The MCAT publishes ±1 and ±2 confidence bands and says they exist to discourage distinctions between similar scores. Zero of six major prep tools publish any interval on their own primary metric. The products are more confident than the exam.
+			No tool on the market rewords an item. Every "retest" mechanism is verbatim repetition, which inflates the number being sold as progress, and none warns that second-pass scores aren't comparable to first-pass.
+			Nobody is funded to find nothing. Independently funded nulls deserve more weight than vendor-adjacent positives, and in this literature the nulls are consistently the better-designed studies.
+			In education, 0.20 is a large effect. Applying Cohen's 1960s benchmarks to classroom research systematically overstates what has been found.
+		Myths
+			"Nothing on the market measures transfer." False. AAMC full-lengths, UWorld and Blueprint all score performance on novel passages. I asserted this and it was wrong.
+			"Flashcards don't build transfer." Butler (2010) found repeated retrieval beat restudy on novel inferential questions, and repeating the same item transferred about as well as varying it.
+			"Reviews are the weakest-evidenced metric; novelty is what pays." I had Rowland inverted. In his own data, review is the moderator that pays and volume is the one that doesn't.
+			"Retention stops being the binding constraint around week six." Invented precision. It is section-specific, baseline-dependent, and retention is a maintenance cost that never ends.
+			"Show students the gap and they will reallocate their time." Told that 90% of people learn better a given way, 78% placed themselves in the 10%. Belief-change is the wrong channel.
+			"Overconfidence can be fixed by directing attention at hard material." Rests on one unreplicated lab study — zero replications across 159 citations in ten years — whose senior author has undisclosed book royalties and a company selling the curriculum it supports.
+			"The learning science is settled, so cite it." 0.13% of education articles are replications. Large-scale trials average 0.06. One of seven EEF efficacy findings survived scale-up. The field's 2025 flagship review omits both the meta-analysis and the replication that complicate its headline claim.
+	Knowledge Tree
+		DOK ladder for this exam
+			DOK 1 recall — what a flashcard measures
+			DOK 2/3 application and reasoning — what an MCAT passage asks
+			DOK 4 projected readiness — what every tool implies it reports
+			35% of MCAT science questions test knowledge; 65% test reasoning. CARS is 100% reasoning with zero recall content.
+		What students actually report
+			Matured decks and finished content review alongside full-lengths "in the low 500s"
+			"a lot of isolated facts memorized from Anki" but can't apply them when a question "requires integrating multiple ideas"
+			A distinct second failure: passing the card by recognising the card — "memorizing what the answer looks like rather than the actual information"
+		Teardown of six MCAT tools
+			Blueprint's own published data: 7.2-point mean absolute error, worst miss 33 points — a diagnostic reading 472 against an official 505, reported as a point estimate
+			Kaplan: across 141 users, every single one scored above their Kaplan composite
+			Jack Westin's institutional dashboard names "QBank usage" as its predictor of score improvement
+			Memm's most prominent personal number is a streak
+		Citation standard adopted mid-project
+			Full text read for any load-bearing number; abstracts don't count
+			Replication status and funding recorded beside every claim
+			Subgroup cells are hypothesis generators, not findings
+			Kraft's benchmarks, not Cohen's
+		Open questions
+			The memory-minus-performance gap is a difference score; reliability approximately .50 for plausible inputs
+			Wilson intervals address binomial sampling error when the dominant variance is item sampling — our intervals are too narrow
+			No study has ever matched time-on-task between elaborated review and additional novel practice. The comparison everyone argues about has never been run.
