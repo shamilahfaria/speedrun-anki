@@ -182,3 +182,36 @@ Same three failures; the four extra passes are `tests/test_transfer.py`.
 Note also that `test_schedv3.py` cannot be run in isolation — it hits an import
 ordering problem in `anki.models` that only resolves when the full `tests/`
 directory runs. This is also true of the unmodified base.
+
+### Performance, measured
+
+`make bench` runs every Section 10 target against the 50,000-card deck
+(400,000 review rows) and exits non-zero on a miss.
+
+| metric | budget | p50 | p95 | result |
+|---|---|---|---|---|
+| Cold start | <5000 ms | 201.0 | 244.0 | PASS |
+| Button press acknowledged | p95 <50 ms | 0.2 | 0.4 | PASS |
+| Next card after grading | p95 <100 ms | 0.1 | 0.1 | PASS |
+| Dashboard first load | <1000 ms | 508.3 | 531.7 | PASS |
+| Dashboard refresh | <500 ms | 486.7 | 497.7 | **see below** |
+| Session sync | <5000 ms | 35.4 | 46.7 | PASS |
+| Longest blocking UI call | worst <100 ms | 0.1 | 0.3 | PASS |
+| Peak RSS | no stated budget | 270.4 MB | — | reported |
+
+**Dashboard refresh is not reliably inside budget, and the table above
+overstates it.** That run passed by 2.3 ms. Across six runs on the same machine
+its p95 was 472 / 478 / 498 (pass) and 618 / 958 / 1638 (fail). The machine
+carried a load average of 8-16 on 12 CPUs; the harness now prints the load and
+labels a contended run. Nothing was tuned to obtain a green run and the three
+failing runs are as real as the passing one. Treat this target as **not met**
+until it is measured on an idle machine and a release build.
+
+Two caveats on what the other numbers mean:
+
+- **Sync is a floor, not an AnkiWeb number.** It is measured against Anki's own
+  `anki.syncserver` on loopback, so it carries no wide-area latency. A baseline
+  full upload is excluded and three grade-then-sync rounds are timed.
+- **Longest blocking UI call passes because the work moved off the UI thread.**
+  Before that change the dashboard blocked it for ~500 ms. The measurement is of
+  the Qt main thread, not of the backend call, which still takes ~500 ms.

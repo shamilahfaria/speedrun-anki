@@ -55,7 +55,7 @@ def test_selection_returns_gemini_when_enabled_and_key_present(monkeypatch):
     monkeypatch.setenv("GEMINI_API_KEY", FAKE_KEY)
     prov = P.get_provider(P.ProviderConfig(ai_enabled=True))
     assert isinstance(prov, P.GeminiProvider)
-    assert prov.model == "gemini-2.5-flash-lite"
+    assert prov.model == P.DEFAULT_MODEL
     assert prov.available is True
 
 
@@ -70,7 +70,7 @@ def test_constructing_gemini_provider_does_not_touch_network(monkeypatch):
     """The SDK/client must be created lazily, so construction is offline-safe."""
     monkeypatch.setenv("GEMINI_API_KEY", FAKE_KEY)
     prov = P.GeminiProvider()  # must not raise even with no google-genai installed
-    assert prov.model == "gemini-2.5-flash-lite"
+    assert prov.model == P.DEFAULT_MODEL
 
 
 def test_api_key_never_appears_in_repr_str_or_logs(monkeypatch, caplog):
@@ -90,7 +90,7 @@ def test_describe_is_safe_to_log(monkeypatch):
     monkeypatch.setenv("GEMINI_API_KEY", FAKE_KEY)
     prov = P.get_provider(P.ProviderConfig(ai_enabled=True))
     assert FAKE_KEY not in prov.describe()
-    assert "gemini-2.5-flash-lite" in prov.describe()
+    assert P.DEFAULT_MODEL in prov.describe()
 
 
 def test_null_provider_returns_no_suggestions_without_raising():
@@ -157,7 +157,7 @@ def test_gemini_happy_path_parses_suggestions_and_sends_the_right_model(monkeypa
     suggestions = prov.suggest_cards(_request())
     assert [s.kind for s in suggestions] == [P.CardKind.RECALL, P.CardKind.PROBE]
     assert suggestions[0].quote == "Glycolysis occurs in the cytosol"
-    assert client.calls[0]["model"] == "gemini-2.5-flash-lite"
+    assert client.calls[0]["model"] == P.DEFAULT_MODEL
     # The prompt must carry the source, and must never carry the key.
     assert "Glycolysis occurs in the cytosol." in client.calls[0]["contents"]
     assert FAKE_KEY not in client.calls[0]["contents"]
