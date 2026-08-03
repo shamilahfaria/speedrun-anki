@@ -1,419 +1,406 @@
-<title>Speedrun — BrainLift talk track</title>
+<title>Speedrun — BrainLift</title>
 
 <style>
   :root {
     --ground:      #FBFCFC;
-    --raised:      #F2F5F5;
+    --raised:      #EFF3F3;
     --ink:         #14191C;
-    --ink-soft:    #3D4A50;
-    --muted:       #6A787F;
-    --hairline:    #DBE2E3;
+    --ink-soft:    #46545B;
+    --muted:       #75838A;
+    --hairline:    #DCE3E4;
     --accent:      #B87333;
-    --accent-soft: #F0E2D2;
-    --null:        #8A979D;
-
-    --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
-    --sans:  ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    --mono:  ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-
-    --gutter: 5.5rem;
+    --note-bg:     #FDF6EC;
+    --note-edge:   #E4CDA9;
+    --note-ink:    #6B4A1E;
   }
-
   @media (prefers-color-scheme: dark) {
     :root {
-      --ground:      #0F1417;
-      --raised:      #161D21;
-      --ink:         #E6EDEF;
-      --ink-soft:    #B4C2C7;
-      --muted:       #7E8F96;
-      --hairline:    #242F35;
-      --accent:      #D89A55;
-      --accent-soft: #2A2018;
-      --null:        #6B7A81;
+      --ground:    #0E1316; --raised: #171F23; --ink: #E7EEF0;
+      --ink-soft:  #AFBEC4; --muted: #7E8F96; --hairline: #232E34;
+      --accent:    #DDA05C; --note-bg: #1E1913; --note-edge: #4A3A24;
+      --note-ink:  #E0C79E;
     }
   }
   :root[data-theme="dark"] {
-    --ground:      #0F1417;
-    --raised:      #161D21;
-    --ink:         #E6EDEF;
-    --ink-soft:    #B4C2C7;
-    --muted:       #7E8F96;
-    --hairline:    #242F35;
-    --accent:      #D89A55;
-    --accent-soft: #2A2018;
-    --null:        #6B7A81;
+    --ground:    #0E1316; --raised: #171F23; --ink: #E7EEF0;
+    --ink-soft:  #AFBEC4; --muted: #7E8F96; --hairline: #232E34;
+    --accent:    #DDA05C; --note-bg: #1E1913; --note-edge: #4A3A24;
+    --note-ink:  #E0C79E;
   }
   :root[data-theme="light"] {
-    --ground:      #FBFCFC;
-    --raised:      #F2F5F5;
-    --ink:         #14191C;
-    --ink-soft:    #3D4A50;
-    --muted:       #6A787F;
-    --hairline:    #DBE2E3;
-    --accent:      #B87333;
-    --accent-soft: #F0E2D2;
-    --null:        #8A979D;
+    --ground:    #FBFCFC; --raised: #EFF3F3; --ink: #14191C;
+    --ink-soft:  #46545B; --muted: #75838A; --hairline: #DCE3E4;
+    --accent:    #B87333; --note-bg: #FDF6EC; --note-edge: #E4CDA9;
+    --note-ink:  #6B4A1E;
   }
 
+  * { box-sizing: border-box; }
   body {
+    margin: 0;
     background: var(--ground);
     color: var(--ink);
-    font-family: var(--serif);
-    font-size: 17px;
-    line-height: 1.62;
-    margin: 0;
-    padding: 4rem 1.5rem 7rem;
+    font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 46rem; margin: 0 auto; }
+  .sans { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .num  { font-variant-numeric: tabular-nums; }
 
-  /* ---- masthead ---- */
-  .eyebrow {
-    font-family: var(--sans);
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 0 0 0.9rem;
+  /* ---------- slide frame ---------- */
+  .deck { position: relative; }
+  .slide {
+    min-height: 100svh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 2rem 7rem;
+    max-width: 54rem;
+    margin: 0 auto;
+  }
+  .slide.on { display: flex; }
+  @media (prefers-reduced-motion: no-preference) {
+    .slide.on > * { animation: rise .34s cubic-bezier(.2,.7,.3,1) both; }
+    .slide.on > *:nth-child(2) { animation-delay: .05s; }
+    .slide.on > *:nth-child(3) { animation-delay: .09s; }
+    .slide.on > *:nth-child(4) { animation-delay: .13s; }
+    @keyframes rise { from { opacity:0; transform: translateY(7px);} to {opacity:1;transform:none;} }
+  }
+
+  .kicker {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .7rem; font-weight: 600; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--muted); margin: 0 0 1.4rem;
   }
   h1 {
-    font-family: var(--sans);
-    font-size: clamp(1.9rem, 4.4vw, 2.6rem);
-    font-weight: 680;
-    letter-spacing: -0.021em;
-    line-height: 1.12;
-    text-wrap: balance;
-    margin: 0 0 1rem;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(2rem, 5.2vw, 3.4rem); font-weight: 680;
+    letter-spacing: -.026em; line-height: 1.08; text-wrap: balance; margin: 0 0 1.2rem;
   }
-  .standfirst {
-    color: var(--ink-soft);
-    font-size: 1.06rem;
-    margin: 0 0 1.4rem;
-    max-width: 34rem;
-  }
-  .meta {
-    font-family: var(--sans);
-    font-size: 0.8rem;
-    color: var(--muted);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem 1.4rem;
-    padding-bottom: 2.6rem;
-    border-bottom: 1px solid var(--hairline);
-  }
-  .meta b { color: var(--ink-soft); font-weight: 600; }
-
-  /* ---- beats ---- */
-  .beat {
-    display: grid;
-    grid-template-columns: var(--gutter) 1fr;
-    gap: 0 1.6rem;
-    padding: 2.4rem 0;
-    border-bottom: 1px solid var(--hairline);
-  }
-  .clock { font-family: var(--sans); padding-top: 0.35rem; }
-  .clock .n {
-    font-size: 1.45rem;
-    font-weight: 660;
-    letter-spacing: -0.02em;
-    font-variant-numeric: tabular-nums;
-    color: var(--accent);
-    display: block;
-    line-height: 1;
-  }
-  .clock .dur {
-    font-size: 0.72rem;
-    font-variant-numeric: tabular-nums;
-    color: var(--muted);
-    display: block;
-    margin-top: 0.4rem;
-  }
-  .clock .cum {
-    font-size: 0.68rem;
-    font-variant-numeric: tabular-nums;
-    color: var(--null);
-    display: block;
-    margin-top: 0.15rem;
-  }
-
   h2 {
-    font-family: var(--sans);
-    font-size: 1.16rem;
-    font-weight: 640;
-    letter-spacing: -0.011em;
-    line-height: 1.28;
-    text-wrap: balance;
-    margin: 0 0 1rem;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(1.3rem, 2.6vw, 1.85rem); font-weight: 660;
+    letter-spacing: -.018em; line-height: 1.2; text-wrap: balance; margin: 0 0 1.5rem;
   }
-  .body > * { margin: 0 0 0.95rem; }
-  .body > *:last-child { margin-bottom: 0; }
+  p { font-size: clamp(1.05rem, 1.6vw, 1.22rem); line-height: 1.6; margin: 0 0 1rem; max-width: 40rem; }
+  .lead { font-size: clamp(1.3rem, 2.3vw, 1.75rem); line-height: 1.36; font-weight: 600; text-wrap: pretty; max-width: 38rem; }
+  .sub { color: var(--ink-soft); }
+  ul { max-width: 40rem; padding-left: 1.2rem; margin: 0 0 1rem; }
+  li { font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.55; margin-bottom: .7rem; }
 
-  /* say-this-aloud */
-  .say {
-    font-size: 1.16rem;
-    font-weight: 600;
-    line-height: 1.44;
-    color: var(--ink);
-    border-left: 2px solid var(--accent);
-    padding-left: 1rem;
-    text-wrap: pretty;
+  blockquote {
+    margin: 0 0 1.1rem; padding-left: 1.1rem;
+    border-left: 2px solid var(--hairline);
+    font-style: italic; color: var(--ink-soft);
+    font-size: clamp(1.02rem, 1.6vw, 1.2rem); max-width: 38rem;
   }
-  /* verbatim from a student or a source */
-  .quote {
-    font-style: italic;
-    color: var(--ink-soft);
-    border-left: 1px solid var(--hairline);
-    padding-left: 1rem;
-  }
-  .quote cite {
-    display: block;
-    font-family: var(--sans);
-    font-style: normal;
-    font-size: 0.74rem;
-    color: var(--muted);
-    margin-top: 0.4rem;
-  }
-  /* stage direction — never spoken */
-  .note {
-    font-family: var(--sans);
-    font-size: 0.82rem;
-    color: var(--muted);
-    background: var(--raised);
-    padding: 0.6rem 0.85rem;
-    border-radius: 3px;
-  }
-  .body ul { padding-left: 1.15rem; }
-  .body li { margin-bottom: 0.55rem; }
-  b, strong { font-weight: 700; }
-  .num {
-    font-variant-numeric: tabular-nums;
-    font-feature-settings: "tnum";
+  blockquote cite {
+    display: block; font-style: normal; font-size: .74rem; color: var(--muted);
+    font-family: ui-sans-serif, system-ui, sans-serif; margin-top: .45rem;
   }
 
-  /* readout — an instrument panel, for the hard numbers */
+  /* ---------- readout ---------- */
   .readout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-    gap: 1px;
-    background: var(--hairline);
-    border: 1px solid var(--hairline);
-    border-radius: 3px;
-    overflow: hidden;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1px; background: var(--hairline);
+    border: 1px solid var(--hairline); margin: 0 0 1.3rem;
   }
-  .readout div { background: var(--ground); padding: 0.85rem 0.95rem; }
+  .readout > div { background: var(--ground); padding: 1.1rem 1.15rem; }
   .readout .v {
-    font-family: var(--sans);
-    font-size: 1.5rem;
-    font-weight: 660;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(1.6rem, 3.4vw, 2.3rem); font-weight: 680;
+    letter-spacing: -.03em; line-height: 1.05; color: var(--accent);
     font-variant-numeric: tabular-nums;
-    letter-spacing: -0.025em;
-    color: var(--accent);
-    line-height: 1.1;
   }
   .readout .k {
-    font-family: var(--sans);
-    font-size: 0.72rem;
-    line-height: 1.35;
-    color: var(--muted);
-    margin-top: 0.35rem;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .78rem; line-height: 1.35; color: var(--muted); margin-top: .45rem;
   }
 
-  /* retraction ledger */
-  .ledger { overflow-x: auto; }
-  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
-  th, td {
-    text-align: left;
-    padding: 0.6rem 0.8rem 0.6rem 0;
-    border-bottom: 1px solid var(--hairline);
-    vertical-align: top;
-  }
-  th {
-    font-family: var(--sans);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  td.claim { color: var(--null); text-decoration: line-through; }
+  .ledger { overflow-x: auto; margin-bottom: 1.1rem; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+  th, td { text-align: left; padding: .65rem .9rem .65rem 0; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+  th { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .68rem; font-weight: 600;
+       letter-spacing: .09em; text-transform: uppercase; color: var(--muted); }
+  td.dead { color: var(--muted); text-decoration: line-through; }
 
-  /* Q&A */
-  .qa { padding-top: 2.4rem; }
-  .qa h2 { margin-bottom: 1.4rem; }
-  .qa dt {
-    font-family: var(--sans);
-    font-weight: 620;
-    font-size: 0.95rem;
-    margin-top: 1.3rem;
+  /* ---------- presenter notes: hidden until asked for ---------- */
+  .note { display: none; }
+  body.notes .note {
+    display: block;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .87rem; line-height: 1.5;
+    background: var(--note-bg); color: var(--note-ink);
+    border: 1px solid var(--note-edge); border-left-width: 3px;
+    padding: .8rem 1rem; margin: 1.2rem 0 0; max-width: 40rem;
   }
-  .qa dd { margin: 0.4rem 0 0; color: var(--ink-soft); }
-
-  @media (max-width: 34rem) {
-    :root { --gutter: 3.2rem; }
-    body { padding: 2.5rem 1.1rem 4rem; }
-    .beat { gap: 0 1rem; }
+  body.notes .note b { color: inherit; }
+  .note-tag {
+    display: inline-block; font-size: .64rem; font-weight: 700; letter-spacing: .1em;
+    text-transform: uppercase; opacity: .72; margin-bottom: .3rem;
   }
 
+  /* ---------- chrome ---------- */
+  .bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    display: flex; align-items: center; gap: .9rem;
+    padding: .7rem 1.1rem;
+    background: color-mix(in srgb, var(--ground) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--hairline);
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: .78rem;
+  }
+  .dots { display: flex; gap: .34rem; flex: 1; }
+  .dot {
+    width: 1.5rem; height: 3px; border: 0; padding: 0; cursor: pointer;
+    background: var(--hairline); border-radius: 2px;
+  }
+  .dot[aria-current="true"] { background: var(--accent); }
+  .dot:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .pos { color: var(--muted); font-variant-numeric: tabular-nums; }
+  button.ctl {
+    font: inherit; cursor: pointer; color: var(--ink);
+    background: var(--raised); border: 1px solid var(--hairline);
+    padding: .35rem .7rem; border-radius: 3px;
+  }
+  button.ctl:hover { border-color: var(--accent); }
+  button.ctl:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  button.ctl[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--ground); }
+  .clock { color: var(--muted); font-variant-numeric: tabular-nums; display: none; }
+  body.notes .clock { display: inline; }
+
+  @media (max-width: 40rem) {
+    .slide { padding: 3.5rem 1.2rem 6rem; }
+    .bar { gap: .55rem; font-size: .72rem; }
+    .dots { gap: .2rem; }
+    .dot { width: .85rem; }
+  }
   @media print {
-    body { padding: 0; font-size: 11pt; }
-    .beat { break-inside: avoid; }
-    .readout { break-inside: avoid; }
+    .slide { display: flex !important; min-height: auto; break-after: page; padding: 1rem 0; }
+    .bar { display: none; }
+    .note { display: block !important; }
   }
 </style>
 
-<div class="wrap">
+<main class="deck" id="deck">
 
-  <p class="eyebrow">BrainLift · talk track</p>
-  <h1>Every study tool reports a number the exam itself refuses to report.</h1>
-  <p class="standfirst">Speedrun — honest measurement for the MCAT. Eight beats, about six minutes.</p>
-  <div class="meta">
-    <span><b>Serif</b> = say close to verbatim</span>
-    <span><b>Sans / grey</b> = scaffolding, don't read aloud</span>
-    <span><b>Amber rule</b> = the line that lands</span>
-  </div>
-
-  <section class="beat">
-    <div class="clock"><span class="n">1</span><span class="dur">45s</span><span class="cum">0:45</span></div>
-    <div class="body">
-      <h2>Open with the student, not the product</h2>
-      <p>An MCAT student finishes content review. Matures the AnKing deck. Four thousand cards.</p>
-      <p>Their full-lengths: <b class="num">493, 500, 496, 500.</b></p>
-      <blockquote class="quote">a lot of isolated facts memorized from Anki, but I can't apply them when a question requires integrating multiple ideas<cite>r/Mcat — verified verbatim against the source page</cite></blockquote>
-      <blockquote class="quote">it gave me a false sense of security by the time I got into practice questions<cite>r/Mcat</cite></blockquote>
-      <p class="say">Every number this student sees is going up. The one number that matters isn't moving.</p>
+  <!-- 0 -->
+  <section class="slide on">
+    <p class="kicker">BrainLift</p>
+    <h1>Every study tool reports a number the exam itself refuses to report.</h1>
+    <p class="lead sub">Speedrun — honest measurement for the MCAT.</p>
+    <div class="note">
+      <span class="note-tag">Presenter</span>
+      <b>N</b> toggles these notes · <b>←</b> <b>→</b> to move · 8 beats, ~6 min.
+      Don't read the title slide aloud — let it sit, then open on the student.
     </div>
   </section>
 
-  <section class="beat">
-    <div class="clock"><span class="n">2</span><span class="dur">30s</span><span class="cum">1:15</span></div>
-    <div class="body">
-      <h2>The question I started with</h2>
-      <p class="say">Why do people who study hard plateau — and why does nothing warn them?</p>
-      <p>I assumed their tools measure memorization and sell it as readiness. That was half right and half badly wrong, and finding out which half took the whole project.</p>
+  <!-- 1 -->
+  <section class="slide">
+    <h2>A student who did everything right</h2>
+    <p>Finished content review. Matured the AnKing deck. Four thousand cards.</p>
+    <p>Their full-lengths: <b class="num">493, 500, 496, 500</b>.</p>
+    <blockquote>a lot of isolated facts memorized from Anki, but I can't apply them when a question requires integrating multiple ideas<cite>r/Mcat</cite></blockquote>
+    <p class="lead">Every number this student sees is going up. The one number that matters isn't moving.</p>
+    <div class="note">
+      <span class="note-tag">0:00 – 0:45</span>
+      Open on the person, not the product. Quote is verified verbatim against the source page.
+      Second quote in reserve if you want it: <i>"it gave me a false sense of security by the time I got into practice questions."</i>
     </div>
   </section>
 
-  <section class="beat">
-    <div class="clock"><span class="n">3</span><span class="dur">60s</span><span class="cum">2:15</span></div>
-    <div class="body">
-      <h2>What the teardown found</h2>
-      <p>I took apart six MCAT tools — UWorld, the Anki decks, Blueprint, Kaplan, Jack Westin, Memm.</p>
-      <p>The MCAT itself publishes a confidence band on every score: <b class="num">±1</b> per section, <b class="num">±2</b> total. The AAMC says the bands exist to discourage distinctions between applicants with similar scores.</p>
-      <p class="say">Not one of the six tools publishes any interval at all. The products are more confident than the exam they predict.</p>
-      <p>From Blueprint's <em>own published data</em>:</p>
-      <div class="readout">
-        <div><div class="v">7.2</div><div class="k">point mean absolute error vs official scores</div></div>
-        <div><div class="v">33</div><div class="k">worst single miss — a 472 against an official 505</div></div>
-        <div><div class="v">0 / 6</div><div class="k">tools that reword a question on retest</div></div>
-      </div>
-      <p class="note">472 is the literal floor of the scale. Reported to the student as a point estimate, no error bar.</p>
+  <!-- 2 -->
+  <section class="slide">
+    <h2>The question</h2>
+    <p class="lead">Why do people who study hard plateau — and why does nothing warn them?</p>
+    <p class="sub">I assumed their tools measure memorization and sell it as readiness. That was half right and half badly wrong.</p>
+    <div class="note">
+      <span class="note-tag">0:45 – 1:15</span>
+      Say "half badly wrong" and stop. It sets up beat 5, which is the strongest thing you have.
+      Resist explaining it here.
     </div>
   </section>
 
-  <section class="beat">
-    <div class="clock"><span class="n">4</span><span class="dur">60s</span><span class="cum">3:15</span></div>
-    <div class="body">
-      <h2>The thing nobody measures</h2>
-      <div class="readout">
-        <div><div class="v">38–40%</div><div class="k">of correct multiple-choice answers are guesses or low-confidence</div></div>
-        <div><div class="v">.40 → .85</div><div class="k">retention when those correct-but-guessed items get feedback</div></div>
-      </div>
-      <p>So the highest-value thing to review is the answer you got right and shouldn't have.</p>
-      <p class="say">A percentage score cannot tell those apart. Ninety percent is ninety percent whether you knew it or guessed it.</p>
-      <p>The AAMC has collected per-question confidence data since October 2022. Four years. I could not find one student anywhere reporting they used it to change how they study.</p>
-      <p class="say">The signal exists. Nothing is connected to it.</p>
+  <!-- 3 -->
+  <section class="slide">
+    <h2>Six tools, taken apart</h2>
+    <p>The MCAT publishes a confidence band on every score — <b class="num">±1</b> per section, <b class="num">±2</b> total — to discourage distinctions between applicants with similar scores.</p>
+    <p class="lead">Not one of the six tools publishes any interval at all.</p>
+    <div class="readout">
+      <div><div class="v">7.2</div><div class="k">point mean absolute error — Blueprint's own published data</div></div>
+      <div><div class="v">33</div><div class="k">worst single miss: a 472 against an official 505</div></div>
+      <div><div class="v">0 / 6</div><div class="k">tools that ever reword a question on retest</div></div>
+    </div>
+    <div class="note">
+      <span class="note-tag">1:15 – 2:15</span>
+      UWorld · the Anki decks · Blueprint · Kaplan · Jack Westin · Memm.
+      <b>472 is the literal floor of the scale.</b> If one line lands, make it "the products are more confident than the exam they predict."
+      If challenged on sourcing: these are Blueprint's own numbers, re-derived from their 54-student table.
     </div>
   </section>
 
-  <section class="beat">
-    <div class="clock"><span class="n">5</span><span class="dur">90s</span><span class="cum">4:45</span></div>
-    <div class="body">
-      <h2>Where I was wrong</h2>
-      <p class="note">Longest beat. This is the strongest material — don't rush it.</p>
-      <p>I built a confident thesis: <em>reviewing everything is why you're plateaued; volume of novel questions is what pays.</em> Then I ran three things against it — a steelman told to destroy it, a replication audit, and a check against the field's own consensus documents.</p>
-      <p class="say">Four of my citations died.</p>
-      <div class="ledger">
-        <table>
-          <thead><tr><th>What I claimed</th><th>What the evidence says</th></tr></thead>
-          <tbody>
-            <tr><td class="claim">Review doesn't matter; volume does</td><td>I had the paper <b>inverted</b>. With feedback <b class="num">g&nbsp;=&nbsp;0.73</b>, without <b class="num">0.39</b>. Review is what pays. Volume was <b>not significant</b>.</td></tr>
-            <tr><td class="claim">Nothing on the market measures transfer</td><td>Flatly false. AAMC full-lengths, UWorld and Blueprint all score novel passages.</td></tr>
-            <tr><td class="claim">Show students the gap and they'll reallocate</td><td>My <em>own</em> citation predicts they won't — told 90% of people learn better a given way, <b class="num">78%</b> put themselves in the 10%.</td></tr>
-            <tr><td class="claim">My best finding, "and it's an RCT"</td><td>Not an RCT. <b class="num">Zero</b> replications across <b class="num">159</b> citations in ten years.</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>That last one had one more thing wrong with it. Its senior author holds book royalties and co-founded a company selling the curriculum it supports — disclosed nowhere.</p>
-      <p class="say">It was the only commercial conflict in an eight-paper stack, and it was sitting under my favourite finding.</p>
-      <p>Two instructions caused all of this, and neither was mine: <em>don't search for evidence that confirms your predictions</em>, and <em>record who funded each study</em>.</p>
+  <!-- 4 -->
+  <section class="slide">
+    <h2>The thing nobody measures</h2>
+    <div class="readout">
+      <div><div class="v">38–40%</div><div class="k">of correct answers are guesses or low-confidence</div></div>
+      <div><div class="v">.40 → .85</div><div class="k">retention when those items get feedback</div></div>
+    </div>
+    <p>So the highest-value thing to review is the answer you got right and shouldn't have.</p>
+    <p class="lead">A percentage cannot tell those apart. Ninety percent is ninety percent whether you knew it or guessed.</p>
+    <p class="sub">The AAMC has collected per-question confidence since October 2022. Four years. Nobody uses it.</p>
+    <div class="note">
+      <span class="note-tag">2:15 – 3:15</span>
+      This is the product thesis. Land the "ninety percent is ninety percent" line, then pause before the AAMC point.
+      Source: Butler, Karpicke &amp; Roediger 2008. The 67%-of-correct-answers-have-a-reasoning-flaw figure is n=14 — hold it back unless pressed.
     </div>
   </section>
 
-  <section class="beat">
-    <div class="clock"><span class="n">6</span><span class="dur">45s</span><span class="cum">5:30</span></div>
-    <div class="body">
-      <h2>So what survives</h2>
-      <p>Almost nothing that's an effect-size claim — because in education, effect sizes don't survive scale.</p>
-      <div class="readout">
-        <div><div class="v">0.13%</div><div class="k">of education findings are ever replicated</div></div>
-        <div><div class="v">1 of 7</div><div class="k">programmes surviving scale-up; mean 0.25 → 0.01</div></div>
-      </div>
-      <p>So the points of view deliberately don't rest on any effect surviving replication. They rest on what instruments are blind to:</p>
-      <ul>
-        <li><b>A percentage can't tell a guess from knowledge</b> — and that's a third of your correct answers.</li>
-        <li><b>"Evidence-based" is a claim nobody in this market can support</b>, including us.</li>
-        <li><b>Retention optimisation was never a readiness claim.</b> FSRS minimises study-minutes-per-recall-probability. There is no exam in that objective function.</li>
-      </ul>
-      <p class="note">Third point is worth a beat of silence. The schedulers are honest; the inference downstream isn't.</p>
+  <!-- 5 -->
+  <section class="slide">
+    <h2>Where I was wrong</h2>
+    <p>I built a confident thesis, then ran three things at it: a steelman told to destroy it, a replication audit, and a check against the field's consensus documents.</p>
+    <p class="lead">Four of my citations died.</p>
+    <div class="ledger">
+      <table>
+        <thead><tr><th>What I claimed</th><th>What the evidence says</th></tr></thead>
+        <tbody>
+          <tr><td class="dead">Review doesn't matter; volume does</td><td>I had the paper <b>inverted</b>. With feedback <b class="num">g&nbsp;=&nbsp;0.73</b>, without <b class="num">0.39</b>. Volume was <b>not significant</b>.</td></tr>
+          <tr><td class="dead">Nothing on the market measures transfer</td><td>False. AAMC full-lengths, UWorld and Blueprint all score novel passages.</td></tr>
+          <tr><td class="dead">Show the gap and students reallocate</td><td>My own citation says otherwise — told 90% learn better a given way, <b class="num">78%</b> put themselves in the 10%.</td></tr>
+          <tr><td class="dead">My best finding, "and it's an RCT"</td><td>Not an RCT. <b class="num">Zero</b> replications across <b class="num">159</b> citations.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="lead">That last one had an undisclosed commercial conflict — the only one in an eight-paper stack, sitting under my favourite finding.</p>
+    <div class="note">
+      <span class="note-tag">3:15 – 4:45 · longest beat</span>
+      <b>Do not rush this.</b> It's the section nobody else can produce, because it needs having been wrong on the record with receipts.
+      Two instructions caused it, and neither was mine: <i>don't search for evidence that confirms your predictions</i>, and <i>record who funded each study</i>.
+      If asked who: senior author holds book royalties and co-founded a company selling the curriculum the paper supports.
     </div>
   </section>
 
-  <section class="beat">
-    <div class="clock"><span class="n">7</span><span class="dur">45s</span><span class="cum">6:15</span></div>
-    <div class="body">
-      <h2>What that forced us to build</h2>
-      <p>Each point of view had to change the code, or it wasn't a point of view.</p>
-      <ul>
-        <li>The engine <b>refuses to emit a score</b> below an evidence threshold — a refusal, not a number with wide error bars. A caller that never receives a number can't render one.</li>
-        <li>On iOS a score is an <b>enum</b>, so rendering a refusal as a number is a <b>compile error</b>.</li>
-        <li>Coverage is checked against the <b>official AAMC outline</b>, all 31 content categories — so what you <em>haven't</em> studied is visible. Right now: <b class="num">1 of 31</b>.</li>
-        <li>Readiness reports on the real <b class="num">472–528</b> scale with its range, coverage, and reasons — or is withheld.</li>
-      </ul>
-      <p class="say">The guarantee is structural, not a promise in a README.</p>
+  <!-- 6 -->
+  <section class="slide">
+    <h2>So what survives</h2>
+    <div class="readout">
+      <div><div class="v">0.13%</div><div class="k">of education findings are ever replicated</div></div>
+      <div><div class="v">1 of 7</div><div class="k">programmes surviving scale-up; mean 0.25 → 0.01</div></div>
+    </div>
+    <p>Almost nothing that's an effect-size claim. So the three points of view rest on what instruments are blind to:</p>
+    <ul>
+      <li><b>A percentage can't tell a guess from knowledge</b> — a third of your correct answers.</li>
+      <li><b>"Evidence-based" is a claim nobody here can support</b>, us included.</li>
+      <li><b>Retention optimisation was never a readiness claim.</b> There is no exam in that objective function.</li>
+    </ul>
+    <div class="note">
+      <span class="note-tag">4:45 – 5:30</span>
+      Beat of silence after the third point. FSRS minimises study-minutes-per-recall-probability — the schedulers are honest; the inference downstream isn't.
     </div>
   </section>
 
-  <section class="beat">
-    <div class="clock"><span class="n">8</span><span class="dur">30s</span><span class="cum">6:45</span></div>
-    <div class="body">
-      <h2>Close on falsifiability</h2>
-      <p>Every point of view states what would kill it. The headline one:</p>
-      <p class="say">If confident-and-wrong rate predicts outcomes no better than raw accuracy, the whole thesis is dead.</p>
-      <p>And two objections I have not answered, which are in the document rather than buried:</p>
-      <ul>
-        <li>The memory-minus-performance gap is a <b>difference score</b> — reliability around <b class="num">.50</b>.</li>
-        <li>Our confidence intervals are <b>too narrow</b>: they model sampling error when the dominant variance is passage-to-passage.</li>
-      </ul>
-      <p class="say">A tool whose whole pitch is honest measurement doesn't get to hide its own weakest numbers.</p>
+  <!-- 7 -->
+  <section class="slide">
+    <h2>What that forced us to build</h2>
+    <ul>
+      <li>The engine <b>refuses to emit a score</b> below an evidence threshold — a refusal, not a number with wide error bars.</li>
+      <li>On iOS a score is an <b>enum</b>, so rendering a refusal as a number is a <b>compile error</b>.</li>
+      <li>Coverage runs against the <b>official AAMC outline</b>, all 31 categories — so what you <em>haven't</em> studied is visible.</li>
+      <li>Readiness reports on the real <b class="num">472–528</b> scale with its range and reasons, or is withheld.</li>
+    </ul>
+    <p class="lead">The guarantee is structural, not a promise in a README.</p>
+    <div class="note">
+      <span class="note-tag">5:30 – 6:15</span>
+      Each POV had to change code or it wasn't a POV. If they want a demo: Tools → Transfer Report shows 1 of 31 topics covered and refuses to project, naming why.
+      614 tests passing. 20/20 unclean kills, zero corruption.
     </div>
   </section>
 
-  <section class="qa">
-    <h2>If asked</h2>
-    <dl>
-      <dt>Isn't this just spaced repetition with extra steps?</dt>
-      <dd>No. Spaced repetition optimises time-per-unit-recall. We measure whether recall survives a change in wording — a different quantity — and refuse to report it when we can't.</dd>
-
-      <dt>How do you know the gap is real?</dt>
-      <dd>We don't yet. That's the ablation test, and it hasn't run. The claim on the record is the measurement one — that percent-correct is blind to guessing — which is verifiable independently of whether the gap predicts scores.</dd>
-
-      <dt>Why should I trust your numbers over UWorld's?</dt>
-      <dd>You shouldn't trust them more. You should notice ours come with a range and a refusal state, and theirs don't.</dd>
-
-      <dt>What's the weakest part?</dt>
-      <dd>The intervals are too narrow, and there's no student outcome data behind the score mapping — it's a documented linear placeholder, not a fitted model. Both are stated in the document.</dd>
-    </dl>
+  <!-- 8 -->
+  <section class="slide">
+    <h2>What would prove me wrong</h2>
+    <p class="lead">If confident-and-wrong rate predicts outcomes no better than raw accuracy, the thesis is dead.</p>
+    <p>Two objections I haven't answered, in the document rather than buried:</p>
+    <ul>
+      <li>The memory-minus-performance gap is a <b>difference score</b> — reliability around <b class="num">.50</b>.</li>
+      <li>Our intervals are <b>too narrow</b>: they model sampling error when the dominant variance is passage-to-passage.</li>
+    </ul>
+    <p class="lead">A tool whose pitch is honest measurement doesn't get to hide its own weakest numbers.</p>
+    <div class="note">
+      <span class="note-tag">6:15 – 6:45 · close</span>
+      <b>Q&amp;A prep.</b><br>
+      <i>Just spaced repetition with extra steps?</i> — No. SRS optimises time-per-unit-recall; we measure whether recall survives rewording, and refuse to report when we can't.<br>
+      <i>How do you know the gap is real?</i> — We don't. The ablation runs on a simulated responder; it says so in its own output. The claim on the record is the measurement one.<br>
+      <i>Why trust your numbers over UWorld's?</i> — Don't trust them more. Notice ours carry a range and a refusal state.<br>
+      <i>Weakest part?</i> — Calibration. We ship intervals nobody has checked. It's the first thing I'd fix.
+    </div>
   </section>
 
-</div>
+</main>
+
+<nav class="bar" aria-label="Presentation controls">
+  <button class="ctl" id="prev" aria-label="Previous">←</button>
+  <button class="ctl" id="next" aria-label="Next">→</button>
+  <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+  <span class="clock" id="clock"></span>
+  <span class="pos" id="pos"></span>
+  <button class="ctl" id="notes" aria-pressed="false">Notes <span aria-hidden="true">(N)</span></button>
+</nav>
+
+<script>
+  (function () {
+    var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
+    var dots = document.getElementById("dots");
+    var pos = document.getElementById("pos");
+    var clock = document.getElementById("clock");
+    var notesBtn = document.getElementById("notes");
+    var i = 0;
+
+    // Cumulative run time at the end of each beat, in seconds.
+    var marks = [0, 45, 75, 135, 195, 285, 330, 375, 405];
+
+    slides.forEach(function (_, n) {
+      var b = document.createElement("button");
+      b.className = "dot";
+      b.setAttribute("role", "tab");
+      b.setAttribute("aria-label", "Slide " + (n + 1));
+      b.addEventListener("click", function () { go(n); });
+      dots.appendChild(b);
+    });
+
+    function fmt(s) {
+      var m = Math.floor(s / 60);
+      return m + ":" + String(s % 60).padStart(2, "0");
+    }
+
+    function go(n) {
+      i = Math.max(0, Math.min(slides.length - 1, n));
+      slides.forEach(function (s, k) { s.classList.toggle("on", k === i); });
+      Array.prototype.forEach.call(dots.children, function (d, k) {
+        d.setAttribute("aria-current", k === i ? "true" : "false");
+      });
+      pos.textContent = (i + 1) + " / " + slides.length;
+      clock.textContent = fmt(marks[i]) + " → " + fmt(marks[i + 1] || marks[i]);
+      window.scrollTo(0, 0);
+    }
+
+    document.getElementById("prev").addEventListener("click", function () { go(i - 1); });
+    document.getElementById("next").addEventListener("click", function () { go(i + 1); });
+
+    notesBtn.addEventListener("click", function () {
+      var on = document.body.classList.toggle("notes");
+      notesBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.target && /^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;
+      if (e.key === "ArrowRight" || e.key === "PageDown") { go(i + 1); e.preventDefault(); }
+      else if (e.key === "ArrowLeft" || e.key === "PageUp") { go(i - 1); e.preventDefault(); }
+      else if (e.key === "Home") { go(0); }
+      else if (e.key === "End") { go(slides.length - 1); }
+      else if (e.key === "n" || e.key === "N") { notesBtn.click(); }
+    });
+
+    go(0);
+  })();
+</script>
