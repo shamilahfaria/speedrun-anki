@@ -67,8 +67,59 @@ message TopicScores {
   bool gap_valid = 5;
 }
 
+// One content category from the official MCAT outline, and whether the learner
+// has any attributable evidence on it.
+//
+// The point of a coverage map is to make the UNSTUDIED visible. A per-topic
+// table built from the learner's own tags can only show what they have already
+// touched, which is exactly the blind spot.
+message CoverageEntry {
+  // Official AAMC content category code, e.g. "1A".
+  string code = 1;
+  string title = 2;
+  // Section code, e.g. "BB", "CP", "CARS", "PS".
+  string section = 3;
+  bool covered = 4;
+  uint32 observations = 5;
+}
+
+message Coverage {
+  repeated CoverageEntry entries = 1;
+  uint32 covered_count = 2;
+  uint32 total_count = 3;
+  // covered_count / total_count, 0..1.
+  double fraction = 4;
+}
+
+// A projected MCAT score on the real 472-528 scale, or a refusal.
+//
+// Reported with the range, the percent of the outline covered, and the reasons,
+// because a bare number is the thing this product exists to refuse. `sufficient`
+// false means no projection was made and `point`/`lower`/`upper` are 0.
+message ProjectedScore {
+  // 472-528. Zero when not sufficient.
+  uint32 point = 1;
+  uint32 lower = 2;
+  uint32 upper = 3;
+  bool sufficient = 4;
+  // "low" | "moderate" | "high" -- driven by coverage and evidence volume.
+  string confidence = 5;
+  // Plain-language drivers, shown to the learner. Always populated, including
+  // when the projection is refused -- especially then.
+  repeated string reasons = 6;
+  // Epoch millis of the most recent review counted.
+  int64 last_updated_millis = 7;
+  // The give-up rule that was applied, stated so it can be checked.
+  string give_up_rule = 8;
+}
+
 message TransferScores {
   repeated TopicScores topics = 1;
-  // DOK 4 -- projected exam readiness, aggregated across topics.
+  // DOK 4 -- projected exam readiness as a raw proportion, aggregated across
+  // topics. Retained for callers that want the underlying quantity.
   ScoreInterval readiness = 2;
+  // The same thing mapped onto the real exam scale, with its range, coverage,
+  // confidence and reasons. This is what a learner should ever see.
+  ProjectedScore projected = 3;
+  Coverage coverage = 4;
 }
