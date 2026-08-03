@@ -8,7 +8,9 @@ use std::sync::Arc;
 
 use crate::prelude::*;
 use crate::transfer::build_report;
+use crate::transfer::outline;
 use crate::transfer::parse_tags;
+use crate::transfer::scale;
 use crate::transfer::topic_list;
 use crate::transfer::GradedReview;
 use crate::transfer::Score;
@@ -71,6 +73,23 @@ impl Collection {
             })?
             .collect()
     }
+
+    /// Epoch millis of the most recent graded review, or 0 if there are none.
+    ///
+    /// Surfaced alongside the projection because a readiness number computed
+    /// from reviews three weeks old is a different claim from one computed
+    /// today, and the learner cannot tell the difference without being told.
+    fn last_graded_review_millis(&mut self, since_millis: i64) -> Result<i64> {
+        let stamp: Option<i64> = self
+            .storage
+            .db
+            .prepare_cached(
+                "SELECT max(r.id) FROM revlog r
+                 WHERE r.id >= ?1 AND r.ease > 0 AND r.type NOT IN (4, 5)",
+            )?
+            .query_row([since_millis], |row| row.get(0))?;
+        Ok(stamp.unwrap_or(0))
+    }
 }
 
 impl crate::services::TransferService for Collection {
@@ -98,6 +117,26 @@ impl crate::services::TransferService for Collection {
         let reviews = self.graded_reviews(input.since_millis)?;
         let report = build_report(&reviews, thresholds);
 
+        // Coverage is computed against the official outline, not against the
+        // learner's tags, so untouched topics are visible rather than absent.
+        let mut counts: HashMap<String, u32> = HashMap::new();
+        for r in &reviews {
+            for topic in r.topics.iter() {
+                *counts.entry(topic.to_string()).or_default() += 1;
+            }
+        }
+        let coverage = outline::build_coverage(&counts);
+
+        // Most recent review counted, so the learner can see how stale this is.
+        let last_updated_millis = self.last_graded_review_millis(input.since_millis)?;
+
+        let projection = scale::project(
+            report.readiness,
+            coverage.fraction,
+            coverage.covered_count,
+            coverage.total_count,
+        );
+
         Ok(anki_proto::transfer::TransferScores {
             topics: report
                 .topics
@@ -111,6 +150,32 @@ impl crate::services::TransferService for Collection {
                 })
                 .collect(),
             readiness: Some(score_to_proto(report.readiness)),
+            projected: Some(anki_proto::transfer::ProjectedScore {
+                point: projection.point,
+                lower: projection.lower,
+                upper: projection.upper,
+                sufficient: projection.sufficient,
+                confidence: projection.confidence,
+                reasons: projection.reasons,
+                last_updated_millis,
+                give_up_rule: projection.give_up_rule,
+            }),
+            coverage: Some(anki_proto::transfer::Coverage {
+                entries: coverage
+                    .entries
+                    .into_iter()
+                    .map(|e| anki_proto::transfer::CoverageEntry {
+                        code: e.code.to_string(),
+                        title: e.title.to_string(),
+                        section: e.section.to_string(),
+                        covered: e.covered,
+                        observations: e.observations,
+                    })
+                    .collect(),
+                covered_count: coverage.covered_count,
+                total_count: coverage.total_count,
+                fraction: coverage.fraction,
+            }),
         })
     }
 }

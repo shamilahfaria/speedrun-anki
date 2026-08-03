@@ -27,6 +27,8 @@
 // belongs next to SQLite rather than across a serialization boundary. This is the
 // weaker of the two arguments and is not the reason the code lives here.
 
+pub mod outline;
+pub mod scale;
 pub mod service;
 pub mod wilson;
 
