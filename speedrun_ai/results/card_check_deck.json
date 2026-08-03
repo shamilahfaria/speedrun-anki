@@ -1,0 +1,662 @@
+{
+  "cards": [
+    {
+      "back": "The cytosol",
+      "front": "Where in the cell does glycolysis take place?",
+      "kind": "recall",
+      "provenance": {
+        "end": 135,
+        "passage_index": 0,
+        "quote": "Glycolysis takes place in the cytosol and proceeds without oxygen, splitting one glucose into two molecules of pyruvate.",
+        "source_id": "mcat-review-2026-08",
+        "start": 15
+      },
+      "topic": "Glycolysis"
+    },
+    {
+      "back": "In the mitochondrial matrix",
+      "front": "Where does the citric acid cycle run?",
+      "kind": "recall",
+      "provenance": {
+        "end": 1117,
+        "passage_index": 1,
+        "quote": "The citric acid cycle runs in the mitochondrial matrix",
+        "source_id": "mcat-review-2026-08",
+        "start": 1063
+      },
+      "topic": "Cellular respiration"
+    },
+    {
+      "back": "The substrate concentration at which an enzyme runs at half of its maximum velocity, inversely related to the enzyme's apparent affinity.",
+      "front": "What is the Michaelis constant Km?",
+      "kind": "recall",
+      "provenance": {
+        "end": 2332,
+        "passage_index": 2,
+        "quote": "The Michaelis constant Km is the substrate concentration at which an enzyme runs at half of its maximum velocity, and it is inversely related to the enzyme's apparent affinity.",
+        "source_id": "mcat-review-2026-08",
+        "start": 2156
+      },
+      "topic": "Enzyme kinetics"
+    },
+    {
+      "back": "Glycine",
+      "front": "What is the only standard amino acid that is not chiral?",
+      "kind": "recall",
+      "provenance": {
+        "end": 3517,
+        "passage_index": 3,
+        "quote": "The twenty standard amino acids share an alpha carbon bearing an amino group, a carboxyl group and a distinguishing side chain, and all except glycine are chiral.",
+        "source_id": "mcat-review-2026-08",
+        "start": 3355
+      },
+      "topic": "Proteins"
+    },
+    {
+      "back": "Fluid bilayers of amphipathic phospholipids, with hydrophilic heads facing water and hydrophobic tails facing inward.",
+      "front": "What are biological membranes composed of?",
+      "kind": "recall",
+      "provenance": {
+        "end": 4694,
+        "passage_index": 4,
+        "quote": "Biological membranes are fluid bilayers of amphipathic phospholipids, with hydrophilic heads facing water and hydrophobic tails facing inward.",
+        "source_id": "mcat-review-2026-08",
+        "start": 4552
+      },
+      "topic": "Membranes"
+    },
+    {
+      "back": "It donates a proton.",
+      "front": "What does a Bronsted-Lowry acid do?",
+      "kind": "recall",
+      "provenance": {
+        "end": 5727,
+        "passage_index": 5,
+        "quote": "A Bronsted-Lowry acid donates a proton",
+        "source_id": "mcat-review-2026-08",
+        "start": 5689
+      },
+      "topic": "Acids and bases"
+    },
+    {
+      "back": "One concerted step.",
+      "front": "How many steps does the bimolecular substitution pathway proceed in?",
+      "kind": "recall",
+      "provenance": {
+        "end": 6793,
+        "passage_index": 6,
+        "quote": "The bimolecular substitution pathway proceeds in one concerted step",
+        "source_id": "mcat-review-2026-08",
+        "start": 6726
+      },
+      "topic": "Substitution reactions"
+    },
+    {
+      "back": "The electronic environment of a hydrogen",
+      "front": "What does the chemical shift report in proton nuclear magnetic resonance?",
+      "kind": "recall",
+      "provenance": {
+        "end": 7943,
+        "passage_index": 7,
+        "quote": "In proton nuclear magnetic resonance, the chemical shift reports the electronic environment of a hydrogen and is measured in parts per million from tetramethylsilane.",
+        "source_id": "mcat-review-2026-08",
+        "start": 7777
+      },
+      "topic": "Spectroscopy"
+    },
+    {
+      "back": "The volume flow rate is constant, forcing a higher flow speed in a narrower cross-section.",
+      "front": "What is constant for an incompressible fluid due to volume flow rate?",
+      "kind": "recall",
+      "provenance": {
+        "end": 9096,
+        "passage_index": 8,
+        "quote": "For an incompressible fluid the volume flow rate is constant, so a narrower cross-section forces a higher flow speed.",
+        "source_id": "mcat-review-2026-08",
+        "start": 8979
+      },
+      "topic": "Fluids and circuits"
+    },
+    {
+      "back": "A neutral stimulus with one that already produces a response until the neutral stimulus produces it alone.",
+      "front": "What does classical conditioning pair together?",
+      "kind": "recall",
+      "provenance": {
+        "end": 10195,
+        "passage_index": 9,
+        "quote": "Classical conditioning pairs a neutral stimulus with one that already produces a response until the neutral stimulus produces it alone.",
+        "source_id": "mcat-review-2026-08",
+        "start": 10060
+      },
+      "topic": "Learning and stress"
+    },
+    {
+      "back": "A net yield of two ATP and two NADH per glucose.",
+      "front": "What is the net yield of ATP and NADH per glucose molecule in glycolysis?",
+      "kind": "recall",
+      "provenance": {
+        "end": 254,
+        "passage_index": 0,
+        "quote": "The pathway invests two ATP in its early steps and recovers four, for a net yield of two ATP and two NADH per glucose.",
+        "source_id": "mcat-review-2026-08",
+        "start": 136
+      },
+      "topic": "Glycolysis"
+    },
+    {
+      "back": "Two molecules",
+      "front": "How many molecules of carbon dioxide are released for each acetyl-CoA that enters the citric acid cycle?",
+      "kind": "recall",
+      "provenance": {
+        "end": 1194,
+        "passage_index": 1,
+        "quote": "where each acetyl-CoA that enters releases two molecules of carbon dioxide.",
+        "source_id": "mcat-review-2026-08",
+        "start": 1119
+      },
+      "topic": "Cellular respiration"
+    },
+    {
+      "back": "It raises Vmax but leaves Km unchanged because Vmax is proportional to the total enzyme concentration.",
+      "front": "How does adding more enzyme affect Vmax and Km?",
+      "kind": "recall",
+      "provenance": {
+        "end": 2447,
+        "passage_index": 2,
+        "quote": "Vmax is proportional to the total enzyme concentration, so adding more enzyme raises Vmax but leaves Km unchanged.",
+        "source_id": "mcat-review-2026-08",
+        "start": 2333
+      },
+      "topic": "Enzyme kinetics"
+    },
+    {
+      "back": "Aspartate and glutamate",
+      "front": "Which amino acids are negatively charged at physiological pH?",
+      "kind": "recall",
+      "provenance": {
+        "end": 3721,
+        "passage_index": 3,
+        "quote": "Side-chain pKa values determine charge at a given pH: aspartate and glutamate are negative at physiological pH, lysine and arginine are positive, and histidine sits near neutrality with a pKa around six.",
+        "source_id": "mcat-review-2026-08",
+        "start": 3518
+      },
+      "topic": "Proteins"
+    },
+    {
+      "back": "It buffers fluidity, keeping the membrane from becoming too rigid when cold and too permeable when warm.",
+      "front": "What role does cholesterol play in biological membranes?",
+      "kind": "recall",
+      "provenance": {
+        "end": 4808,
+        "passage_index": 4,
+        "quote": "Cholesterol buffers fluidity, keeping the membrane from becoming too rigid when cold and too permeable when warm.",
+        "source_id": "mcat-review-2026-08",
+        "start": 4695
+      },
+      "topic": "Membranes"
+    },
+    {
+      "back": "The stronger the acid, the weaker its conjugate base.",
+      "front": "What is the relationship between the strength of an acid and its conjugate base?",
+      "kind": "recall",
+      "provenance": {
+        "end": 5820,
+        "passage_index": 5,
+        "quote": "the stronger the acid the weaker its conjugate base.",
+        "source_id": "mcat-review-2026-08",
+        "start": 5768
+      },
+      "topic": "Acids and bases"
+    },
+    {
+      "back": "Both the substrate and the nucleophile.",
+      "front": "What does the rate of the bimolecular substitution pathway depend on?",
+      "kind": "recall",
+      "provenance": {
+        "end": 6857,
+        "passage_index": 6,
+        "quote": "so its rate depends on both the substrate and the nucleophile.",
+        "source_id": "mcat-review-2026-08",
+        "start": 6795
+      },
+      "topic": "Substitution reactions"
+    },
+    {
+      "back": "Parts per million from tetramethylsilane",
+      "front": "What unit is used to measure chemical shift in proton nuclear magnetic resonance?",
+      "kind": "recall",
+      "provenance": {
+        "end": 7943,
+        "passage_index": 7,
+        "quote": "In proton nuclear magnetic resonance, the chemical shift reports the electronic environment of a hydrogen and is measured in parts per million from tetramethylsilane.",
+        "source_id": "mcat-review-2026-08",
+        "start": 7777
+      },
+      "topic": "Spectroscopy"
+    },
+    {
+      "back": "It conserves energy per unit volume along a streamline.",
+      "front": "What does Bernoulli's equation conserve along a streamline?",
+      "kind": "recall",
+      "provenance": {
+        "end": 9252,
+        "passage_index": 8,
+        "quote": "Bernoulli's equation conserves energy per unit volume along a streamline, which means the faster region of an ideal flow is also the lower-pressure region.",
+        "source_id": "mcat-review-2026-08",
+        "start": 9097
+      },
+      "topic": "Fluids and circuits"
+    },
+    {
+      "back": "Reinforcement always increases that frequency while punishment always decreases it.",
+      "front": "How do reinforcement and punishment affect the frequency of a behaviour in operant conditioning?",
+      "kind": "recall",
+      "provenance": {
+        "end": 10357,
+        "passage_index": 9,
+        "quote": "reinforcement always increases that frequency while punishment always decreases it.",
+        "source_id": "mcat-review-2026-08",
+        "start": 10274
+      },
+      "topic": "Learning and stress"
+    },
+    {
+      "back": "Phosphofructokinase-1",
+      "front": "Which enzyme catalyzes the committed, rate-limiting step of glycolysis?",
+      "kind": "recall",
+      "provenance": {
+        "end": 385,
+        "passage_index": 0,
+        "quote": "Phosphofructokinase-1 catalyses the committed, rate-limiting step, converting fructose-6-phosphate into fructose-1,6-bisphosphate.",
+        "source_id": "mcat-review-2026-08",
+        "start": 255
+      },
+      "topic": "Glycolysis"
+    },
+    {
+      "back": "Isocitrate dehydrogenase",
+      "front": "What is the rate-limiting enzyme of the citric acid cycle?",
+      "kind": "recall",
+      "provenance": {
+        "end": 1391,
+        "passage_index": 1,
+        "quote": "Isocitrate dehydrogenase is the cycle's rate-limiting enzyme",
+        "source_id": "mcat-review-2026-08",
+        "start": 1331
+      },
+      "topic": "Cellular respiration"
+    },
+    {
+      "back": "It binds the active site, raising the apparent Km while leaving Vmax untouched.",
+      "front": "Where does a competitive inhibitor bind and how does it affect Km and Vmax?",
+      "kind": "recall",
+      "provenance": {
+        "end": 2606,
+        "passage_index": 2,
+        "quote": "A competitive inhibitor binds the active site, raising the apparent Km while leaving Vmax untouched, because a high substrate concentration can outcompete it.",
+        "source_id": "mcat-review-2026-08",
+        "start": 2448
+      },
+      "topic": "Enzyme kinetics"
+    },
+    {
+      "back": "The isoelectric point",
+      "front": "What is the term for the pH at which a molecule carries no net charge and does not migrate in an electric field?",
+      "kind": "recall",
+      "provenance": {
+        "end": 3857,
+        "passage_index": 3,
+        "quote": "The isoelectric point is the pH at which the molecule carries no net charge, and a protein does not migrate in an electric field there.",
+        "source_id": "mcat-review-2026-08",
+        "start": 3722
+      },
+      "topic": "Proteins"
+    },
+    {
+      "back": "Small nonpolar molecules such as oxygen and carbon dioxide.",
+      "front": "What type of molecules can diffuse straight through biological membranes?",
+      "kind": "recall",
+      "provenance": {
+        "end": 4970,
+        "passage_index": 4,
+        "quote": "Small nonpolar molecules such as oxygen and carbon dioxide diffuse straight through, whereas ions and large polar molecules require protein channels or carriers.",
+        "source_id": "mcat-review-2026-08",
+        "start": 4809
+      },
+      "topic": "Membranes"
+    },
+    {
+      "back": "pH equals pKa plus the logarithm of the ratio of conjugate base to acid.",
+      "front": "What does the Henderson-Hasselbalch equation state that pH equals?",
+      "kind": "recall",
+      "provenance": {
+        "end": 5940,
+        "passage_index": 5,
+        "quote": "The Henderson-Hasselbalch equation states that pH equals pKa plus the logarithm of the ratio of conjugate base to acid.",
+        "source_id": "mcat-review-2026-08",
+        "start": 5821
+      },
+      "topic": "Acids and bases"
+    },
+    {
+      "back": "It requires backside attack, which inverts the configuration at the carbon under attack.",
+      "front": "What type of attack is required for the bimolecular substitution pathway, and what does it do to the configuration?",
+      "kind": "recall",
+      "provenance": {
+        "end": 6945,
+        "passage_index": 6,
+        "quote": "It requires backside attack, which inverts the configuration at the carbon under attack",
+        "source_id": "mcat-review-2026-08",
+        "start": 6858
+      },
+      "topic": "Substitution reactions"
+    },
+    {
+      "back": "They deshield them and move their signals downfield",
+      "front": "What effect do electronegative neighbours have on nearby hydrogens?",
+      "kind": "recall",
+      "provenance": {
+        "end": 8108,
+        "passage_index": 7,
+        "quote": "Electronegative neighbours deshield nearby hydrogens and move their signals downfield, which is why an aldehyde hydrogen appears near nine to ten parts per million.",
+        "source_id": "mcat-review-2026-08",
+        "start": 7944
+      },
+      "topic": "Spectroscopy"
+    },
+    {
+      "back": "It increases with depth as the density times gravitational acceleration times depth.",
+      "front": "How does hydrostatic pressure change with depth?",
+      "kind": "recall",
+      "provenance": {
+        "end": 9409,
+        "passage_index": 8,
+        "quote": "Hydrostatic pressure increases with depth as the density times gravitational acceleration times depth, and it does not depend on the shape of the container.",
+        "source_id": "mcat-review-2026-08",
+        "start": 9253
+      },
+      "topic": "Fluids and circuits"
+    },
+    {
+      "back": "Because it removes an unpleasant stimulus in order to strengthen a response.",
+      "front": "Why is negative reinforcement not a form of punishment?",
+      "kind": "recall",
+      "provenance": {
+        "end": 10491,
+        "passage_index": 9,
+        "quote": "Negative reinforcement removes an unpleasant stimulus in order to strengthen a response, which is why it is not a form of punishment.",
+        "source_id": "mcat-review-2026-08",
+        "start": 10358
+      },
+      "topic": "Learning and stress"
+    },
+    {
+      "back": "ATP and citrate",
+      "front": "What molecules inhibit phosphofructokinase-1?",
+      "kind": "recall",
+      "provenance": {
+        "end": 494,
+        "passage_index": 0,
+        "quote": "That enzyme is inhibited by ATP and by citrate, and it is activated by AMP and by fructose-2,6-bisphosphate.",
+        "source_id": "mcat-review-2026-08",
+        "start": 386
+      },
+      "topic": "Glycolysis"
+    },
+    {
+      "back": "Pyruvate dehydrogenase",
+      "front": "What enzyme links glycolysis to the citric acid cycle?",
+      "kind": "recall",
+      "provenance": {
+        "end": 1500,
+        "passage_index": 1,
+        "quote": "Pyruvate dehydrogenase links glycolysis to the cycle",
+        "source_id": "mcat-review-2026-08",
+        "start": 1448
+      },
+      "topic": "Cellular respiration"
+    },
+    {
+      "back": "It binds an allosteric site and lowers Vmax without changing Km.",
+      "front": "Where does a pure noncompetitive inhibitor bind and what is its effect on Vmax and Km?",
+      "kind": "recall",
+      "provenance": {
+        "end": 2700,
+        "passage_index": 2,
+        "quote": "A pure noncompetitive inhibitor binds an allosteric site and lowers Vmax without changing Km.",
+        "source_id": "mcat-review-2026-08",
+        "start": 2607
+      },
+      "topic": "Enzyme kinetics"
+    },
+    {
+      "back": "Partial double-bond character",
+      "front": "What structural feature of peptide bonds keeps the backbone amide planar and restricts rotation?",
+      "kind": "recall",
+      "provenance": {
+        "end": 3969,
+        "passage_index": 3,
+        "quote": "Peptide bonds have partial double-bond character, which keeps the backbone amide planar and restricts rotation.",
+        "source_id": "mcat-review-2026-08",
+        "start": 3858
+      },
+      "topic": "Proteins"
+    },
+    {
+      "back": "No protein and no energy.",
+      "front": "What are two requirements that simple diffusion does not need?",
+      "kind": "recall",
+      "provenance": {
+        "end": 5069,
+        "passage_index": 4,
+        "quote": "Simple diffusion needs no protein and no energy, and it always runs down a concentration gradient.",
+        "source_id": "mcat-review-2026-08",
+        "start": 4971
+      },
+      "topic": "Membranes"
+    },
+    {
+      "back": "Within about one pH unit of its pKa.",
+      "front": "Within what range does a buffer work best?",
+      "kind": "recall",
+      "provenance": {
+        "end": 6018,
+        "passage_index": 5,
+        "quote": "A buffer resists pH change and works best within about one pH unit of its pKa",
+        "source_id": "mcat-review-2026-08",
+        "start": 5941
+      },
+      "topic": "Acids and bases"
+    },
+    {
+      "back": "Methyl and primary substrates.",
+      "front": "Which substrates react fastest in the bimolecular substitution pathway?",
+      "kind": "recall",
+      "provenance": {
+        "end": 7025,
+        "passage_index": 6,
+        "quote": "so methyl and primary substrates react fastest.",
+        "source_id": "mcat-review-2026-08",
+        "start": 6978
+      },
+      "topic": "Substitution reactions"
+    },
+    {
+      "back": "The number of hydrogens in that environment",
+      "front": "What is the area under a peak proportional to in proton nuclear magnetic resonance?",
+      "kind": "recall",
+      "provenance": {
+        "end": 8282,
+        "passage_index": 7,
+        "quote": "The area under a peak is proportional to the number of hydrogens in that environment, and splitting into n plus one lines reveals how many hydrogens sit on adjacent carbons.",
+        "source_id": "mcat-review-2026-08",
+        "start": 8109
+      },
+      "topic": "Spectroscopy"
+    },
+    {
+      "back": "It is equal to the weight of the fluid the object displaces.",
+      "front": "What determines the magnitude of the buoyant force on a submerged object?",
+      "kind": "recall",
+      "provenance": {
+        "end": 9503,
+        "passage_index": 8,
+        "quote": "A submerged object experiences a buoyant force equal to the weight of the fluid it displaces.",
+        "source_id": "mcat-review-2026-08",
+        "start": 9410
+      },
+      "topic": "Fluids and circuits"
+    },
+    {
+      "back": "Variable ratio schedules, which reinforce after an unpredictable number of responses.",
+      "front": "Which reinforcement schedule is the most resistant to extinction?",
+      "kind": "recall",
+      "provenance": {
+        "end": 10611,
+        "passage_index": 9,
+        "quote": "Variable ratio schedules reinforce after an unpredictable number of responses and are the most resistant to extinction.",
+        "source_id": "mcat-review-2026-08",
+        "start": 10492
+      },
+      "topic": "Learning and stress"
+    },
+    {
+      "back": "By phosphorylating it",
+      "front": "How does hexokinase trap glucose inside the cell?",
+      "kind": "recall",
+      "provenance": {
+        "end": 663,
+        "passage_index": 0,
+        "quote": "Hexokinase traps glucose inside the cell by phosphorylating it, and in the liver the higher-Km isoform glucokinase performs the same job only when glucose is abundant.",
+        "source_id": "mcat-review-2026-08",
+        "start": 496
+      },
+      "topic": "Glycolysis"
+    },
+    {
+      "back": "Oxygen",
+      "front": "What is the terminal electron acceptor at complex IV in the electron transport chain?",
+      "kind": "recall",
+      "provenance": {
+        "end": 1899,
+        "passage_index": 1,
+        "quote": "Oxygen is the terminal electron acceptor at complex IV",
+        "source_id": "mcat-review-2026-08",
+        "start": 1845
+      },
+      "topic": "Cellular respiration"
+    },
+    {
+      "back": "The equilibrium constant and the free energy difference between reactants and products.",
+      "front": "What two thermodynamic properties do enzymes never change?",
+      "kind": "recall",
+      "provenance": {
+        "end": 2874,
+        "passage_index": 2,
+        "quote": "they never change the equilibrium constant or the free energy difference between reactants and products.",
+        "source_id": "mcat-review-2026-08",
+        "start": 2770
+      },
+      "topic": "Enzyme kinetics"
+    },
+    {
+      "back": "Backbone hydrogen bonds",
+      "front": "What type of bonds hold secondary structures such as alpha helices and beta sheets together?",
+      "kind": "recall",
+      "provenance": {
+        "end": 4171,
+        "passage_index": 3,
+        "quote": "Secondary structure comprises alpha helices and beta sheets held together by backbone hydrogen bonds, while tertiary structure is driven largely by the hydrophobic effect burying nonpolar side chains.",
+        "source_id": "mcat-review-2026-08",
+        "start": 3971
+      },
+      "topic": "Proteins"
+    },
+    {
+      "back": "Once every transporter is occupied.",
+      "front": "When does facilitated diffusion saturate?",
+      "kind": "recall",
+      "provenance": {
+        "end": 5191,
+        "passage_index": 4,
+        "quote": "Facilitated diffusion moves solute down its gradient through a protein and saturates once every transporter is occupied.",
+        "source_id": "mcat-review-2026-08",
+        "start": 5071
+      },
+      "topic": "Membranes"
+    },
+    {
+      "back": "The pH equals the pKa.",
+      "front": "What is the pH equal to at exactly one half of the equivalence volume in a titration of a weak acid?",
+      "kind": "recall",
+      "provenance": {
+        "end": 6153,
+        "passage_index": 5,
+        "quote": "At exactly one half of the equivalence volume in a titration of a weak acid, the pH equals the pKa.",
+        "source_id": "mcat-review-2026-08",
+        "start": 6054
+      },
+      "topic": "Acids and bases"
+    },
+    {
+      "back": "Polar aprotic solvents such as dimethyl sulfoxide, because they leave the nucleophile relatively unencumbered.",
+      "front": "What type of solvents accelerate the bimolecular substitution pathway and why?",
+      "kind": "recall",
+      "provenance": {
+        "end": 7149,
+        "passage_index": 6,
+        "quote": "Polar aprotic solvents such as dimethyl sulfoxide accelerate it because they leave the nucleophile relatively unencumbered.",
+        "source_id": "mcat-review-2026-08",
+        "start": 7026
+      },
+      "topic": "Substitution reactions"
+    },
+    {
+      "back": "How many hydrogens sit on adjacent carbons",
+      "front": "What does splitting into n plus one lines reveal?",
+      "kind": "recall",
+      "provenance": {
+        "end": 8282,
+        "passage_index": 7,
+        "quote": "The area under a peak is proportional to the number of hydrogens in that environment, and splitting into n plus one lines reveals how many hydrogens sit on adjacent carbons.",
+        "source_id": "mcat-review-2026-08",
+        "start": 8109
+      },
+      "topic": "Spectroscopy"
+    },
+    {
+      "back": "The resistances add directly.",
+      "front": "How do resistances combine in a series circuit?",
+      "kind": "recall",
+      "provenance": {
+        "end": 9604,
+        "passage_index": 8,
+        "quote": "In a series circuit the same current passes through every element and the resistances add directly.",
+        "source_id": "mcat-review-2026-08",
+        "start": 9505
+      },
+      "topic": "Fluids and circuits"
+    },
+    {
+      "back": "Encoding, storage and retrieval.",
+      "front": "What are the three stages of memory?",
+      "kind": "recall",
+      "provenance": {
+        "end": 10675,
+        "passage_index": 9,
+        "quote": "Encoding, storage and retrieval are the three stages of memory",
+        "source_id": "mcat-review-2026-08",
+        "start": 10613
+      },
+      "topic": "Learning and stress"
+    }
+  ],
+  "data_cutoff": "2026-08-03",
+  "degraded": false,
+  "degraded_reason": "",
+  "fingerprint": "c9193cab18bdba417c3a4f6bbefbaba2",
+  "model": "gemini-3.5-flash-lite",
+  "provider_name": "gemini",
+  "rejected": 0,
+  "source_id": "mcat-review-2026-08"
+}

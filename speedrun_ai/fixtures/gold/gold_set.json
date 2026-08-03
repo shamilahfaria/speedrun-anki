@@ -1,0 +1,309 @@
+{
+  "name": "speedrun-card-check-gold-set",
+  "version": 1,
+  "data_cutoff": "2026-08-03",
+  "source_id": "mcat-review-2026-08",
+  "authoring_note": "Fifty MCAT-style question and answer pairs, hand-written for this fixture set and frozen on the cutoff date, five per section of fixtures/source/mcat_review.md. They are the reference answer key for the card check: a generated card is judged against the gold pairs that cover the same material, plus the source span the card cites. The gold set was written before any card was generated, and it is deliberately worded differently from the source so that a card cannot be scored correct merely by echoing sentences.",
+  "pairs": [
+    {
+      "id": "g01",
+      "section": "Glycolysis",
+      "question": "Where in the cell does glycolysis occur and does it require oxygen?",
+      "answer": "In the cytosol, and no. Glycolysis is anaerobic; it needs no oxygen."
+    },
+    {
+      "id": "g02",
+      "section": "Glycolysis",
+      "question": "What is the net ATP and NADH yield of glycolysis per glucose?",
+      "answer": "A net of 2 ATP and 2 NADH per glucose. Two ATP are invested and four are produced."
+    },
+    {
+      "id": "g03",
+      "section": "Glycolysis",
+      "question": "Which enzyme catalyses the rate-limiting step of glycolysis and how is it regulated?",
+      "answer": "Phosphofructokinase-1. It is inhibited by ATP and citrate and activated by AMP and fructose-2,6-bisphosphate."
+    },
+    {
+      "id": "g04",
+      "section": "Glycolysis",
+      "question": "Why must pyruvate be reduced to lactate when oxygen is unavailable?",
+      "answer": "Lactate dehydrogenase regenerates NAD+, without which glycolysis would halt for lack of oxidised cofactor."
+    },
+    {
+      "id": "g05",
+      "section": "Glycolysis",
+      "question": "How do hexokinase and glucokinase differ in their affinity for glucose?",
+      "answer": "Glucokinase, the liver isoform, has a higher Km, so it acts mainly when glucose is abundant. Hexokinase has a low Km and works at ordinary concentrations."
+    },
+    {
+      "id": "g06",
+      "section": "Cellular respiration",
+      "question": "Where does the citric acid cycle take place and what does one turn produce?",
+      "answer": "In the mitochondrial matrix. One turn gives 3 NADH, 1 FADH2, 1 GTP and 2 carbon dioxide."
+    },
+    {
+      "id": "g07",
+      "section": "Cellular respiration",
+      "question": "Which enzyme is rate-limiting for the citric acid cycle and what controls it?",
+      "answer": "Isocitrate dehydrogenase, stimulated by ADP and inhibited by ATP and NADH."
+    },
+    {
+      "id": "g08",
+      "section": "Cellular respiration",
+      "question": "How does the proton gradient across the inner mitochondrial membrane produce ATP?",
+      "answer": "Protons pumped into the intermembrane space flow back through ATP synthase, and that flow drives phosphorylation of ADP. This is chemiosmotic coupling."
+    },
+    {
+      "id": "g09",
+      "section": "Cellular respiration",
+      "question": "What is the effect of an uncoupler such as 2,4-dinitrophenol on respiration?",
+      "answer": "Oxygen consumption rises and ATP synthesis falls. The gradient is dissipated as heat, so the chain runs faster but ATP synthase has nothing to work against."
+    },
+    {
+      "id": "g10",
+      "section": "Cellular respiration",
+      "question": "Which molecule is the terminal electron acceptor and what happens if it is absent?",
+      "answer": "Oxygen, at complex IV. Without it the electron transport chain backs up, the proton gradient collapses, and oxidative phosphorylation stops."
+    },
+    {
+      "id": "g11",
+      "section": "Enzyme kinetics",
+      "question": "What does the Michaelis constant Km represent?",
+      "answer": "The substrate concentration giving half of maximum velocity. A lower Km means a higher apparent affinity for substrate."
+    },
+    {
+      "id": "g12",
+      "section": "Enzyme kinetics",
+      "question": "How does a competitive inhibitor affect Km and Vmax?",
+      "answer": "Apparent Km rises and Vmax is unchanged, since enough substrate can outcompete the inhibitor for the active site."
+    },
+    {
+      "id": "g13",
+      "section": "Enzyme kinetics",
+      "question": "How does a pure noncompetitive inhibitor affect Km and Vmax?",
+      "answer": "Vmax falls and Km is unchanged, because the inhibitor binds an allosteric site regardless of substrate occupancy."
+    },
+    {
+      "id": "g14",
+      "section": "Enzyme kinetics",
+      "question": "Does an enzyme change the equilibrium constant of the reaction it catalyses?",
+      "answer": "No. An enzyme lowers the activation energy and speeds both directions equally, leaving the equilibrium constant and the free energy change untouched."
+    },
+    {
+      "id": "g15",
+      "section": "Enzyme kinetics",
+      "question": "What kind of velocity curve does a cooperative multi-subunit enzyme give?",
+      "answer": "A sigmoidal curve rather than a hyperbolic one, described by the Hill equation instead of simple Michaelis-Menten kinetics."
+    },
+    {
+      "id": "g16",
+      "section": "Proteins",
+      "question": "Which standard amino acid is achiral and why?",
+      "answer": "Glycine. Its side chain is a hydrogen, so the alpha carbon carries two identical substituents and is not a stereocentre."
+    },
+    {
+      "id": "g17",
+      "section": "Proteins",
+      "question": "Which amino acid side chain has a pKa closest to physiological pH?",
+      "answer": "Histidine, whose imidazole side chain has a pKa near 6, which is why it buffers and shuttles protons near pH 7.4."
+    },
+    {
+      "id": "g18",
+      "section": "Proteins",
+      "question": "What is the isoelectric point of a protein?",
+      "answer": "The pH at which the protein carries no net charge and therefore does not migrate in an electric field."
+    },
+    {
+      "id": "g19",
+      "section": "Proteins",
+      "question": "Which interaction stabilising tertiary structure is covalent?",
+      "answer": "The disulfide bridge between two cysteine residues. Hydrophobic interactions, hydrogen bonds and salt bridges are all noncovalent."
+    },
+    {
+      "id": "g20",
+      "section": "Proteins",
+      "question": "What distinguishes tertiary from quaternary protein structure?",
+      "answer": "Tertiary structure is the fold of one polypeptide chain; quaternary structure is the assembly of two or more separate chains, as in haemoglobin's four subunits."
+    },
+    {
+      "id": "g21",
+      "section": "Membranes",
+      "question": "Why is the phospholipid bilayer described as amphipathic?",
+      "answer": "Each phospholipid has a hydrophilic head that faces water and hydrophobic tails that face inward, so one molecule carries both characters."
+    },
+    {
+      "id": "g22",
+      "section": "Membranes",
+      "question": "What does cholesterol do to membrane fluidity?",
+      "answer": "It buffers fluidity in both directions: it prevents rigid packing at low temperature and restrains excessive fluidity at high temperature."
+    },
+    {
+      "id": "g23",
+      "section": "Membranes",
+      "question": "How does facilitated diffusion differ from primary active transport?",
+      "answer": "Facilitated diffusion uses a protein but no energy and runs down the gradient; primary active transport hydrolyses ATP to move solute against its gradient."
+    },
+    {
+      "id": "g24",
+      "section": "Membranes",
+      "question": "What stoichiometry does the sodium-potassium pump use?",
+      "answer": "Three sodium ions out for every two potassium ions in, per ATP hydrolysed."
+    },
+    {
+      "id": "g25",
+      "section": "Membranes",
+      "question": "Where does secondary active transport get its energy?",
+      "answer": "From an ion gradient previously established by primary active transport, not from ATP directly. The sodium-glucose cotransporter is the standard example."
+    },
+    {
+      "id": "g26",
+      "section": "Acids and bases",
+      "question": "State the Henderson-Hasselbalch equation and what it is used for.",
+      "answer": "pH = pKa + log([conjugate base]/[acid]). It gives the pH of a buffer from the ratio of its two components."
+    },
+    {
+      "id": "g27",
+      "section": "Acids and bases",
+      "question": "Over what pH range does a buffer work best?",
+      "answer": "Within roughly one pH unit either side of its pKa, where the base-to-acid ratio is near one and the buffer can absorb either addition."
+    },
+    {
+      "id": "g28",
+      "section": "Acids and bases",
+      "question": "What is the pH at the half-equivalence point of a weak acid titration?",
+      "answer": "It equals the pKa of the weak acid, because half the acid has been converted to conjugate base and the ratio is one."
+    },
+    {
+      "id": "g29",
+      "section": "Acids and bases",
+      "question": "Why is the equivalence point of a weak acid with a strong base above pH 7?",
+      "answer": "Only the conjugate base remains at that point, and it hydrolyses water to give hydroxide, so the solution is basic."
+    },
+    {
+      "id": "g30",
+      "section": "Acids and bases",
+      "question": "What happens to blood pH during hyperventilation and why?",
+      "answer": "It rises, giving respiratory alkalosis. Blowing off carbon dioxide pulls the bicarbonate equilibrium back, consuming hydrogen ions."
+    },
+    {
+      "id": "g31",
+      "section": "Substitution reactions",
+      "question": "Which substrates and solvents favour the bimolecular substitution pathway?",
+      "answer": "Methyl and primary substrates with a strong nucleophile in a polar aprotic solvent. Backside attack is blocked by steric bulk."
+    },
+    {
+      "id": "g32",
+      "section": "Substitution reactions",
+      "question": "What is the stereochemical outcome of a bimolecular substitution?",
+      "answer": "Inversion of configuration at the reacting carbon, because the nucleophile attacks from the side opposite the leaving group."
+    },
+    {
+      "id": "g33",
+      "section": "Substitution reactions",
+      "question": "Why do tertiary substrates favour the unimolecular pathway?",
+      "answer": "The intermediate is a carbocation, and alkyl groups stabilise it by induction and hyperconjugation, so a tertiary centre ionises most readily."
+    },
+    {
+      "id": "g34",
+      "section": "Substitution reactions",
+      "question": "Why does the unimolecular pathway give a racemic product?",
+      "answer": "The carbocation intermediate is planar, so the nucleophile can add to either face with roughly equal probability."
+    },
+    {
+      "id": "g35",
+      "section": "Substitution reactions",
+      "question": "On what does the rate of the unimolecular pathway depend?",
+      "answer": "On the substrate concentration only. The slow step is ionisation, which happens before the nucleophile is involved."
+    },
+    {
+      "id": "g36",
+      "section": "Spectroscopy",
+      "question": "Where does an aldehyde hydrogen appear in a proton NMR spectrum?",
+      "answer": "Near 9 to 10 parts per million, well downfield, because the adjacent carbonyl strongly deshields it."
+    },
+    {
+      "id": "g37",
+      "section": "Spectroscopy",
+      "question": "What does the integration of an NMR peak tell you?",
+      "answer": "The relative number of hydrogens in that environment. Area is proportional to hydrogen count, independent of chemical shift."
+    },
+    {
+      "id": "g38",
+      "section": "Spectroscopy",
+      "question": "What does the n+1 rule describe in proton NMR?",
+      "answer": "A signal splits into n+1 lines, where n is the number of hydrogens on adjacent carbons."
+    },
+    {
+      "id": "g39",
+      "section": "Spectroscopy",
+      "question": "Which infrared absorptions identify a carbonyl and an alcohol?",
+      "answer": "A sharp carbonyl stretch near 1700 wavenumbers and a broad alcohol O-H stretch above 3000 wavenumbers."
+    },
+    {
+      "id": "g40",
+      "section": "Spectroscopy",
+      "question": "What does the molecular ion peak in a mass spectrum tell you?",
+      "answer": "The molecular weight of the intact compound, since that peak is the mass-to-charge ratio of the unfragmented molecule."
+    },
+    {
+      "id": "g41",
+      "section": "Fluids and circuits",
+      "question": "What happens to fluid speed and pressure at a constriction in a pipe?",
+      "answer": "Speed rises because volume flow rate is conserved, and pressure falls because energy per unit volume is conserved along the streamline."
+    },
+    {
+      "id": "g42",
+      "section": "Fluids and circuits",
+      "question": "How does hydrostatic pressure depend on depth and container shape?",
+      "answer": "It equals fluid density times gravitational acceleration times depth, and it does not depend on the shape of the container."
+    },
+    {
+      "id": "g43",
+      "section": "Fluids and circuits",
+      "question": "State Archimedes' principle for a submerged object.",
+      "answer": "The buoyant force equals the weight of the fluid the object displaces."
+    },
+    {
+      "id": "g44",
+      "section": "Fluids and circuits",
+      "question": "How do resistances combine in series and in parallel?",
+      "answer": "In series the resistances add. In parallel the reciprocals add, so the equivalent resistance is smaller than the smallest branch."
+    },
+    {
+      "id": "g45",
+      "section": "Fluids and circuits",
+      "question": "What happens to total current when a resistor is added in parallel?",
+      "answer": "Total resistance falls, so the current drawn from the source rises. The voltage across each branch is unchanged."
+    },
+    {
+      "id": "g46",
+      "section": "Learning and stress",
+      "question": "How does negative reinforcement differ from punishment?",
+      "answer": "Negative reinforcement removes an unpleasant stimulus and increases the behaviour. Punishment decreases the behaviour, whichever way it is delivered."
+    },
+    {
+      "id": "g47",
+      "section": "Learning and stress",
+      "question": "Which reinforcement schedule is most resistant to extinction?",
+      "answer": "Variable ratio, because reinforcement arrives after an unpredictable number of responses so a run of unrewarded responses carries no signal."
+    },
+    {
+      "id": "g48",
+      "section": "Learning and stress",
+      "question": "Why is recognition usually easier than free recall?",
+      "answer": "Recognition presents the material, which supplies retrieval cues directly. Free recall requires generating it unaided."
+    },
+    {
+      "id": "g49",
+      "section": "Learning and stress",
+      "question": "List the hormones of the HPA axis in order.",
+      "answer": "Corticotropin-releasing hormone from the hypothalamus, then adrenocorticotropic hormone from the anterior pituitary, then cortisol from the adrenal cortex."
+    },
+    {
+      "id": "g50",
+      "section": "Learning and stress",
+      "question": "What are the effects of chronically elevated cortisol?",
+      "answer": "Raised blood glucose, suppressed immune function, and negative feedback onto the hypothalamus and pituitary."
+    }
+  ]
+}

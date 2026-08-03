@@ -1,0 +1,9 @@
+{
+  "name": "speedrun-card-check-source",
+  "version": 1,
+  "data_cutoff": "2026-08-03",
+  "source_id": "mcat-review-2026-08",
+  "file": "mcat_review.md",
+  "section_marker": "## ",
+  "cutoff_note": "One hand-written MCAT review document, authored for this fixture set and frozen on the cutoff date. It is not scraped and contains nothing published after that date. Every generated card in the card check comes from this document and carries a character span into it, so any card can be checked against the sentence it claims to be based on. Ten sections, each two paragraphs; headings are kept under thirty characters so the offline extractive path does not turn a heading into a card."
+}

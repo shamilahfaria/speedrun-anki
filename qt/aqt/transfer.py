@@ -11,6 +11,9 @@
 
 from __future__ import annotations
 
+from concurrent.futures import Future
+from typing import Any
+
 import aqt
 from aqt.qt import (
     QDialog,
@@ -136,6 +139,13 @@ def _render(scores) -> str:
 """
 
 
+def _render_loading() -> str:
+    return (
+        '<div style="font-family:-apple-system,Segoe UI,sans-serif;'
+        'opacity:.6;padding:24px">Scoring your review history…</div>'
+    )
+
+
 class TransferReportDialog(QDialog):
     def __init__(self, mw: aqt.main.AnkiQt) -> None:
         QDialog.__init__(self, mw, Qt.WindowType.Window)
@@ -156,10 +166,27 @@ class TransferReportDialog(QDialog):
         restoreGeom(self, "transferReport")
 
     def refresh(self) -> None:
-        scores = self.mw.col._backend.compute_transfer_scores(
-            since_millis=0, min_reviews=MIN_REVIEWS, min_cards=MIN_CARDS
-        )
-        self.browser.setHtml(_render(scores))
+        """Compute off the main thread.
+
+        Scoring scans the whole review log: ~500 ms on a 50,000-card collection.
+        Run inline, that is a half-second UI freeze every time this opens, and
+        Anki's own watchdog flags it. Section 10 sets a 100 ms ceiling on
+        blocking the UI, and no amount of optimising the query gets a full-log
+        scan under that -- the fix is to not be on this thread at all.
+        """
+        self.browser.setHtml(_render_loading())
+
+        def task() -> Any:
+            return self.mw.col._backend.compute_transfer_scores(
+                since_millis=0, min_reviews=MIN_REVIEWS, min_cards=MIN_CARDS
+            )
+
+        def on_done(future: Future) -> None:
+            # Re-raises on the main thread if scoring failed, so an error
+            # surfaces as an error rather than as a permanently loading pane.
+            self.browser.setHtml(_render(future.result()))
+
+        self.mw.taskman.run_in_background(task, on_done)
 
     def reject(self) -> None:
         saveGeom(self, "transferReport")

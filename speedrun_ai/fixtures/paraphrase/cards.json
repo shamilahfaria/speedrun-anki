@@ -1,0 +1,488 @@
+{
+  "name": "speedrun-paraphrase-fixture",
+  "version": 1,
+  "data_cutoff": "2026-08-03",
+  "authoring_note": "Thirty MCAT-style recall cards, each paired with two reworded exam-style variants, hand-written for this fixture set and frozen on the cutoff date. Nothing here is scraped and no item depends on material published after that date. A variant is written to test the same underlying knowledge as its card while sharing as little surface wording as possible: the stem is re-framed as a scenario, the technical nouns of the original are replaced by descriptions of what they do, and the question is asked from the other end of the causal chain. Content-word overlap with the original stem is held at or below 0.35 (Jaccard) so that surface matching alone cannot carry a responder across.",
+  "cards": [
+    {
+      "id": "pc-01",
+      "topic": "Biochemistry",
+      "front": "Which enzyme catalyses the rate-limiting step of glycolysis, and which two molecules activate it?",
+      "back": "Phosphofructokinase-1. It is activated by AMP and fructose-2,6-bisphosphate, and inhibited by ATP and citrate.",
+      "variants": [
+        {
+          "front": "During a sprint a hepatocyte's energy charge falls and cytosolic AMP accumulates. Which control point in the pathway that splits glucose into two pyruvate molecules speeds up first, and why?",
+          "back": "Phosphofructokinase-1, the committed control point. AMP signals low energy charge and allosterically activates it, so flux through the pathway rises."
+        },
+        {
+          "front": "A drug occupies the allosteric pocket where citrate normally binds on a cytosolic kinase, leaving that pocket unable to respond. Flux from glucose to pyruvate stays high even when ATP is plentiful. Name the protein the drug is acting on.",
+          "back": "Phosphofructokinase-1. Citrate and ATP are its negative allosteric regulators, so blocking that inhibition removes the brake on the pathway."
+        }
+      ]
+    },
+    {
+      "id": "pc-02",
+      "topic": "Biochemistry",
+      "front": "How does a competitive inhibitor change Km and Vmax in Michaelis-Menten kinetics?",
+      "back": "Apparent Km increases and Vmax is unchanged, because saturating substrate outcompetes the inhibitor for the active site.",
+      "variants": [
+        {
+          "front": "An investigator adds a compound to an assay and finds that the substrate concentration needed for half-maximal velocity doubles, while the plateau velocity at very high substrate is identical to the control. What kind of inhibition is this?",
+          "back": "Competitive inhibition. Half-maximal velocity occurs at the apparent Km, which rises, while the maximum rate is recoverable by flooding with substrate."
+        },
+        {
+          "front": "On a double-reciprocal plot, two lines meet exactly on the vertical axis but one is steeper. Which class of inhibitor produces that pattern, and what does the shared intercept tell you about the maximum rate?",
+          "back": "A competitive inhibitor. The shared y-intercept is 1/Vmax, so the maximum rate is unchanged; the steeper slope reflects the raised apparent Km."
+        }
+      ]
+    },
+    {
+      "id": "pc-03",
+      "topic": "Biochemistry",
+      "front": "What happens to oxygen consumption and to ATP synthesis when an uncoupler such as 2,4-dinitrophenol is added to mitochondria?",
+      "back": "Oxygen consumption rises while ATP synthesis falls. The proton gradient is dissipated as heat, so the electron transport chain runs faster but ATP synthase has little gradient left to use.",
+      "variants": [
+        {
+          "front": "A patient who took an illegal weight-loss compound presents with a high body temperature and a raised metabolic rate but is exhausted and acidotic. In terms of the inner mitochondrial membrane, explain why the energy appears as heat rather than as usable chemical currency.",
+          "back": "The compound carries protons back across the membrane, collapsing the electrochemical gradient. Respiration accelerates to rebuild it and the released energy leaves as heat instead of driving ATP synthase."
+        },
+        {
+          "front": "Brown adipose tissue in a newborn expresses a membrane protein that lets protons leak into the matrix. What does that leak do to the rate of electron flow through the respiratory complexes and to the yield of phosphoanhydride bonds?",
+          "back": "Electron flow speeds up because the gradient opposing it is discharged, while the yield of ATP per oxygen consumed falls; the energy is released as heat instead."
+        }
+      ]
+    },
+    {
+      "id": "pc-04",
+      "topic": "Biochemistry",
+      "front": "At pH 7.4, what is the net charge on the side chains of lysine, aspartate and histidine?",
+      "back": "Lysine is protonated and positive (side-chain pKa about 10.5), aspartate is deprotonated and negative (about 3.9), and histidine (about 6.0) is largely neutral with a small protonated fraction.",
+      "variants": [
+        {
+          "front": "A short peptide placed in a gel at physiological pH migrates towards the anode. Which of its residues most likely drive that direction of travel, and why does the imidazole-bearing residue contribute so little?",
+          "back": "Acidic residues such as aspartate and glutamate, which are deprotonated and negative at that pH, drive migration to the anode. Imidazole has a pKa near 6, so at 7.4 it is mostly uncharged."
+        },
+        {
+          "front": "You need a buffering group inside a protein that can accept or donate a proton close to blood pH. Which of the twenty standard residues carries a side chain with an ionisation constant in the right region for that job?",
+          "back": "Histidine. Its imidazole side chain has a pKa near 6, the only standard side chain close enough to physiological pH to shuttle protons there."
+        }
+      ]
+    },
+    {
+      "id": "pc-05",
+      "topic": "Biochemistry",
+      "front": "How does glucagon signalling switch liver glycogen metabolism from synthesis to breakdown?",
+      "back": "Glucagon raises cAMP, activating protein kinase A. PKA phosphorylates phosphorylase kinase, which activates glycogen phosphorylase, and phosphorylates glycogen synthase, which inactivates it. Breakdown is on and synthesis is off.",
+      "variants": [
+        {
+          "front": "Eight hours after a person's last meal, a cyclic second messenger derived from ATP accumulates in hepatocytes. Trace what that messenger does to the two opposing enzymes of stored-polysaccharide handling, and say which one ends up switched on.",
+          "back": "cAMP activates protein kinase A, which phosphorylates both enzymes: the degradative one is turned on and the synthetic one is turned off. Net result is release of glucose from stores."
+        },
+        {
+          "front": "A mutant hepatocyte has a protein kinase A that can no longer transfer phosphate groups. After an overnight fast, what happens to that cell's ability to release sugar from its stores, and why?",
+          "back": "It is badly impaired. Without PKA-mediated phosphorylation the degradative cascade is never switched on and the synthetic enzyme is never switched off, so stored glycogen is not mobilised."
+        }
+      ]
+    },
+    {
+      "id": "pc-06",
+      "topic": "Biochemistry",
+      "front": "Why is one new DNA strand synthesised discontinuously at the replication fork?",
+      "back": "DNA polymerase can only extend a strand 5' to 3'. On the lagging-strand template the fork opens in the opposite direction, so synthesis happens in short Okazaki fragments that ligase later joins.",
+      "variants": [
+        {
+          "front": "At a growing bubble, one template is read in the same direction the helicase travels and the other is not. Explain what the directional restriction of the polymerising enzyme forces to happen on the second template.",
+          "back": "Because the enzyme can only add nucleotides to a free 3' hydroxyl, the second template must be copied in short backwards pieces, each primed anew as the bubble widens, and the pieces are sealed afterwards."
+        },
+        {
+          "front": "A cell is treated with an agent that inactivates the enzyme that seals adjacent pieces of newly made DNA. Which of the two daughter strands accumulates nicks, and why is its partner largely unaffected?",
+          "back": "The lagging strand accumulates nicks, because it is built as many separate fragments whose junctions need sealing. The leading strand is made as one continuous piece and has almost no junctions."
+        }
+      ]
+    },
+    {
+      "id": "pc-07",
+      "topic": "Biochemistry",
+      "front": "What effect do increased carbon dioxide and decreased pH have on the haemoglobin oxygen dissociation curve?",
+      "back": "They shift the curve to the right (the Bohr effect): oxygen affinity falls, so more oxygen is unloaded in metabolically active tissue.",
+      "variants": [
+        {
+          "front": "Blood arriving at an exercising quadriceps is warmer and more acidic than blood leaving the lungs. Describe what that does to the fraction of bound oxygen released at a given partial pressure, and name the effect.",
+          "back": "More oxygen is released at the same partial pressure: the binding curve moves right and affinity falls. This is the Bohr effect, and it delivers oxygen where it is being consumed."
+        },
+        {
+          "front": "A four-subunit transport protein with a sigmoidal binding curve gives up its ligand more readily as protons accumulate, while a single-subunit relative shows a hyperbolic curve and holds on tightly. Which molecule serves delivery and which serves storage?",
+          "back": "The cooperative four-subunit protein is haemoglobin, which delivers oxygen and is sensitive to protons. The hyperbolic single-subunit protein is myoglobin, which stores oxygen in muscle."
+        }
+      ]
+    },
+    {
+      "id": "pc-08",
+      "topic": "Biochemistry",
+      "front": "Where does beta-oxidation occur, and what does each round of it produce?",
+      "back": "In the mitochondrial matrix. Each round shortens the acyl chain by two carbons and yields one acetyl-CoA, one NADH and one FADH2.",
+      "variants": [
+        {
+          "front": "A sixteen-carbon fatty acid is broken down during a fast, once the carnitine shuttle has carried it across the inner membrane. List the reduced electron carriers and the two-carbon unit released per cycle, and say how many cycles are needed.",
+          "back": "Each cycle releases one acetyl-CoA plus one NADH and one FADH2. A sixteen-carbon chain needs seven cycles and gives eight acetyl-CoA."
+        },
+        {
+          "front": "A child with a defect in the transporter that pairs long fatty acyl groups with a small zwitterionic carrier cannot use fat during fasting. Which subcellular compartment is the fuel failing to reach, and what happens to ketone production?",
+          "back": "It fails to reach the mitochondrial matrix, so the degradative pathway cannot run. Acetyl-CoA is not generated and hypoketotic hypoglycaemia results."
+        }
+      ]
+    },
+    {
+      "id": "pc-09",
+      "topic": "Organic Chemistry",
+      "front": "How do substrate substitution and solvent choice differ between SN1 and SN2 reactions?",
+      "back": "SN1 favours tertiary substrates and polar protic solvents, going through a carbocation and giving racemisation. SN2 favours methyl and primary substrates and polar aprotic solvents, with backside attack and inversion of configuration.",
+      "variants": [
+        {
+          "front": "A tertiary alkyl bromide is stirred in aqueous ethanol with a weak nucleophile, and the product is a nearly even mixture of two enantiomers. Which mechanism operated, and what does that stereochemical outcome say about the intermediate?",
+          "back": "The unimolecular pathway. The near-racemic product means a planar carbocation intermediate formed, so the nucleophile could add to either face."
+        },
+        {
+          "front": "Moving an experiment from dimethyl sulfoxide to methanol sharply slows the reaction of iodide with a primary halide. Explain what hydrogen bonding does to the attacking species, and which pathway was operating.",
+          "back": "The protic solvent cages the iodide in a hydrogen-bonded shell and lowers its nucleophilicity. The reaction was the bimolecular backside-attack pathway, whose rate depends directly on the nucleophile."
+        }
+      ]
+    },
+    {
+      "id": "pc-10",
+      "topic": "Organic Chemistry",
+      "front": "In proton NMR, which chemical shift range identifies an aldehyde proton, and what does peak integration measure?",
+      "back": "Aldehyde protons appear near 9 to 10 ppm. Integration is proportional to the number of protons giving rise to that signal.",
+      "variants": [
+        {
+          "front": "An unknown compound of formula C4H8O gives a one-hydrogen singlet far downfield at 9.7 ppm and nothing beyond 12 ppm. Which functional group is present, and which one is ruled out?",
+          "back": "A carbonyl bearing a hydrogen, that is an aldehyde, whose hydrogen resonates near 9 to 10 ppm. A carboxylic acid is ruled out, since its acidic hydrogen would appear beyond 10 to 12 ppm."
+        },
+        {
+          "front": "Two peaks in a spectrum have areas in a three-to-two ratio. Which physical quantity does that ratio report, and why is it independent of how strongly each environment is deshielded?",
+          "back": "It reports the relative number of equivalent hydrogens in each environment. Deshielding sets where a peak appears along the axis, not how much area it encloses."
+        }
+      ]
+    },
+    {
+      "id": "pc-11",
+      "topic": "Organic Chemistry",
+      "front": "Rank acyl chloride, anhydride, ester and amide by reactivity toward nucleophilic acyl substitution.",
+      "back": "Acyl chloride > anhydride > ester > amide. Reactivity tracks how stable the leaving group is and how much electron density the attached atom donates into the carbonyl.",
+      "variants": [
+        {
+          "front": "Four derivatives of one carboxylic acid are each treated with ammonia. Which reacts fastest, which is nearly inert, and what property of the departing fragment accounts for that ordering?",
+          "back": "The chloride derivative reacts fastest and the nitrogen-bearing derivative is nearly inert. The better the departing fragment stabilises negative charge, the faster the substitution."
+        },
+        {
+          "front": "Donation from a nitrogen lone pair into a carbon-oxygen pi system reduces how electrophilic that carbon is. Use this to predict which functional group sits at the bottom of the substitution ladder, and which conjugate acid is the weakest leaving group.",
+          "back": "The amide sits at the bottom: nitrogen donates strongly, so its carbonyl carbon is least electrophilic, and the amide anion is a very poor leaving group."
+        }
+      ]
+    },
+    {
+      "id": "pc-12",
+      "topic": "Organic Chemistry",
+      "front": "What distinguishes enantiomers from diastereomers, and when is a molecule with two stereocentres achiral?",
+      "back": "Enantiomers are non-superimposable mirror images, inverted at every stereocentre. Diastereomers differ at some but not all stereocentres. A two-stereocentre compound is meso, and achiral, when an internal mirror plane makes the halves opposite.",
+      "variants": [
+        {
+          "front": "Tartaric acid has two adjacent carbons each bearing a hydroxyl group. One of its stereoisomers does not rotate plane-polarised light at all, even when pure. Explain the internal symmetry that removes optical activity.",
+          "back": "That isomer is meso: the two halves are configurationally opposite, so an internal mirror plane exists and the molecule superimposes on its own reflection. Rotations cancel within the molecule."
+        },
+        {
+          "front": "One pair of isomers has identical melting points and opposite configurations at every centre; another pair has different melting points and differs at only one centre. Classify each pair and predict which pair can be separated by ordinary recrystallisation.",
+          "back": "The first pair are enantiomers, the second are diastereomers. Only the diastereomers differ in physical properties, so only they separate by ordinary recrystallisation."
+        }
+      ]
+    },
+    {
+      "id": "pc-13",
+      "topic": "Organic Chemistry",
+      "front": "Why is a carboxylic acid far more acidic than an alcohol of similar size?",
+      "back": "Its conjugate base spreads the negative charge over two equivalent oxygens by resonance, while an alkoxide keeps the charge on one oxygen. The pKa values are roughly 4 to 5 versus about 16.",
+      "variants": [
+        {
+          "front": "Removing a proton from ethanoic acid gives an anion whose two carbon-oxygen bonds are measured to be the same length. Explain how that structural observation accounts for the roughly twelve-log-unit difference from ethanol.",
+          "back": "Equal bond lengths show the charge is delocalised evenly over both oxygens, which stabilises the anion. A more stable conjugate base means a much stronger acid."
+        },
+        {
+          "front": "Placing three electronegative chlorines on the carbon next to an acidic hydrogen drops the ionisation constant further still. Combine inductive withdrawal with charge delocalisation to rank ethanol, acetic acid and trichloroacetic acid.",
+          "back": "Trichloroacetic acid is strongest, then acetic acid, then ethanol. Delocalisation stabilises the anion and inductive withdrawal by chlorine stabilises it further."
+        }
+      ]
+    },
+    {
+      "id": "pc-14",
+      "topic": "Organic Chemistry",
+      "front": "How can an amine be separated from a neutral organic compound by liquid-liquid extraction?",
+      "back": "Wash the organic layer with aqueous acid. The amine is protonated to a water-soluble ammonium salt and moves into the aqueous layer, leaving the neutral compound behind. Basifying the aqueous layer regenerates the free amine.",
+      "variants": [
+        {
+          "front": "A flask holds benzoic acid, aniline and naphthalene dissolved together in diethyl ether. Describe a sequence of aqueous washes that would put each of the three into a different container, and name the property being exploited.",
+          "back": "Wash with dilute acid to pull out the basic component as its salt, then with bicarbonate or hydroxide to pull out the acidic component as its salt, leaving the hydrocarbon in the ether. The property exploited is the difference in solubility between charged and uncharged forms."
+        },
+        {
+          "front": "Adding dilute hydrochloric acid to an ether solution moves one solute into the water layer. What chemical change happened to that solute, and how would you recover the original molecule?",
+          "back": "It was protonated to a charged salt, which is water-soluble. Adding base to the aqueous layer deprotonates it and the neutral molecule can be extracted back into an organic solvent."
+        }
+      ]
+    },
+    {
+      "id": "pc-15",
+      "topic": "Organic Chemistry",
+      "front": "State Huckel's rule and the conditions a ring must meet to be aromatic.",
+      "back": "The ring must be cyclic, planar and fully conjugated, with 4n+2 pi electrons. A conjugated planar ring holding 4n pi electrons is antiaromatic and destabilised.",
+      "variants": [
+        {
+          "front": "Cyclooctatetraene puckers into a tub shape and behaves like an ordinary alkene, yet adding two electrons to give a flat dianion makes it unusually stable. Account for both observations by counting electrons.",
+          "back": "Flat, the neutral molecule would hold eight delocalised electrons, a 4n count that is destabilising, so it puckers and avoids conjugation. The dianion has ten, a 4n+2 count, so it flattens and gains stabilisation."
+        },
+        {
+          "front": "A five-membered ring containing one oxygen donates a lone pair into its pi system, giving six delocalised electrons. Why does that donation stabilise the ring, and what geometric condition must hold for it to help?",
+          "back": "Six delocalised electrons satisfy the 4n+2 count, which confers extra stability. The donation only helps if the ring is planar so the p orbitals overlap continuously."
+        }
+      ]
+    },
+    {
+      "id": "pc-16",
+      "topic": "Physics",
+      "front": "For an ideal fluid in a horizontal pipe, what happens to speed and to pressure where the cross-section narrows?",
+      "back": "Speed rises, because the volume flow rate A times v is constant, and pressure falls, because Bernoulli's equation conserves energy per unit volume along the streamline.",
+      "variants": [
+        {
+          "front": "An artery is partly occluded by plaque so that the open lumen area halves. Compare the flow speed and the lateral wall pressure inside the narrowing with their values just upstream of it.",
+          "back": "The speed doubles, since the same volume must pass per second through half the area. The lateral pressure drops, because faster flow carries more of the fixed energy per volume as kinetic energy."
+        },
+        {
+          "front": "A gardener presses a thumb over part of a hose opening and the water jet travels much further. Using conservation of volume flow and of energy per unit volume, explain both the higher exit speed and the reduced internal pressure at the constriction.",
+          "back": "The same volume per second through a smaller opening requires a higher speed. Since energy per unit volume is fixed, the extra kinetic term must be paid for by a lower pressure term."
+        }
+      ]
+    },
+    {
+      "id": "pc-17",
+      "topic": "Physics",
+      "front": "Why do a ball dropped from rest and a ball launched horizontally from the same height land at the same time?",
+      "back": "Horizontal and vertical motion are independent. Both balls start with zero vertical velocity and share the same downward acceleration g, so the time to fall is identical.",
+      "variants": [
+        {
+          "front": "On a flat range, a bullet fired level from a rifle reaches the ground at the same moment as one released from the muzzle. Which component of the velocity is irrelevant to that timing, and what quantity do the two share?",
+          "back": "The sideways component is irrelevant, because the two directions are independent. Both start with no downward velocity and both accelerate downward at g, so the fall takes equally long."
+        },
+        {
+          "front": "An aircraft in straight and level flight releases a package. Ignoring air resistance, describe the package's sideways velocity during the descent, and explain why the time until impact does not depend on how fast the aircraft was going.",
+          "back": "The sideways velocity stays equal to the aircraft's, since nothing acts along that direction. Only the downward acceleration sets the time, and it is the same regardless of the sideways motion."
+        }
+      ]
+    },
+    {
+      "id": "pc-18",
+      "topic": "Physics",
+      "front": "What happens to total resistance and to total current when a second resistor is added in parallel across a battery?",
+      "back": "Total resistance falls below the smaller of the two individual resistances, so the total current drawn from the battery rises. The voltage across each branch is unchanged.",
+      "variants": [
+        {
+          "front": "A technician clips an extra ten-ohm element directly across the terminals of a device already connected to an ideal source. Predict the change in the equivalent load the source sees and in the current it must deliver.",
+          "back": "The equivalent load drops, ending up below either element on its own, so the source delivers more current. The potential difference across each element stays the same."
+        },
+        {
+          "front": "Two branches share exactly the same potential difference and one has twice the resistance of the other. How does the current divide between them, and what single element could replace the pair?",
+          "back": "The lower-resistance branch carries twice the current, since current is inversely proportional to resistance at fixed voltage. The pair can be replaced by one element of two-thirds the smaller resistance."
+        }
+      ]
+    },
+    {
+      "id": "pc-19",
+      "topic": "Physics",
+      "front": "For a converging lens, what kind of image forms when the object sits between the focal point and the lens?",
+      "back": "A virtual, upright, magnified image on the same side as the object, which is how a magnifying glass works. The thin-lens equation gives a negative image distance.",
+      "variants": [
+        {
+          "front": "A jeweller holds a loupe closer to a gemstone than one focal length and sees an enlarged, right-way-up view that cannot be projected onto a card. Classify what is being seen and justify the sign of the image distance.",
+          "back": "It is a virtual, upright, magnified image. Because it lies on the same side as the object, the image distance comes out negative, and a virtual image cannot be caught on a screen."
+        },
+        {
+          "front": "Take 1/f = 1/o + 1/i with a positive focal length and an object distance smaller than f. Work out the sign of i, and state what that sign implies about orientation and about whether a screen could catch it.",
+          "back": "1/i = 1/f - 1/o is negative, so i is negative. A negative image distance means a virtual image on the object's side, upright and impossible to project."
+        }
+      ]
+    },
+    {
+      "id": "pc-20",
+      "topic": "Physics",
+      "front": "How does the observed frequency change as a sound source approaches and then recedes from a stationary observer?",
+      "back": "It is higher than the emitted frequency while the source approaches and lower once it recedes, because the relative motion compresses and then stretches the wavefronts.",
+      "variants": [
+        {
+          "front": "A siren drops in pitch abruptly as the ambulance goes past a pedestrian standing on the kerb. Describe what happens to the spacing of the arriving wavefronts before and after the moment of passing.",
+          "back": "Approaching, each successive wavefront is emitted closer to the pedestrian, so the fronts arrive bunched and the pitch is raised. Receding, they are stretched apart and the pitch falls."
+        },
+        {
+          "front": "A whistle is swung on a string in a horizontal circle at constant speed. At which points of the circle does a listener standing well outside it hear the highest and the lowest tones, and what sets the size of the shift?",
+          "back": "The tone is highest where the whistle moves straight toward the listener and lowest where it moves straight away. The size of the shift is set by the component of velocity along the line of sight relative to the speed of sound."
+        }
+      ]
+    },
+    {
+      "id": "pc-21",
+      "topic": "Physics",
+      "front": "A block slides down a rough incline. How do you relate its speed at the bottom to the drop height and the friction force?",
+      "back": "Set mgh minus the friction force times the path length equal to one half m v squared. Gravitational potential energy converts to kinetic energy minus the work done against friction.",
+      "variants": [
+        {
+          "front": "A crate released down a ramp reaches the floor moving more slowly than an identical crate on a frictionless ramp of the same vertical drop. Write the energy bookkeeping that accounts for the missing kinetic energy, naming the quantity that was dissipated.",
+          "back": "Starting energy equals final kinetic energy plus energy lost to the surface: mgh = one half m v squared plus the friction force times distance travelled. The dissipated quantity leaves as thermal energy."
+        },
+        {
+          "front": "Two ramps drop through the same vertical distance but one is much longer, and both have the same coefficient of kinetic friction. On which does the object arrive faster, and which term of the energy balance explains the difference?",
+          "back": "The shorter, steeper ramp gives the faster arrival. The dissipative term grows with the distance travelled along the surface, so the longer path removes more energy from the same initial store."
+        }
+      ]
+    },
+    {
+      "id": "pc-22",
+      "topic": "Physics",
+      "front": "At equilibrium, what is the electric field inside the material of a charged conductor, and where does the excess charge sit?",
+      "back": "The field inside the conducting material is zero and all excess charge resides on the outer surface, because mobile charges rearrange until they cancel any interior field.",
+      "variants": [
+        {
+          "front": "A sensitive instrument sealed inside a closed metal box is unaffected by a strong external field during a storm. Explain the rearrangement of mobile carriers that produces this protection.",
+          "back": "The free carriers in the metal redistribute over its surface until the field they create exactly cancels the applied one inside the metal, leaving nothing to disturb the instrument."
+        },
+        {
+          "front": "A hollow metal sphere is given a net negative charge and left alone. Describe where the extra electrons come to rest, and what force a small test charge embedded within the metal shell itself would feel.",
+          "back": "The extra electrons spread over the outer surface, as far apart as they can get. A test charge inside the metal feels no force, since the field within the conducting material is zero at equilibrium."
+        }
+      ]
+    },
+    {
+      "id": "pc-23",
+      "topic": "Physics",
+      "front": "For an ideal gas expanding isothermally, what are the signs of the change in internal energy, of the heat and of the work done by the gas?",
+      "back": "The change in internal energy is zero because temperature is constant, the work done by the gas is positive, and an equal amount of heat is absorbed, so heat is positive.",
+      "variants": [
+        {
+          "front": "A cylinder of gas pushes a piston outward very slowly while sitting in a large water bath that holds its temperature fixed. Account for the energy delivered to the piston, given that the gas's internal energy did not change.",
+          "back": "Every joule delivered to the piston was drawn in as heat from the bath. With no temperature change there is no change in internal energy, so heat in equals work out."
+        },
+        {
+          "front": "Compare gas compressed inside a perfectly insulated cylinder with gas compressed in a thermostatted bath. In which case does the temperature rise, and which term of the first law is zero in each case?",
+          "back": "The insulated compression raises the temperature; the heat term is zero there. In the thermostatted case the temperature is held fixed, so the internal energy change is zero and the work done on the gas leaves as heat."
+        }
+      ]
+    },
+    {
+      "id": "pc-24",
+      "topic": "Psych/Soc",
+      "front": "What is the difference between negative reinforcement and punishment in operant conditioning?",
+      "back": "Negative reinforcement removes an aversive stimulus and thereby increases a behaviour. Punishment decreases a behaviour, whether by adding something aversive or removing something desirable. Both are defined by their effect on the frequency of behaviour.",
+      "variants": [
+        {
+          "front": "A driver fastens the seat belt to stop an irritating chime, and starts fastening it sooner on each subsequent trip. Classify the consequence acting on the fastening behaviour, and say whether its frequency should rise or fall.",
+          "back": "Taking away an unpleasant stimulus contingent on the response is negative reinforcement, so the frequency rises. The response is strengthened, not weakened."
+        },
+        {
+          "front": "A teenager loses phone privileges after breaking curfew and comes home on time thereafter. Name the procedure, then contrast it with the case where taking away something unpleasant makes a response more likely.",
+          "back": "Removing a desirable stimulus to weaken a behaviour is negative punishment. Removing an unpleasant stimulus to strengthen a behaviour is negative reinforcement; both remove something, but they move frequency in opposite directions."
+        }
+      ]
+    },
+    {
+      "id": "pc-25",
+      "topic": "Psych/Soc",
+      "front": "Distinguish recognition from free recall, and explain why recognition is usually easier.",
+      "back": "Recognition means identifying material that is present in front of you; free recall means generating it with no cues. Recognition supplies retrieval cues, so less reconstruction is needed.",
+      "variants": [
+        {
+          "front": "A student breezes through a multiple-choice quiz but freezes when the same content is asked as a blank-page essay prompt. Explain the retrieval difference between the two formats and which one supplies more support.",
+          "back": "The multiple-choice format presents the target among alternatives, so it acts as a cue and only requires identification. The blank page requires generating the material unaided, which is a harder retrieval demand."
+        },
+        {
+          "front": "Witnesses often cannot describe a face from memory yet pick the person out of a lineup without hesitation. Which memory process is tapped in each situation, and what accounts for the asymmetry?",
+          "back": "Describing the face requires unaided generation; the lineup requires only identifying a presented item. The presented item is itself a strong retrieval cue, which is why the second task succeeds when the first fails."
+        }
+      ]
+    },
+    {
+      "id": "pc-26",
+      "topic": "Psych/Soc",
+      "front": "Define the fundamental attribution error and state the direction of the bias.",
+      "back": "It is the tendency, when explaining other people's behaviour, to overweight dispositional causes and underweight situational ones.",
+      "variants": [
+        {
+          "front": "A colleague arrives late and you conclude they are careless, without weighing the train delay you would certainly have blamed had it been your own lateness. Name the bias, and say which kind of cause you gave too little weight.",
+          "back": "This is the fundamental attribution error. Situational causes were underweighted for the other person while a stable personal trait was overweighted."
+        },
+        {
+          "front": "In a study, observers judged an essay writer to personally hold the essay's position even after being told that the position had been assigned by a coin toss. Which inferential error does this demonstrate?",
+          "back": "The fundamental attribution error, in its correspondence-bias form: an internal attitude was inferred from behaviour whose external cause had already been made explicit."
+        }
+      ]
+    },
+    {
+      "id": "pc-27",
+      "topic": "Psych/Soc",
+      "front": "At which Piagetian stage does conservation appear, and what marks the stage before it?",
+      "back": "Conservation appears in the concrete operational stage, roughly ages seven to eleven. The preceding preoperational stage is marked by egocentrism and centration, and the child there lacks conservation.",
+      "variants": [
+        {
+          "front": "A four-year-old insists that a tall thin glass holds more juice than a short wide one after watching the pour, while an eight-year-old is unbothered. Name the ability the older child has acquired and the developmental period it belongs to.",
+          "back": "The older child has acquired conservation of quantity, which belongs to the concrete operational period. The younger child centres on one dimension, the height, which is typical of the preoperational period."
+        },
+        {
+          "front": "A child uses symbols fluently and engages in pretend play but cannot work out what a doll positioned opposite would see. Which developmental period does that describe, and which capability arrives in the period after it?",
+          "back": "That is the preoperational period, and the failure described is egocentrism. The next period, concrete operational, brings conservation and logical operations on concrete material."
+        }
+      ]
+    },
+    {
+      "id": "pc-28",
+      "topic": "Psych/Soc",
+      "front": "Which EEG pattern dominates REM sleep, and what happens to skeletal muscle tone during it?",
+      "back": "REM shows low-amplitude, high-frequency, wake-like activity on the EEG, while skeletal muscle goes atonic apart from the eye muscles and the diaphragm.",
+      "variants": [
+        {
+          "front": "An overnight recording shows brain activity that looks like alert wakefulness at the same time as the chin electrode falls silent and the eyes dart about. Identify the stage, and explain the muscle finding.",
+          "back": "This is rapid eye movement sleep. Descending inhibition paralyses skeletal muscle, which is why the chin channel goes flat while the cortical trace looks awake."
+        },
+        {
+          "front": "A patient repeatedly punches and kicks while dreaming and injures a bed partner. Which normal feature of the dreaming stage has failed, and what is the consequence for the sleeper's movement?",
+          "back": "The paralysis of skeletal muscle that normally accompanies dreaming has failed. Without it the dreamed movements are executed, which is REM sleep behaviour disorder."
+        }
+      ]
+    },
+    {
+      "id": "pc-29",
+      "topic": "Psych/Soc",
+      "front": "Trace the hypothalamic-pituitary-adrenal response to a stressor and name the hormone at the end of it.",
+      "back": "The hypothalamus releases CRH, the anterior pituitary releases ACTH, and the adrenal cortex releases cortisol. Cortisol raises blood glucose and feeds back negatively on both the hypothalamus and the pituitary.",
+      "variants": [
+        {
+          "front": "A student under months of examination pressure shows a raised fasting blood sugar and a blunted immune response. Name the three glands in the signalling chain that produces this, in order, and the steroid at its end.",
+          "back": "Hypothalamus, then anterior pituitary, then adrenal cortex. The steroid is cortisol, which mobilises glucose and dampens immune activity when chronically elevated."
+        },
+        {
+          "front": "A tumour secretes ACTH continuously and ignores the usual feedback signals. Which gland is being driven inappropriately, what happens to circulating cortisol, and what happens to the hypothalamic releasing hormone?",
+          "back": "The adrenal cortex is driven inappropriately and cortisol rises. High cortisol suppresses hypothalamic CRH through negative feedback, so the releasing hormone falls."
+        }
+      ]
+    },
+    {
+      "id": "pc-30",
+      "topic": "Psych/Soc",
+      "front": "What defines stage two of the demographic transition model?",
+      "back": "Death rates fall sharply while birth rates stay high, so the population grows rapidly. The fall in mortality is typically driven by improved sanitation, food supply and medicine.",
+      "variants": [
+        {
+          "front": "Clean water and vaccination arrive in a region and far fewer children die, yet families continue to have six or seven children each. Describe what happens to the size of the population, and name the phase of the standard model.",
+          "back": "The population grows rapidly, because mortality has fallen while fertility has not yet responded. This gap is the second phase of the demographic transition."
+        },
+        {
+          "front": "Two nations have similar fertility, but one has just completed a national vaccination programme and has halved its mortality. Which phase of the population model has that nation entered, and what happens to its growth rate relative to its neighbour?",
+          "back": "It has entered the second phase of the transition, where mortality has dropped ahead of fertility. Its growth rate rises well above the neighbour's."
+        }
+      ]
+    }
+  ]
+}
