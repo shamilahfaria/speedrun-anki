@@ -3,195 +3,204 @@
   "grades": {
     "031cc5118b09f59a4423fc37": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests a single load-bearing idea, and accurately reflects the provided source span."
+      "reason": "The card is factually correct based on the source span, the front is self-contained and clear, and the back targets the core load-bearing concept without bundling multiple ideas."
     },
     "0e3123c9641f6ed51e6c5e71": {
       "bucket": "correct-and-useful",
-      "reason": "The front is self-contained, the back targets the load-bearing idea directly, and the content is fully supported by the cited source span."
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing idea, and accurately reflects the cited source span."
     },
     "197c43c0f1d9c12d753f7679": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests a single load-bearing idea, and accurately reflects the reference key and source span."
+      "reason": "The card is factually accurate based on the source span, self-contained, tests a single load-bearing idea, and has a clear, concise answer."
     },
     "1b5de20ac705617f74645b5e": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct based on the source text, self-contained, and tests a single load-bearing concept clearly."
+      "reason": "The card is factually accurate according to the source text, self-contained, tests a single load-bearing concept, and requires no outside context to understand."
     },
     "22dfb5dd7b5b25c4efa44328": {
       "bucket": "correct-and-useful",
-      "reason": "The front is self-contained and clearly targets the specific load-bearing mechanism of NMR splitting without giving away the answer."
+      "reason": "The front is self-contained and the back targets the exact load-bearing idea supported by the source span."
     },
     "2607bb02410c7bcdd99633cd": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, directly supported by the source span, self-contained, and tests a single load-bearing fact."
+      "reason": "The card is factually correct based on the cited source span, self-contained, tests a single load-bearing concept, and is well-formulated for MCAT study."
     },
     "2b1f4549ee90bdae94b0d081": {
-      "bucket": "wrong",
-      "reason": "The card asks about membrane diffusion based on a source text, but the reference answer key pertains to cellular respiration, hyperventilation, and glycolysis, making it fail the gold standard."
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually accurate based on the cited source span, self-contained, tests a single load-bearing concept, and is well-formulated for MCAT study."
     },
     "2cdf2c9e03417053ffe30c05": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually supported by the source span, asks a self-contained and clear question, and tests a single load-bearing fact."
+      "reason": "The card is factually correct based on the source span, self-contained, tests a single load-bearing concept, and is well-formatted for MCAT study."
     },
     "43d6beaf70798db08050be30": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests the load-bearing idea directly, and aligns precisely with the source span."
+      "reason": "The card is factually correct, directly supported by the source span, self-contained on the front, and tests a single load-bearing concept clearly."
     },
     "446e68a0f9644b623381e516": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct based on the source span, self-contained, and tests a single load-bearing idea clearly."
+      "reason": "The front is self-contained and clear, the back directly answers the question using the load-bearing idea, and it is fully supported by the cited source span."
     },
     "4599ed2d7c09ba92560efecd": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept directly supported by the source span, and is well-taught."
+      "reason": "The card is factually correct based on the source span and reference answer, self-contained, tests a single load-bearing concept, and is well-taught."
     },
     "491dc5efe5edeeb8f928a823": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct based on the source and answer key, self-contained, tests a single load-bearing idea, and has a clear front and back."
+      "reason": "The card is factually correct based on the source span, self-contained, tests a single load-bearing concept, and is well-formatted for MCAT studying."
     },
     "492b773bf0c0bc42cffe908c": {
       "bucket": "correct-and-useful",
-      "reason": "The card asks a self-contained question directly supported by the source span and provides a concise, load-bearing answer testing a single fact."
+      "reason": "The card is factually correct based on the source span and answer key, self-contained, and tests a single load-bearing idea clearly."
     },
     "4b50d10959fb8ad7fcf40196": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, asks a self-contained question testing a load-bearing concept from the source, and evaluates a single distinct piece of knowledge."
+      "reason": "The card is factually correct based on the source span, self-contained, and tests a single load-bearing concept clearly."
+    },
+    "4c8f310ade1fef6299ff8ba7": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept, and directly aligns with the source span."
+    },
+    "523ae3acdf55288b3c889c83": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct based on the cited source, self-contained, tests a single load-bearing concept, and is well-formatted for MCAT study."
     },
     "54053502c325ce831252b1df": {
       "bucket": "correct-and-useful",
-      "reason": "The front is self-contained, the back accurately captures the load-bearing definition from the source span without bundling multiple independent concepts, and it aligns with the reference answer key."
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept, and directly aligns with the cited source span."
     },
     "5c62d575aed456bf5a510800": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually supported by the source span, self-contained, tests a single load-bearing idea, and is well-formulated for active recall."
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing idea, and is directly supported by the source span."
     },
     "5e075d27fcb5eed605593cb2": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct based on the source span, self-contained, tests a specific load-bearing distinction, and is well-formatted for flashcard use."
+      "reason": "The card is factually accurate based on the source text, self-contained, tests a single clear concept, and targets the load-bearing requirements of simple diffusion."
     },
     "65471acd125fc03f12352e15": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, tests a single load-bearing idea directly from the source span, and the front is completely self-contained."
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept directly supported by the source, and avoids common pedagogical flaws."
     },
     "65c67f8fb1e89a6c1ff1b726": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually supported by the source span, tests a single load-bearing idea, and has a self-contained front answerable without seeing the source."
+      "reason": "The card is factually correct based on the cited source, self-contained, and tests a single load-bearing concept clearly."
     },
     "6d3a0d0543714b084073d7e0": {
       "bucket": "correct-and-useful",
-      "reason": "The card asks a self-contained, high-yield question directly supported by the source span and reference answer key, testing a single load-bearing fact with a concise and accurate back."
+      "reason": "The front is self-contained and clear, the back directly answers the load-bearing quantitative fact supported by the cited source span, and it tests a single distinct concept."
     },
     "6f5933411d94f55fdc07da37": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually accurate according to the source span, self-contained, tests a single load-bearing concept, and is well-formatted for active recall."
+      "reason": "The card is factually accurate according to the source span, self-contained, tests a single load-bearing concept, and is well-formatted for MCAT review."
     },
     "76ba690f9b3b32cbc87acdc7": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct based on the cited source span, asks a clear and self-contained question about the load-bearing idea, and tests exactly one concept."
+      "reason": "The front is self-contained, tests a single load-bearing fact, and the answer is factually correct according to the source span."
     },
     "78eed718a74d81e114ba73d3": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct based on the source text, self-contained, and tests a single load-bearing concept clearly."
+      "reason": "The card is factually accurate based on the source text, self-contained, and tests a single load-bearing concept clearly."
     },
     "8eb0109fd93b67c979838a46": {
       "bucket": "correct-and-useful",
-      "reason": "The front is self-contained and the back accurately captures the load-bearing idea from the source span and reference answer."
+      "reason": "The card is factually correct based on the source span, self-contained, and tests a single load-bearing concept clearly."
     },
     "8f629cdaa6aa5ce63d0d022b": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually accurate according to the source and answer key, self-contained, tests a single load-bearing concept, and is free of pedagogical flaws."
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept, and directly aligns with the source span."
     },
     "9707baf18615f3c73df1339d": {
       "bucket": "correct-and-useful",
-      "reason": "The front is self-contained, the back is the direct load-bearing answer, and it is factually correct according to the source and reference answer key."
+      "reason": "The card is factually correct based on the source span, self-contained, and tests a single load-bearing idea clearly."
     },
     "9e6557ca41f95cee6da865f5": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct based on the source text, self-contained, tests a single load-bearing idea, and has a clear, concise answer."
+      "reason": "The card is factually correct based on the source span, self-contained, tests a single load-bearing concept, and is well-formatted for MCAT studying."
     },
     "a137f4b610d51cfa49e3a68b": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept, and aligns completely with the reference answer and source span."
+      "reason": "The card is factually accurate, tests a single clear concept self-containedly, and targets the load-bearing mechanism and kinetic effects of a competitive inhibitor."
     },
     "a88acb16c0980e6a8878d46a": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests a single load-bearing idea, and relies on information supported by the source span."
+      "reason": "The card is factually correct, self-contained, and tests a single load-bearing concept well."
     },
     "bc1417e2d000c1945fef7089": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests the load-bearing idea, and aligns with the reference answer and source span."
+      "reason": "The front is self-contained and the back accurately captures the load-bearing net yield of glycolysis directly supported by the source span."
     },
     "be41a489ed3b30ad86ed328d": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests a single load-bearing fact, and matches the reference answer key."
+      "reason": "The front is self-contained and clearly asks for the rate-limiting enzyme of the citric acid cycle, and the back accurately provides the load-bearing answer supported by the source span and reference key."
     },
     "c14ed12e9432be3abea9a558": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct based on the source span, self-contained, tests a single load-bearing idea, and has no pedagogical flaws."
+      "reason": "The card is factually accurate based on the source text, asks a self-contained question with a clear answer, and tests a single load-bearing concept."
     },
     "c6a3da35b1e40463f0a90150": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests a single load-bearing idea, and accurately reflects the cited source span."
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept supported by the source span, and avoids pedagogical flaws."
     },
     "c792dee96e4f0d5548510d2f": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, directly supported by the source span, and poses a self-contained, well-formulated question targeting the core concept."
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept accurately, and aligns with the reference answer key and source span."
     },
     "cab6d3943f7049370dae8f82": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests the load-bearing ideas, and aligns with the source span and reference answer."
+      "reason": "The front is self-contained, tests a single load-bearing concept, and the back is factually accurate and directly supported by the source span."
     },
     "cb785cc9527a7610bb1ce15b": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept, and directly matches the cited source span."
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing idea, and directly reflects the cited source span."
     },
     "cbe763ee588389ccb5842a2b": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, tests a single load-bearing concept, and the front is self-contained without giving away the answer."
+      "reason": "The card is factually accurate, directly supported by the source span, self-contained, and tests a single load-bearing concept clearly."
     },
     "d0e03570e68d7bab8cfe517d": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, asks a self-contained and clear question, and targets the exact load-bearing fact specified in the source span."
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept, and aligns with both the source span and reference answer key."
     },
     "d3c1756014e763158684293a": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests a load-bearing idea directly supported by the source span, and is well-formulated."
+      "reason": "The card is factually accurate based on the source span, self-contained, and tests a single, load-bearing concept clearly."
     },
     "d3c713e529c04bfaf4ffc196": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct based on the source text, the front is self-contained and specific, and the back targets the load-bearing mechanism of cholesterol's effect on membrane fluidity."
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept, and directly aligns with both the source span and the reference key."
     },
     "dbc703f1ead47d903483d220": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept directly supported by the source span, and is well-formulated for study."
+      "reason": "The front is self-contained and clear, the back directly answers the question with the load-bearing idea, and the statement is factually supported by the cited source span."
     },
     "e59417c61a9fb322c5e5caaa": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests a single load-bearing idea, and aligns with the reference answer key and source span."
+      "reason": "The front is fully self-contained, the back targets the single load-bearing fact, and the information is factually accurate and supported by the source."
     },
     "eaec56dc031ea1aebddb1536": {
       "bucket": "correct-but-bad-teaching",
-      "reason": "The back is a direct copy of the source sentence rather than a concise, discrete answer, and it gives away the second half of the definition in the prompt."
+      "reason": "The back is a direct copy of the source sentence rather than a concise, discrete fact, making it poor for active recall."
     },
     "efd0b752193d180b46de3ae6": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct based on the source span, self-contained, tests a single load-bearing concept, and is well-formulated for active recall."
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept directly from the source text, and is well-formulated for MCAT study."
     },
     "f659cba6efd59ebe2cbe524c": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct based on the source span, self-contained, tests a single load-bearing concept, and is well-formulated for study."
+      "reason": "The front is self-contained and clear, the back captures the exact load-bearing definition directly from the source span, and it tests a single distinct MCAT concept."
     },
     "f90a4af452f4f1c13fbbe33f": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct based on the source span, self-contained, and tests exactly one load-bearing concept."
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept directly from the source span, and avoids pedagogical flaws."
     },
     "fd2af2df4092f91ad793b782": {
-      "bucket": "correct-but-bad-teaching",
-      "reason": "The back repeats the question and answers it with a full sentence rather than isolating the specific load-bearing fact requested."
+      "bucket": "wrong",
+      "reason": "The card asks what is constant 'due to volume flow rate' and answers that the volume flow rate itself is constant, which is circular and fails to test the actual relationship between cross-sectional area and flow speed."
     },
     "ffe1e08a610f8ad9d3a01899": {
       "bucket": "correct-and-useful",
-      "reason": "The card is factually correct, self-contained, tests the load-bearing idea of solvent effects in bimolecular substitution, and aligns with the provided source span."
+      "reason": "The card is factually correct based on standard organic chemistry knowledge and the cited source span, asks a self-contained and clear question, and tests a single load-bearing concept."
     }
-  }
+  },
+  "rubric_fingerprint": "3a81a290baa1d159c9898ceb"
 }

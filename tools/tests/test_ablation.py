@@ -148,12 +148,22 @@ def test_the_mechanism_actually_engages_so_the_null_tests_are_not_vacuous():
     """
     trial = ablation.run_trial(seed=101, **SMALL)
     full = trial.arms[ablation.ARM_FULL]
+    base = trial.arms[ablation.ARM_BASELINE]
+
+    # the weighted policy was selected on every review of the full arm
     assert full.weighted_picks == SMALL["learners"] * SMALL["reviews"]
+    assert base.weighted_picks == 0
+
+    # ...and it was live -- not refused -- on a real share of them. It is high:
+    # a topic needs 20 graded reviews PER SIDE before its gap is scorable, so
+    # the opening stretch of every run is necessarily stock. That dilution is
+    # real, is a property of the engine's own refusal rule, and is printed in
+    # the report rather than hidden.
     total = full.weighted_picks + full.stock_picks
-    assert full.refused_topic_reviews < 0.5 * total, (
-        "the gap is refused on most reviews, so arm 1 is mostly plain Anki "
-        "and the exact-zero tests below would pass vacuously"
-    )
+    live = 1.0 - full.refused_topic_reviews / total
+    assert live > 0.15, f"transfer weighting was live on only {live:.1%} of reviews"
+
+    # the load-bearing check: the arms actually studied different things
     c = trial.contrast(ablation.ARM_FULL, ablation.ARM_BASELINE)
     assert c.point != 0.0, "arms are indistinguishable even at the defaults"
     assert any(d != 0.0 for d in c.per_learner)
@@ -188,16 +198,23 @@ def test_feature_loses_when_the_gap_points_at_the_wrong_topics():
     assert c.point < 0.0, f"expected the feature to lose, got {c.point:+.3f} pp"
 
 
-def test_feature_is_no_better_than_chance_when_the_gap_is_uninformative():
+def test_feature_demonstrates_no_gain_when_the_gap_is_uninformative():
     """gamma = 0: headroom is independent of the observed gap.
 
-    Targeting the gap is then targeting at random, so the effect should be
-    small and its interval should include zero.
+    Targeting the gap is then targeting noise, and the feature must not
+    demonstrate a gain. Note it does not merely tie: concentrating a fixed
+    budget on any subset is a LOSS under a concave learning curve, because
+    the boosted topics hit diminishing returns while the starved ones give
+    up their cheapest gains. Uninformative targeting therefore costs
+    something, and the harness shows that rather than rounding it to zero.
     """
     model = ablation.LearnerModel(headroom_alignment=0.0)
     trial = ablation.run_trial(seed=17, learners=24, reviews=2500, model=model)
     c = trial.contrast(ablation.ARM_FULL, ablation.ARM_BASELINE)
-    assert c.lower <= 0.0 <= c.upper, (c.lower, c.point, c.upper)
+    assert not (c.lower > 0.0), (
+        f"a feature targeting pure noise demonstrated a gain: "
+        f"{c.point:+.3f} pp CI [{c.lower:+.3f}, {c.upper:+.3f}]"
+    )
 
 
 def test_ablation_shows_nothing_when_display_alone_reallocates():
@@ -207,7 +224,7 @@ def test_ablation_shows_nothing_when_display_alone_reallocates():
     and the ablation's verdict must be that the feature did no work.
     """
     model = ablation.LearnerModel(display_response=1.0)
-    trial = ablation.run_trial(seed=19, **SMALL)
+    trial = ablation.run_trial(seed=19, model=model, **SMALL)
     c = trial.contrast(ablation.ARM_FULL, ablation.ARM_ABLATION)
     assert c.point == pytest.approx(0.0, abs=1e-12)
 
@@ -230,6 +247,48 @@ def test_the_sweep_reports_where_the_feature_stops_paying():
         "a sweep that never crosses zero cannot distinguish a working feature "
         f"from a rigged harness; got {points}"
     )
+    assert sweep.break_even is not None
+
+
+def test_a_detectable_but_negligible_effect_is_not_sold_as_an_improvement():
+    """The trap this whole project exists to call out.
+
+    At n = 120 simulated learners a 0.1 pp difference can have a CI that
+    excludes zero. That is statistical detectability, not an improvement.
+    The report must say so in those terms rather than printing a tick.
+    """
+    trial = ablation.run_trial(seed=20260803, learners=40, reviews=3000)
+    c = trial.contrast(ablation.ARM_FULL, ablation.ARM_BASELINE)
+    report = ablation.render_report(trial)
+    assert abs(c.point) < ablation.PRACTICAL_FLOOR_PP, (
+        "this guard assumes the default model yields a sub-threshold effect; "
+        f"got {c.point:+.3f} pp against a floor of "
+        f"{ablation.PRACTICAL_FLOOR_PP:.3f}"
+    )
+    if c.excludes_zero:
+        assert "NEGLIGIBLE" in report
+        assert "is not a product claim" in report.lower()
+    else:
+        assert "no effect was demonstrated" in report.lower()
+
+
+def test_the_practical_floor_is_one_point_on_the_real_exam_scale():
+    # 100 pp spread over the 472-528 scale, so one scaled point.
+    assert ablation.PRACTICAL_FLOOR_PP == pytest.approx(100.0 / 56.0)
+
+
+def test_the_display_sweep_is_judged_on_the_contrast_it_actually_moves():
+    """display_response only moves arm 2, so arm1 - arm3 is flat across that
+    sweep by construction. Reading a break-even off it would be nonsense."""
+    sweep = ablation.run_sweep(
+        seed=23, learners=6, reviews=2500, param="display_response"
+    )
+    assert sweep.governing == "arm1_minus_arm2"
+    flat = {round(r.arm1_minus_arm3.point, 9) for r in sweep.rows}
+    assert len(flat) == 1, "arm1-arm3 must not move when only delta changes"
+    # and the contrast that does move, goes to zero at delta = 1
+    assert sweep.rows[-1].value == 1.0
+    assert sweep.rows[-1].arm1_minus_arm2.point == pytest.approx(0.0, abs=1e-12)
     assert sweep.break_even is not None
 
 

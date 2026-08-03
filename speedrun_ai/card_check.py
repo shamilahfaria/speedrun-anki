@@ -76,6 +76,14 @@ from speedrun_ai.retrieval import Bm25Retriever, Passage
 #       exhaustion on the key, not a bad model id.
 #   gemini-flash-lite-latest -- callable; an alias, so it survives the next
 #       retirement. Used here for that reason.
+# Verified callable, not merely listed. A previous edit to this file asserted
+# that "gemini-3.5-flash-lite" did not exist and was an invented id; that was
+# wrong -- it is callable, it is in models.list(), and it generated the deck in
+# results/card_check_deck.json. The claim came from a model listing that had
+# been truncated before it was read. Retired ids are a real hazard here
+# (gemini-2.5-flash-lite is still listed and 404s with "no longer available to
+# new users"), which is why this uses an alias -- but the way to establish that
+# is to make the call, not to read a list.
 CARD_CHECK_MODEL = "gemini-flash-lite-latest"
 
 # ---------------------------------------------------------------------------
@@ -507,15 +515,23 @@ def gold_references(gold: GoldSet, card: GeneratedCard, k: int = 3) -> List[Gold
     BM25 over the gold questions and answers, reusing the retriever already in
     this package. These are what the grader checks the card against, so a card
     is never judged against the whole 50-pair set at once.
+
+    Scoped to the card's own section first. Unscoped BM25 handed a membrane
+    card the respiration and hyperventilation pairs -- they share "carbon
+    dioxide" -- and the grader turned that mismatch into a WRONG verdict on a
+    perfectly correct card. Vocabulary overlap is not topic identity.
     """
+    candidates = [p for p in gold.pairs if p.section and p.section == card.topic]
+    if not candidates:
+        candidates = list(gold.pairs)
     retriever = Bm25Retriever()
     retriever.index(
         [
             Passage(id=pair.id, text="%s %s" % (pair.question, pair.answer))
-            for pair in gold.pairs
+            for pair in candidates
         ]
     )
-    by_id = {pair.id: pair for pair in gold.pairs}
+    by_id = {pair.id: pair for pair in candidates}
     query = "%s %s %s" % (card.front, card.back, card.provenance.quote)
     return [by_id[hit.passage_id] for hit in retriever.search(query, k=k)]
 
@@ -710,7 +726,11 @@ Put the card in EXACTLY ONE bucket:
 
 If a card is both wrong and badly taught, it is "wrong".
 
-REFERENCE ANSWER KEY (hand-written; treat as authoritative):
+REFERENCE ANSWER KEY (hand-written; authoritative where it applies).
+The key covers the topic but MAY NOT COVER this specific card. Do not mark a
+card wrong merely because the key is silent on it -- judge that card against
+the cited source span and ordinary MCAT knowledge. Only "wrong" means a real
+factual error.
 {references}
 
 SOURCE SPAN THE CARD CITES (verbatim from the source document):
@@ -812,7 +832,6 @@ class LlmGrader(Grader):
                         "response_mime_type": "application/json",
                     },
                 )
-                break
             except ProviderError:
                 raise
             except Exception as exc:  # noqa: BLE001 - reclassified below
@@ -826,10 +845,27 @@ class LlmGrader(Grader):
                         % (attempt, type(exc).__name__, status or "unknown")
                     ) from None
                 self._sleep(self.retry_delay * attempt)
-        text = getattr(response, "text", None)
-        if not text:
-            raise GradingError("Gemini returned an empty grading response")
-        return parse_grade(text)
+                continue
+
+            # A malformed or empty reply is a transient formatting glitch, not
+            # a verdict. Observed live: one unparseable answer on card N ended
+            # a 50-call run. Retried like any other transient failure.
+            text = getattr(response, "text", None)
+            try:
+                if not text:
+                    raise GradingError("Gemini returned an empty grading response")
+                return parse_grade(text)
+            except GradingError:
+                if attempt >= self.retries:
+                    raise GradingError(
+                        "Gemini returned no usable grade after %d attempt(s). "
+                        "Last reply was: %r"
+                        % (attempt, (text or "")[:200])
+                    ) from None
+                self._sleep(self.retry_delay * attempt)
+        raise GradingError(  # pragma: no cover - loop returns or raises above
+            "grading exhausted its attempts without a verdict"
+        )
 
 
 def parse_grade(text: str) -> Grade:
@@ -1083,6 +1119,25 @@ def _card_key(card: GeneratedCard) -> str:
     ).hexdigest()
 
 
+def rubric_fingerprint() -> str:
+    """Identity of the grading contract: bucket definitions, precedence, the
+    grader prompt, and the heuristic rule source.
+
+    A cached grade is only meaningful under the rubric that produced it. All
+    three of these changed during development while a cache sat on disk, so
+    the fingerprint is what stops a stale entry being reported as a result.
+    """
+    digest = hashlib.blake2b(digest_size=12)
+    for bucket in BUCKET_PRECEDENCE:
+        digest.update(bucket.value.encode("utf-8"))
+        digest.update(BUCKET_DEFINITIONS[bucket].encode("utf-8"))
+    digest.update(GRADER_PROMPT.encode("utf-8"))
+    import inspect
+
+    digest.update(inspect.getsource(HeuristicGrader).encode("utf-8"))
+    return digest.hexdigest()
+
+
 class GradeCache:
     """Grades already obtained, keyed by card and by grader.
 
@@ -1092,13 +1147,20 @@ class GradeCache:
     heuristic grades never masquerade as LLM grades.
     """
 
-    def __init__(self, path: Path, grader_name: str):
+    def __init__(self, path: Path, grader_name: str, reset: bool = False):
         self.path = Path(path)
         self.grader_name = grader_name
         self._entries: Dict[str, Grade] = {}
-        if self.path.exists():
+        # `reset` discards existing grades but keeps writing new ones: a fresh
+        # 50-call run that dies at card 40 having saved nothing is exactly the
+        # failure this cache exists to prevent.
+        self.rubric = rubric_fingerprint()
+        if self.path.exists() and not reset:
             raw = json.loads(self.path.read_text(encoding="utf-8"))
-            if raw.get("grader") == grader_name:
+            if (
+                raw.get("grader") == grader_name
+                and raw.get("rubric_fingerprint") == self.rubric
+            ):
                 for key, value in raw.get("grades", {}).items():
                     self._entries[key] = Grade(
                         bucket=Bucket(value["bucket"]), reason=value.get("reason", "")
@@ -1118,6 +1180,7 @@ class GradeCache:
         self.path.parent.mkdir(parents=True, exist_ok=True)
         payload = {
             "grader": self.grader_name,
+            "rubric_fingerprint": self.rubric,
             "grades": {
                 key: {"bucket": grade.bucket.value, "reason": grade.reason}
                 for key, grade in self._entries.items()
@@ -1253,12 +1316,11 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         choice = "llm" if os.environ.get(API_KEY_ENV, "").strip() else "heuristic"
     grader: Grader = LlmGrader() if choice == "llm" else HeuristicGrader()
 
-    grade_cache = None
-    if not args.regrade:
-        grade_cache = GradeCache(
-            RESULTS_DIR / ("card_check_grades_%s.json" % grader.name),
-            grader_name=grader.name,
-        )
+    grade_cache = GradeCache(
+        RESULTS_DIR / ("card_check_grades_%s.json" % grader.name),
+        grader_name=grader.name,
+        reset=args.regrade,
+    )
     try:
         report = run_card_check(
             deck=deck,

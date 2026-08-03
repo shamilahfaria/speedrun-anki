@@ -97,6 +97,8 @@ that proves it.
 | Readiness reports on the real 472–528 scale, or refuses | `rslib/src/transfer/scale.rs` | `refuses_below_the_coverage_floor`, `projects_with_a_range_when_earned`, `confidence_tracks_coverage_not_accuracy` |
 | Evaluation data is not contaminated | `speedrun_ai/leakage_check.py` | Clean: 0 of 946 pairs over threshold; three detectors incl. asymmetric containment |
 | Every Section 10 target is measured | `make bench` | 8 targets, none skipped — see Performance below, including the one that is **not met** |
+| AI-generated cards are checked against a gold set | `speedrun_ai/card_check.py` | 50 cards generated live from one source, graded against 50 authored Q&A pairs: **48 correct-and-useful (96%), 1 wrong, 1 correct-but-bad-teaching** — against a 70%/10% cutoff declared in the file before any card existed. Graded by an LLM, which the output labels a weak evaluation, not human review. |
+| Reworded probes measure something a card does not | `speedrun_ai/paraphrase_test.py` | 30 cards × 2 rewordings: originals 93.3%, rewordings 21.7%, gap **+0.717 [0.517, 0.883]** by cluster bootstrap over cards. Simulated responder — the output states it is not evidence about learners. |
 
 Not yet true, and listed here rather than omitted:
 
@@ -107,7 +109,7 @@ Not yet true, and listed here rather than omitted:
 | Readiness is **weighted** by the outline's own section percentages | **Partial.** Coverage is now measured against all 31 official content categories and the projection refuses below 50% coverage — but the score is not yet weighted by AAMC's published per-concept percentages. |
 | Models are calibrated (Brier / log loss on held-back data) | **Not started.** This is the largest remaining gap: we report intervals nobody has checked for calibration. |
 | Ablation test validating the thesis | **Harness only.** Three arms are built and the failure modes were stated in advance in `BRAINLIFT.md`, but there are no human subjects, so the responder is simulated and the numbers are not evidence about learners. |
-| AI card check against the 50-item gold set | **Blocked, not failed.** The harness is complete and refuses to report partial counts; the Gemini free-tier quota is exhausted (429). Needs quota, not code. |
+
 | Dashboard refresh inside its 500 ms budget | **Not met.** Passes on an idle-ish run and fails under load — 3 of 6 runs exceeded budget. Recorded rather than reported as a pass. |
 
 ---

@@ -37,6 +37,9 @@ help:
 	@echo "make deck       - build the 50k benchmark deck only"
 	@echo "make leakage    - eval-set vs. corpus leakage check"
 	@echo "make test-bench - unit tests for the harness and the leakage check"
+	@echo "make ablation   - Section 9 ablation test: full vs feature-off vs plain Anki"
+	@echo "make ablation-quick - the three arms without the parameter sweep"
+	@echo "make test-ablation  - unit tests for the ablation harness"
 	@echo "make clean-bench- delete the built deck"
 
 # pylib is the thing under test; ninja no-ops when it is already current.
@@ -83,3 +86,41 @@ test-bench:
 clean-bench:
 	rm -f "$(DECK)" "$(DECK)-wal" "$(DECK)-journal" \
 		"$(REPO)/out/bench/speedrun-5k.anki2"
+
+# --- Section 9: the ablation test -------------------------------------------
+#
+# Appended below the Section 10 bench targets. Touches none of them: the
+# ablation is pure Python over checked-in fixtures and never opens a collection,
+# so it needs neither the built pylib nor the 50k deck.
+
+ABL_LEARNERS ?= 120
+ABL_REVIEWS  ?= 3000
+ABL_SEED     ?= 20260803
+ABL_ARGS     ?=
+
+# No PYTHONPATH to out/pylib on purpose -- this harness must not be able to
+# reach the real collection layer, so it cannot accidentally depend on one.
+RUN_ABL := PATH="$(TOOLCHAIN):$$PATH" $(PYTHON)
+
+.PHONY: ablation ablation-sweep ablation-json test-ablation
+
+ablation:
+	cd $(REPO) && $(RUN_ABL) tools/ablation.py \
+		--learners $(ABL_LEARNERS) --reviews $(ABL_REVIEWS) --seed $(ABL_SEED) \
+		--sweep $(ABL_ARGS)
+
+# The three arms only, without the parameter sweep.
+ablation-quick:
+	cd $(REPO) && $(RUN_ABL) tools/ablation.py \
+		--learners $(ABL_LEARNERS) --reviews $(ABL_REVIEWS) --seed $(ABL_SEED) \
+		$(ABL_ARGS)
+.PHONY: ablation-quick
+
+ablation-json:
+	cd $(REPO) && $(RUN_ABL) tools/ablation.py \
+		--learners $(ABL_LEARNERS) --reviews $(ABL_REVIEWS) --seed $(ABL_SEED) \
+		--sweep --json $(ABL_ARGS)
+
+test-ablation:
+	cd $(REPO) && PYTHONPATH="$(REPO)/tools" $(RUN_ABL) -m pytest \
+		tools/tests/test_ablation.py -q

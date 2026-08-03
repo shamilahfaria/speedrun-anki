@@ -221,10 +221,32 @@ SCALE_MAX = 528
 
 #: How strongly a measured gap lifts a topic. weight = 1 + LAMBDA * gap.
 TRANSFER_LAMBDA = 4.0
-#: The transfer-weighted picker reorders within the K most-due cards only. It
-#: never serves a card that is not already due-ish, so it changes ORDER and
-#: never changes VOLUME -- which is what makes "equal study time" enforceable.
+#: The transfer-weighted picker reorders within the K most-due cards.
+#:
+#: FINDING, recorded because it cost a rewrite and is worth more than the
+#: headline number: reordering within a lookahead window reallocates NOTHING.
+#: A first version of this file implemented the feature purely as "among the K
+#: most-due cards, serve the one whose topic has the largest gap", which sounds
+#: like prioritisation and is not. In a backlog-driven SRS every due card is
+#: served eventually, so a within-window reorder changes only WHEN a card
+#: appears, never HOW OFTEN. Measured: per-topic review counts came out at
+#: 83-111 in the full arm against 86-111 in the baseline arm, a per-topic
+#: difference of at most 3 reviews in 3000, and the contrast was +0.05 pp --
+#: indistinguishable from zero, for the boring reason that the two arms had
+#: studied almost exactly the same thing.
+#:
+#: What actually changes what gets served, under a FIXED review budget, is the
+#: rate at which a topic's cards come back. That is INTERVAL_SCALING below. The
+#: window reorder is retained because it is part of the feature as described,
+#: but it is not the part that does the work.
 LOOKAHEAD = 12
+#: The load-bearing half of the mechanism. A boosted topic's cards are re-queued
+#: at interval / weight, so they return up to TRANSFER_LAMBDA-fold sooner and
+#: claim more of a fixed budget. The card's stored SM-2 interval and ease are
+#: left stock; only the queue placement moves. Weights are >= 1, so the feature
+#: only ever promotes -- but under a fixed budget, promoting the wrong topics
+#: still starves the right ones, which is how it can and does lose.
+INTERVAL_SCALING = True
 #: The gap display and the queue weights refresh every N reviews, not every
 #: review. The real dashboard is not recomputed per card either.
 WEIGHT_REFRESH = 25
@@ -276,6 +298,14 @@ ARM_BLURB = {
 
 BOOTSTRAP_DRAWS = 10000
 BOOTSTRAP_ALPHA = 0.05
+
+#: The smallest held-out difference this project will call practically
+#: meaningful, in percentage points. One scaled point on 472-528 is 100/56 =
+#: 1.79 pp, and the real exam's own published confidence band is +/-1 to +/-2
+#: scaled points -- so anything under a scaled point is inside the exam's own
+#: noise and must not be sold as an improvement, however tight its CI.
+#: Declared alongside the prediction, before any run.
+PRACTICAL_FLOOR_PP = 100.0 / (SCALE_MAX - SCALE_MIN)
 
 
 class InvariantViolation(RuntimeError):
@@ -644,13 +674,25 @@ def _simulate_learner(
             transfer[t] += rho * TRANSFER_GAIN_RATE * head
 
         # --- stock SM-2-ish rescheduling ------------------------------------
+        # The card's own interval and ease are updated identically in every
+        # arm. Nothing here depends on the policy.
         if passed:
             interval[idx] *= ease[idx]
         else:
             interval[idx] = LAPSE_INTERVAL
             e = ease[idx] - EASE_PENALTY
             ease[idx] = e if e > MIN_EASE else MIN_EASE
-        heapq.heappush(queue, (due + interval[idx], idx))
+
+        # ...but where the card lands in the queue does. This is the half of
+        # the mechanism that actually reallocates a fixed review budget: a
+        # topic carrying a measured transfer gap gets its cards back sooner,
+        # and so consumes more of the budget, at the cost of every topic that
+        # is not boosted. Under `use_weighted` only -- arms 2 and 3 push at the
+        # stock interval.
+        if use_weighted and INTERVAL_SCALING:
+            heapq.heappush(queue, (due + interval[idx] / weights[t], idx))
+        else:
+            heapq.heappush(queue, (due + interval[idx], idx))
 
     # --- the held-out probe set, identical for every arm --------------------
     correct = 0
@@ -836,6 +878,21 @@ SWEEP_VALUES = {
     "display_response": (0.0, 0.22, 0.4, 0.6, 0.8, 1.0),
 }
 
+#: Which contrast each parameter actually acts on. display_response moves only
+#: arm 2, so arm1 - arm3 is flat across that sweep by construction and reading a
+#: break-even off it would be meaningless -- the question that parameter answers
+#: is "did the SCHEDULING do the work", which is arm1 - arm2.
+SWEEP_GOVERNING_CONTRAST = {
+    "headroom_alignment": "arm1_minus_arm3",
+    "transfer_responsiveness": "arm1_minus_arm3",
+    "display_response": "arm1_minus_arm2",
+}
+
+CONTRAST_TITLE = {
+    "arm1_minus_arm3": "arm1 - arm3 (does it beat plain Anki?)",
+    "arm1_minus_arm2": "arm1 - arm2 (did the scheduling do the work?)",
+}
+
 SWEEP_MEANING = {
     "headroom_alignment": (
         "Does a lagging probe score mark a topic worth more reviews (+) or one "
@@ -866,11 +923,12 @@ class SweepRow:
 class SweepResult:
     param: str
     rows: Tuple[SweepRow, ...]
-    #: the parameter value at which arm 1 - arm 3 crosses zero, interpolated
+    #: the parameter value at which the GOVERNING contrast crosses zero
     break_even: Optional[float]
     seed: int
     learners: int
     reviews: int
+    governing: str = "arm1_minus_arm3"
 
 
 def run_sweep(
@@ -898,9 +956,11 @@ def run_sweep(
             )
         )
 
+    governing = SWEEP_GOVERNING_CONTRAST[param]
     break_even = None
     for a, b in zip(rows, rows[1:]):
-        ya, yb = a.arm1_minus_arm3.point, b.arm1_minus_arm3.point
+        ya = getattr(a, governing).point
+        yb = getattr(b, governing).point
         if ya == 0.0 and yb == 0.0:
             continue
         if (ya <= 0.0 <= yb) or (yb <= 0.0 <= ya):
@@ -916,6 +976,7 @@ def run_sweep(
         seed=seed,
         learners=learners,
         reviews=reviews,
+        governing=governing,
     )
 
 
@@ -1002,8 +1063,11 @@ def render_report(trial: Trial) -> str:
         )
     w("")
     w("  Assertion passed: every arm served exactly the same number of reviews")
-    w("  to every learner. The transfer-weighted picker only reorders within the")
-    w(f"  {LOOKAHEAD} most-due cards, so it changes order and never volume.")
+    w("  to every learner. The budget is a fixed COUNT of review events, and the")
+    w("  transfer weighting can only change WHICH card fills each of them -- by")
+    w(f"  reordering the {LOOKAHEAD} most-due cards and by re-queueing a boosted")
+    w("  topic's cards at interval/weight so they come back sooner. Neither can")
+    w("  add a review, so a topic is only ever promoted at another topic's cost.")
     w("")
 
     # --- questions ----------------------------------------------------------
@@ -1075,6 +1139,34 @@ def render_report(trial: Trial) -> str:
     w("  the held-out set is fixed by design, so learner is the unit that varies.")
     w("")
 
+    # --- statistical vs practical significance ------------------------------
+    key = f"{ARM_FULL}-{ARM_BASELINE}"
+    if key in contrasts:
+        c = contrasts[key]
+        w("  IS THAT AN EFFECT, OR JUST A DETECTABLE ONE?")
+        w(f"  {c.point:+.2f} pp is {abs(c.point) / 100 * len(deck.holdout_probes):.1f} "
+          f"of {len(deck.holdout_probes)} held-out items, and "
+          f"{c.scaled_equivalent():+.2f} points on the 472-528 scale.")
+        if c.excludes_zero and abs(c.point) < PRACTICAL_FLOOR_PP:
+            w(f"  The interval excludes zero, so the effect is DETECTABLE at "
+              f"n = {trial.learners}.")
+            w(f"  It is also far below {PRACTICAL_FLOOR_PP:.1f} pp, which is the "
+              f"smallest difference")
+            w("  this project is willing to call practically meaningful (1 scaled")
+            w("  point, against a real exam whose own reported band is +/-1 to +/-2).")
+            w("  So the honest reading is: THE MECHANISM IS REAL AND ITS SIZE IS")
+            w("  NEGLIGIBLE. Statistical detectability at a simulated n is not a")
+            w("  product claim, and reporting it as one would be the exact error")
+            w("  this project was built to call out.")
+        elif not c.excludes_zero:
+            w("  The interval includes zero. No effect was demonstrated.")
+        else:
+            w(f"  The interval excludes zero and the point exceeds the "
+              f"{PRACTICAL_FLOOR_PP:.1f} pp")
+            w("  practical floor. That is a real effect UNDER THIS LEARNER MODEL,")
+            w("  and says nothing whatever about real learners.")
+        w("")
+
     # --- against the declared prediction ------------------------------------
     w("AGAINST THE NUMBER DECLARED IN ADVANCE")
     w(THIN)
@@ -1125,36 +1217,51 @@ def render_sweep(sweep: SweepResult) -> str:
     w(f"  seed {sweep.seed}, {sweep.learners} learners, {sweep.reviews} reviews each,")
     w("  every other parameter at its declared default.")
     w("")
+    w(f"  judged on: {CONTRAST_TITLE[sweep.governing]}")
+    w("")
     w(f"  {sweep.param:>24} {'arm1-arm3':>12} {'95% CI':>20} "
       f"{'arm1-arm2':>11} {'arm3 acc':>9}  pays?")
     w("  " + THIN[:76])
     for r in sweep.rows:
-        c = r.arm1_minus_arm3
-        if c.point > 0 and c.lower > 0:
-            pays = "yes"
+        c = getattr(r, sweep.governing)
+        if c.point == 0.0:
+            pays = "no -- exactly nil"
         elif c.point < 0 and c.upper < 0:
             pays = "NO -- it LOSES"
-        elif c.point == 0.0:
-            pays = "no -- exactly nil"
-        else:
+        elif c.lower <= 0.0 <= c.upper:
             pays = "no -- CI spans 0"
+        elif abs(c.point) < PRACTICAL_FLOOR_PP:
+            pays = "detectable, negligible"
+        else:
+            pays = "yes"
         w(
-            f"  {r.value:>24.2f} {c.point:>+11.2f}pp "
-            f"{f'[{c.lower:+.2f}, {c.upper:+.2f}]':>20} "
+            f"  {r.value:>24.2f} {r.arm1_minus_arm3.point:>+11.2f}pp "
+            f"{f'[{r.arm1_minus_arm3.lower:+.2f}, {r.arm1_minus_arm3.upper:+.2f}]':>20} "
             f"{r.arm1_minus_arm2.point:>+10.2f}pp "
             f"{r.baseline_accuracy * 100:>8.2f}%  {pays}"
         )
     w("")
     if sweep.break_even is None:
-        w("  WHERE THE FEATURE STOPS PAYING: nowhere in this sweep. The contrast")
-        w("  never crosses zero across the whole swept range. Treat that as a")
-        w("  reason to distrust the harness, not as a result about the feature.")
+        w("  WHERE THE FEATURE STOPS PAYING: nowhere in this sweep -- the")
+        w(f"  governing contrast never crosses zero across the whole swept range.")
+        w("  Treat that as a reason to distrust the harness on this axis, not as")
+        w("  a result about the feature.")
     else:
+        first = getattr(sweep.rows[0], sweep.governing).point
+        last = getattr(sweep.rows[-1], sweep.governing).point
+        side = "BELOW" if last > first else "ABOVE"
         w(f"  WHERE THE FEATURE STOPS PAYING: {sweep.param} = "
-          f"{sweep.break_even:+.3f} (linear interpolation between the bracketing")
-        w("  rows). Below that value the feature is worth nothing or worse than")
-        w("  nothing, and the product's premise is the claim that the real world")
-        w("  sits above it. Nothing in this file establishes that it does.")
+          f"{sweep.break_even:+.3f}")
+        w(f"  (linear interpolation between the bracketing rows). {side} that")
+        w("  value the feature is worth nothing or worse than nothing. The")
+        w("  product's premise is the claim that the real world sits on the other")
+        w("  side of it, and nothing in this file establishes that it does.")
+    w("")
+    w(f"  'detectable, negligible' means the CI excludes zero but the effect is")
+    w(f"  under {PRACTICAL_FLOOR_PP:.2f} pp -- less than one point on 472-528, "
+      f"inside the real")
+    w("  exam's own reported confidence band. It is not an improvement anyone")
+    w("  would notice, and it is not being reported as one.")
     w("")
     return "\n".join(out)
 

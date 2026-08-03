@@ -387,6 +387,59 @@ def test_grader_paces_calls_to_stay_under_a_per_minute_limit(gold):
     assert sum(slept) >= 4.0
 
 
+def test_an_unparseable_reply_is_retried_before_the_run_is_abandoned(gold):
+    """Observed live: one malformed reply on card N killed a 50-call run. A
+    formatting glitch is transient, so it is retried like any other."""
+    grader = cc.LlmGrader(api_key="k", retries=3, retry_delay=0.0, pace_seconds=0.0)
+    client = _FakeClient(failures=0, error_text="", payload="not json at all")
+    grader._client = client
+
+    calls = {"n": 0}
+    original = client.models.generate_content
+
+    def flaky(**kwargs):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            return type("R", (), {"text": "I think this card is fine, really"})()
+        return type(
+            "R", (), {"text": '{"bucket": "correct-and-useful", "reason": "ok"}'}
+        )()
+
+    client.models.generate_content = flaky
+    card = _card_for_grading()
+    grade = grader.grade(card, references=cc.gold_references(gold, card))
+    assert grade.bucket is cc.Bucket.CORRECT_AND_USEFUL
+    assert calls["n"] == 2
+
+
+def test_a_persistently_unparseable_reply_reports_what_came_back(gold):
+    grader = cc.LlmGrader(api_key="k", retries=2, retry_delay=0.0, pace_seconds=0.0)
+    grader._client = _FakeClient(
+        failures=0, error_text="", payload="absolutely not json"
+    )
+    card = _card_for_grading()
+    with pytest.raises(cc.GradingError) as excinfo:
+        grader.grade(card, references=cc.gold_references(gold, card))
+    assert "absolutely not json" in str(excinfo.value)
+
+
+def test_regrade_still_persists_grades_as_they_complete(tmp_path, gold, source):
+    """--regrade must not mean 'keep nothing'. A fresh 50-call run that dies at
+    card 40 with nothing written is the failure this cache exists to prevent."""
+    deck = cc.generate_deck(source, provider=EchoProvider(), target=cc.TARGET_CARDS)
+    path = tmp_path / "grades.json"
+    cc.run_card_check(
+        deck=deck,
+        gold=gold,
+        grader=cc.HeuristicGrader(),
+        cache=cc.GradeCache(path, grader_name="heuristic"),
+    )
+    fresh = cc.GradeCache(path, grader_name="heuristic", reset=True)
+    assert len(fresh) == 0
+    cc.run_card_check(deck=deck, gold=gold, grader=cc.HeuristicGrader(), cache=fresh)
+    assert len(cc.GradeCache(path, grader_name="heuristic")) == cc.TARGET_CARDS
+
+
 def test_grades_are_cached_so_a_quota_failure_does_not_discard_the_run(
     tmp_path, gold, source
 ):
@@ -423,6 +476,29 @@ def test_grades_are_cached_so_a_quota_failure_does_not_discard_the_run(
     assert second.counts == first.counts
 
 
+def test_grade_cache_is_invalidated_when_the_rubric_changes(tmp_path, gold, source):
+    """Grades are only meaningful under the rubric that produced them. The
+    bucket definitions, the grader prompt and the heuristic rules all changed
+    during development while a cache sat on disk; reusing those entries would
+    have reported grades no current rule ever produced."""
+    deck = cc.generate_deck(source, provider=EchoProvider(), target=cc.TARGET_CARDS)
+    path = tmp_path / "grades.json"
+    cc.run_card_check(
+        deck=deck,
+        gold=gold,
+        grader=cc.HeuristicGrader(),
+        cache=cc.GradeCache(path, grader_name="heuristic"),
+    )
+    assert len(cc.GradeCache(path, grader_name="heuristic")) == cc.TARGET_CARDS
+
+    saved = json.loads(path.read_text(encoding="utf-8"))
+    assert saved["rubric_fingerprint"] == cc.rubric_fingerprint()
+    saved["rubric_fingerprint"] = "a-different-rubric"
+    path.write_text(json.dumps(saved), encoding="utf-8")
+
+    assert len(cc.GradeCache(path, grader_name="heuristic")) == 0
+
+
 def test_grade_cache_ignores_entries_from_a_different_grader(tmp_path, gold, source):
     deck = cc.generate_deck(source, provider=EchoProvider(), target=cc.TARGET_CARDS)
     path = tmp_path / "grades.json"
@@ -433,6 +509,47 @@ def test_grade_cache_ignores_entries_from_a_different_grader(tmp_path, gold, sou
         cache=cc.GradeCache(path, grader_name="heuristic"),
     )
     assert len(cc.GradeCache(path, grader_name="llm-gemini")) == 0
+
+
+def test_gold_references_stay_inside_the_card_s_own_section(gold):
+    """Observed in a real run: a correct membrane card was graded WRONG because
+    BM25 handed the grader gold pairs about respiration and hyperventilation,
+    and the grader read 'not in the key' as 'false'. References are scoped to
+    the card's section so an off-topic key cannot manufacture a wrong verdict."""
+    card = cc.make_card(
+        front="What type of molecules can diffuse straight through membranes?",
+        back="Small nonpolar molecules such as oxygen and carbon dioxide.",
+        topic="Membranes",
+    )
+    refs = cc.gold_references(gold, card, k=3)
+    assert refs
+    assert {r.section for r in refs} == {"Membranes"}
+
+
+def test_grader_prompt_forbids_marking_uncovered_material_wrong(gold):
+    """The gold set does not cover every sentence of the source. A card about
+    material the key is silent on must not be graded wrong for that silence."""
+    grader = cc.LlmGrader(api_key="k", retries=1, retry_delay=0.0, pace_seconds=0.0)
+    client = _FakeClient(
+        failures=0,
+        error_text="",
+        payload='{"bucket": "correct-and-useful", "reason": "ok"}',
+    )
+    grader._client = client
+    sent = {}
+
+    original = client.models.generate_content
+
+    def capture(**kwargs):
+        sent.update(kwargs)
+        return original(**kwargs)
+
+    client.models.generate_content = capture
+    card = _card_for_grading()
+    grader.grade(card, references=cc.gold_references(gold, card))
+    prompt = sent["contents"].lower()
+    assert "may not cover" in prompt
+    assert "do not mark" in prompt
 
 
 def test_gold_references_are_ranked_and_capped(gold):

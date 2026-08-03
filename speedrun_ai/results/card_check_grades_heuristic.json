@@ -201,5 +201,6 @@
       "bucket": "correct-and-useful",
       "reason": "passes every mechanical check applied"
     }
-  }
+  },
+  "rubric_fingerprint": "3a81a290baa1d159c9898ceb"
 }
