@@ -17,6 +17,10 @@
       "bucket": "correct-and-useful",
       "reason": "The card is factually correct based on the source text, self-contained, and tests a single load-bearing concept clearly."
     },
+    "22dfb5dd7b5b25c4efa44328": {
+      "bucket": "correct-and-useful",
+      "reason": "The front is self-contained and clearly targets the specific load-bearing mechanism of NMR splitting without giving away the answer."
+    },
     "2607bb02410c7bcdd99633cd": {
       "bucket": "correct-and-useful",
       "reason": "The card is factually correct, directly supported by the source span, self-contained, and tests a single load-bearing fact."
@@ -28,6 +32,14 @@
     "2cdf2c9e03417053ffe30c05": {
       "bucket": "correct-and-useful",
       "reason": "The card is factually supported by the source span, asks a self-contained and clear question, and tests a single load-bearing fact."
+    },
+    "43d6beaf70798db08050be30": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct, self-contained, tests the load-bearing idea directly, and aligns precisely with the source span."
+    },
+    "446e68a0f9644b623381e516": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct based on the source span, self-contained, and tests a single load-bearing idea clearly."
     },
     "4599ed2d7c09ba92560efecd": {
       "bucket": "correct-and-useful",
@@ -41,9 +53,17 @@
       "bucket": "correct-and-useful",
       "reason": "The card asks a self-contained question directly supported by the source span and provides a concise, load-bearing answer testing a single fact."
     },
+    "4b50d10959fb8ad7fcf40196": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct, asks a self-contained question testing a load-bearing concept from the source, and evaluates a single distinct piece of knowledge."
+    },
     "54053502c325ce831252b1df": {
       "bucket": "correct-and-useful",
       "reason": "The front is self-contained, the back accurately captures the load-bearing definition from the source span without bundling multiple independent concepts, and it aligns with the reference answer key."
+    },
+    "5c62d575aed456bf5a510800": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually supported by the source span, self-contained, tests a single load-bearing idea, and is well-formulated for active recall."
     },
     "5e075d27fcb5eed605593cb2": {
       "bucket": "correct-and-useful",
@@ -129,6 +149,10 @@
       "bucket": "correct-and-useful",
       "reason": "The card is factually correct, tests a single load-bearing concept, and the front is self-contained without giving away the answer."
     },
+    "d0e03570e68d7bab8cfe517d": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct, asks a self-contained and clear question, and targets the exact load-bearing fact specified in the source span."
+    },
     "d3c1756014e763158684293a": {
       "bucket": "correct-and-useful",
       "reason": "The card is factually correct, self-contained, tests a load-bearing idea directly supported by the source span, and is well-formulated."
@@ -164,6 +188,10 @@
     "fd2af2df4092f91ad793b782": {
       "bucket": "correct-but-bad-teaching",
       "reason": "The back repeats the question and answers it with a full sentence rather than isolating the specific load-bearing fact requested."
+    },
+    "ffe1e08a610f8ad9d3a01899": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct, self-contained, tests the load-bearing idea of solvent effects in bimolecular substitution, and aligns with the provided source span."
     }
   }
 }

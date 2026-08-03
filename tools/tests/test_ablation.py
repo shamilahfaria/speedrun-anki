@@ -138,6 +138,27 @@ def test_every_arm_is_scored_on_an_identical_question_set_in_identical_order():
 # --- requirement 4: the learner model must be able to make the thesis fail ---
 
 
+def test_the_mechanism_actually_engages_so_the_null_tests_are_not_vacuous():
+    """Guard for every exact-zero test below.
+
+    All the "must be exactly 0" assertions would also pass if the transfer
+    weighting never fired at all -- if the engine's refusal threshold were
+    never cleared, or the picker were a no-op. This asserts the opposite at
+    the same budget those tests use: weights are live, and the arms diverge.
+    """
+    trial = ablation.run_trial(seed=101, **SMALL)
+    full = trial.arms[ablation.ARM_FULL]
+    assert full.weighted_picks == SMALL["learners"] * SMALL["reviews"]
+    total = full.weighted_picks + full.stock_picks
+    assert full.refused_topic_reviews < 0.5 * total, (
+        "the gap is refused on most reviews, so arm 1 is mostly plain Anki "
+        "and the exact-zero tests below would pass vacuously"
+    )
+    c = trial.contrast(ablation.ARM_FULL, ablation.ARM_BASELINE)
+    assert c.point != 0.0, "arms are indistinguishable even at the defaults"
+    assert any(d != 0.0 for d in c.per_learner)
+
+
 def test_feature_cannot_win_when_transfer_is_unresponsive():
     """rho = 0: study moves recall but never moves transfer.
 

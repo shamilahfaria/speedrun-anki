@@ -91,7 +91,12 @@ that proves it.
 | Desktop and phone run one engine, not two | iOS `anki-upstream` submodule → this repo, branch `speedrun` | `git submodule status` in the iOS repo pins `a84fb5e` |
 | The iOS companion actually builds against our engine | [speedrun-ios](https://github.com/shamilahfaria/speedrun-ios) CI | Run 30712722654: all steps green, `aarch64-apple-ios` + `-ios-sim` + `-watchos-sim` slices built, 28.2 MB unsigned IPA produced on a clean runner |
 | The build is reproducible on a fresh machine | same CI run | GitHub `macos-26` runner starts from nothing: clones, installs toolchains, builds end to end |
-| Transfer report meets its latency budget | `tools/bench_transfer.py` | 50,000 cards / 400,000 reviews: 441 ms cold (budget 1000 ms), 399 ms warm median (budget 500 ms), p95 403 ms |
+| Undo works and the collection does not corrupt | `pylib/tests/test_transfer_undo.py` | 7 tests: no undo entry pushed, observation counts track undo/redo, integrity clean, a SHA-256 digest of every row of every table byte-identical across 10 scoring calls — plus a control asserting the instrument deflects on `set_config` |
+| 20 unclean kills mid-review corrupt nothing | `tools/crash_test.py` | 20/20 SIGKILL, zero corruption, scores computable after each; detector separately validated against four injected corruption classes |
+| Coverage is measured against the official outline | `rslib/src/transfer/outline.rs` | All 31 AAMC content categories, verbatim from the official PDF; `uncovered_topics_are_visible` asserts untouched topics are present and marked, not omitted |
+| Readiness reports on the real 472–528 scale, or refuses | `rslib/src/transfer/scale.rs` | `refuses_below_the_coverage_floor`, `projects_with_a_range_when_earned`, `confidence_tracks_coverage_not_accuracy` |
+| Evaluation data is not contaminated | `speedrun_ai/leakage_check.py` | Clean: 0 of 946 pairs over threshold; three detectors incl. asymmetric containment |
+| Every Section 10 target is measured | `make bench` | 8 targets, none skipped — see Performance below, including the one that is **not met** |
 
 Not yet true, and listed here rather than omitted:
 
@@ -99,9 +104,11 @@ Not yet true, and listed here rather than omitted:
 |---|---|
 | iOS companion **syncs** end to end | **Unverified.** It builds and the engine is wired in, but no device run has exercised bidirectional sync or offline reconciliation. |
 | The iOS app **displays** the three scores | **Not implemented.** The request factory and domain types exist; no SwiftUI surface calls them yet. |
-| Readiness is weighted by the official exam outline | **Not implemented.** Readiness pools probe results across topics and is labelled a floor, not a prediction. |
-| Models are calibrated (Brier / log loss on held-back data) | **Not started.** Sunday scope. |
-| Ablation test validating the thesis | **Not started.** Sunday scope. Failure modes stated in advance in `BRAINLIFT.md`. |
+| Readiness is **weighted** by the outline's own section percentages | **Partial.** Coverage is now measured against all 31 official content categories and the projection refuses below 50% coverage — but the score is not yet weighted by AAMC's published per-concept percentages. |
+| Models are calibrated (Brier / log loss on held-back data) | **Not started.** This is the largest remaining gap: we report intervals nobody has checked for calibration. |
+| Ablation test validating the thesis | **Harness only.** Three arms are built and the failure modes were stated in advance in `BRAINLIFT.md`, but there are no human subjects, so the responder is simulated and the numbers are not evidence about learners. |
+| AI card check against the 50-item gold set | **Blocked, not failed.** The harness is complete and refuses to report partial counts; the Gemini free-tier quota is exhausted (429). Needs quota, not code. |
+| Dashboard refresh inside its 500 ms budget | **Not met.** Passes on an idle-ish run and fails under load — 3 of 6 runs exceeded budget. Recorded rather than reported as a pass. |
 
 ---
 
