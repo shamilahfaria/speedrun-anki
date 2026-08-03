@@ -1,0 +1,23 @@
+{
+  "purpose": "Fixtures for the Section 9 ablation test. Synthetic items over the real AAMC content outline. No human subject data of any kind is present here or anywhere in this test.",
+  "fixture_seed": 20260803,
+  "generated": "2026-08-03",
+  "data_cutoff": {
+    "content_outline": "AAMC 'What's on the MCAT Exam?' content outline PDF, (c) 2020 AAMC; transcribed verbatim in rslib/src/transfer/outline.rs",
+    "learner_model_priors": "2025-10-01 -- no source published after this date informs any parameter in tools/ablation.py",
+    "learner_outcome_data": "NONE. No real learner has used this product. There is no outcome dataset and no cutoff for one."
+  },
+  "counts": {
+    "topics": 31,
+    "study_items": 1240,
+    "study_probe_items": 372,
+    "study_recall_items": 868,
+    "holdout_probes": 310
+  },
+  "sha256": {
+    "topics.json": "0e86870336da70cb90251affd69f4548b00af76e256d4329a06f7a1e8b746e12",
+    "study_deck.json": "e04f292d4aaae7da8a6a8adcde7b1c8933b0229c29643f7c90dfc0d7d17afeb8",
+    "holdout_probes.json": "6623cc7ff1fb07be26dfa06c01c5c74b73e1394c666bbdca0551b4b66f7c5547"
+  },
+  "disjointness": "study_deck.json ids are prefixed 'study::', holdout_probes.json ids 'holdout::'. The two sets share no id. tools/ablation.py asserts this at load time and again against the actual served log of every arm."
+}

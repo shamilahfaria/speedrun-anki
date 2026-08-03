@@ -310,6 +310,131 @@ def test_llm_grader_declares_itself_and_the_weak_evaluation_caveat():
     assert "weak" in grader.limitation_note.lower()
 
 
+class _FakeClient:
+    """Stands in for the genai client. Records calls, fails on demand."""
+
+    def __init__(self, failures: int, error_text: str, payload: str = None):
+        self.failures = failures
+        self.error_text = error_text
+        self.payload = payload or '{"bucket": "wrong", "reason": "stub"}'
+        self.calls = 0
+
+        class _Models:
+            def generate_content(inner, **kwargs):
+                self.calls += 1
+                if self.calls <= self.failures:
+                    raise RuntimeError(self.error_text)
+                return type("R", (), {"text": self.payload})()
+
+        self.models = _Models()
+
+
+def _card_for_grading():
+    return cc.make_card(
+        front="Which enzyme catalyses the rate-limiting step of glycolysis?",
+        back="Phosphofructokinase-1.",
+    )
+
+
+def test_grading_error_names_the_http_status_not_just_the_exception_type(gold):
+    """A run that dies after four minutes must say 429 rather than
+    'ClientError'. Quota exhaustion and a retired model need different fixes,
+    and collapsing both to the type name hides which one happened."""
+    grader = cc.LlmGrader(api_key="k", retries=1, retry_delay=0.0, pace_seconds=0.0)
+    grader._client = _FakeClient(
+        failures=99, error_text="429 RESOURCE_EXHAUSTED. quota exceeded"
+    )
+    card = _card_for_grading()
+    with pytest.raises(cc.GradingError) as excinfo:
+        grader.grade(card, references=cc.gold_references(gold, card))
+    assert "429" in str(excinfo.value)
+
+
+def test_grader_retries_a_transient_failure_then_succeeds(gold):
+    grader = cc.LlmGrader(api_key="k", retries=3, retry_delay=0.0, pace_seconds=0.0)
+    client = _FakeClient(failures=2, error_text="503 UNAVAILABLE")
+    grader._client = client
+    card = _card_for_grading()
+    grade = grader.grade(card, references=cc.gold_references(gold, card))
+    assert grade.bucket is cc.Bucket.WRONG
+    assert client.calls == 3
+
+
+def test_grader_gives_up_after_the_declared_number_of_attempts(gold):
+    grader = cc.LlmGrader(api_key="k", retries=2, retry_delay=0.0, pace_seconds=0.0)
+    client = _FakeClient(failures=99, error_text="429 RESOURCE_EXHAUSTED")
+    grader._client = client
+    card = _card_for_grading()
+    with pytest.raises(cc.GradingError):
+        grader.grade(card, references=cc.gold_references(gold, card))
+    assert client.calls == 2
+
+
+def test_grader_paces_calls_to_stay_under_a_per_minute_limit(gold):
+    """The free tier is rate-limited per minute and answers a 429 with an ~11s
+    retryDelay. Firing 50 calls back to back guarantees the limit is hit
+    partway through, so calls are spaced deliberately."""
+    slept: list = []
+    grader = cc.LlmGrader(
+        api_key="k", retries=1, retry_delay=0.0, pace_seconds=4.0, sleep=slept.append
+    )
+    grader._client = _FakeClient(failures=0, error_text="")
+    card = _card_for_grading()
+    references = cc.gold_references(gold, card)
+    grader.grade(card, references)
+    grader.grade(card, references)
+    assert 4.0 in slept
+    assert sum(slept) >= 4.0
+
+
+def test_grades_are_cached_so_a_quota_failure_does_not_discard_the_run(
+    tmp_path, gold, source
+):
+    """Fifty grading calls on a rate-limited key will not always finish. A
+    partial run that threw away its completed grades would make the harness
+    unrunnable, so completed grades persist and are reused."""
+    deck = cc.generate_deck(source, provider=EchoProvider(), target=cc.TARGET_CARDS)
+    cache_path = tmp_path / "grades.json"
+
+    cache = cc.GradeCache(cache_path, grader_name="heuristic")
+    first = cc.run_card_check(
+        deck=deck, gold=gold, grader=cc.HeuristicGrader(), cache=cache
+    )
+    assert cache_path.exists()
+    assert len(cc.GradeCache(cache_path, grader_name="heuristic")) == cc.TARGET_CARDS
+
+    class ExplodingGrader(cc.Grader):
+        name = "heuristic"
+        is_llm = False
+        limitation_note = "never called"
+
+        def describe(self):
+            return "must not be called"
+
+        def grade(self, card, references):
+            raise AssertionError("cache miss: the cached grade was not reused")
+
+    second = cc.run_card_check(
+        deck=deck,
+        gold=gold,
+        grader=ExplodingGrader(),
+        cache=cc.GradeCache(cache_path, grader_name="heuristic"),
+    )
+    assert second.counts == first.counts
+
+
+def test_grade_cache_ignores_entries_from_a_different_grader(tmp_path, gold, source):
+    deck = cc.generate_deck(source, provider=EchoProvider(), target=cc.TARGET_CARDS)
+    path = tmp_path / "grades.json"
+    cc.run_card_check(
+        deck=deck,
+        gold=gold,
+        grader=cc.HeuristicGrader(),
+        cache=cc.GradeCache(path, grader_name="heuristic"),
+    )
+    assert len(cc.GradeCache(path, grader_name="llm-gemini")) == 0
+
+
 def test_gold_references_are_ranked_and_capped(gold):
     card = cc.make_card(
         front="Which enzyme catalyses the rate-limiting step of glycolysis?",

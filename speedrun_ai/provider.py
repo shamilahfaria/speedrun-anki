@@ -22,7 +22,11 @@ from speedrun_ai.cards import CardKind
 logger = logging.getLogger(__name__)
 
 API_KEY_ENV = "GEMINI_API_KEY"
-DEFAULT_MODEL = "gemini-2.5-flash-lite"
+# Alias rather than a pinned version. Pinned Gemini model ids get retired --
+# gemini-2.5-flash-lite is still returned by models.list() but 404s with "no
+# longer available to new users", so listing a model is not evidence you can
+# call it. The -latest alias tracks the current generation.
+DEFAULT_MODEL = "gemini-flash-lite-latest"
 DEFAULT_MAX_RECALL = 6
 DEFAULT_MAX_PROBES = 3
 

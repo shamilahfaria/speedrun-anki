@@ -59,14 +59,21 @@ REQUIRED_METRICS = (
 )
 
 #: Operations that run on the UI thread, and so feed the "nothing blocks the
-#: UI" worst case. Sync is excluded: Anki runs it in a background thread behind
-#: a progress dialog. Cold start is excluded: there is no UI yet to block.
+#: UI" worst case.
+#:
+#: Excluded, and each for a reason that can be checked in the source rather
+#: than taken on trust:
+#:  * sync -- aqt/sync.py runs it in a background thread behind a progress
+#:    dialog.
+#:  * cold start -- there is no UI yet to block.
+#:  * dashboard load and refresh -- qt/aqt/transfer.py:refresh() computes via
+#:    taskman.run_in_background. They still get their own rows and their own
+#:    budgets; they just are not UI stalls. If that call ever goes back to
+#:    being inline, these keys belong here again, because it measured ~500 ms.
 UI_THREAD_KEYS = (
     "answer_card",
     "next_card",
     "card_render",
-    "dashboard_load",
-    "dashboard_refresh",
 )
 
 
@@ -238,7 +245,10 @@ def derive_ui_block(metrics: Sequence[Metric]) -> Metric:
         100.0,
         pooled,
         judge="worst",
-        note="worst call was %s (%.1f ms); pooled over %s"
+        note="worst call was %s (%.1f ms); pooled over %s. Dashboard scoring is "
+        "NOT pooled here because qt/aqt/transfer.py computes it via "
+        "taskman.run_in_background -- it is slow (see its own rows) but it is "
+        "not on this thread"
         % (
             worst_metric.label,
             worst_metric.worst,
@@ -475,6 +485,12 @@ def child_coldstart(collection: str, out_path: str, process_start: float) -> Non
     col.sched.get_queued_cards(fetch_limit=1)
     first_fetch_ms = (time.perf_counter() - t) * 1000
     ready_ms = (time.time() - process_start) * 1000
+    # A cold dashboard load can only happen once per process, so each cold
+    # process contributes one -- otherwise the target with a p95 budget would
+    # be judged on a single sample.
+    t = time.perf_counter()
+    col._backend.compute_transfer_scores(since_millis=0, min_reviews=20, min_cards=5)
+    dashboard_cold_ms = (time.perf_counter() - t) * 1000
     col.close()
     Path(out_path).write_text(
         json.dumps(
@@ -482,6 +498,7 @@ def child_coldstart(collection: str, out_path: str, process_start: float) -> Non
                 "ready_ms": ready_ms,
                 "open_ms": open_ms,
                 "first_fetch_ms": first_fetch_ms,
+                "dashboard_cold_ms": dashboard_cold_ms,
                 "peak_rss_mb": _peak_rss_mb(),
             }
         ),
@@ -543,6 +560,11 @@ def child_session(
 
     col = Collection(collection)
     try:
+        # Recorded before the session changes them, so the report describes the
+        # collection the numbers were taken on.
+        result["card_count"] = col.db.scalar("select count() from cards")
+        result["revlog_count"] = col.db.scalar("select count() from revlog")
+
         # Dashboard: first load is cold by definition, so it is measured once,
         # before anything else has warmed the page cache or SQLite.
         t = time.perf_counter()
@@ -563,8 +585,6 @@ def child_session(
 
         result["peak_rss_mb"] = _peak_rss_mb()
         result["collection_bytes"] = os.path.getsize(collection)
-        result["card_count"] = col.db.scalar("select count() from cards")
-        result["revlog_count"] = col.db.scalar("select count() from revlog")
     finally:
         col.close()
 
@@ -666,6 +686,37 @@ def _measure_sync(
 # --- parent ------------------------------------------------------------------
 
 
+def _load_average() -> Optional[float]:
+    try:
+        return os.getloadavg()[0]
+    except (OSError, AttributeError):
+        return None
+
+
+def _machine_note(load_before: Optional[float]) -> str:
+    """State what else the machine was doing.
+
+    A latency benchmark that does not say what it was competing with invites
+    the reader to treat a contended number as a clean one. Timings on this
+    harness move by well over 50% between a quiet machine and a busy one.
+    """
+    cpus = os.cpu_count() or 0
+    after = _load_average()
+    if load_before is None or after is None:
+        return "machine: %d CPUs, load average unavailable on this platform" % cpus
+    verdict = (
+        "quiet"
+        if after < cpus * 0.5
+        else "BUSY -- these numbers are contended, not best case"
+    )
+    return "machine: %d CPUs, 1-min load average %.1f before / %.1f after (%s)" % (
+        cpus,
+        load_before,
+        after,
+        verdict,
+    )
+
+
 @dataclass
 class ChildRun:
     payload: Dict[str, Any]
@@ -678,7 +729,16 @@ class ChildRun:
         hits = parse_blocked_warnings(self.stdout)
         if not hits:
             return ""
-        return ", ".join("%dms in %s()" % (ms, where) for ms, where in hits)
+        grouped: Dict[str, List[int]] = {}
+        for ms, where in hits:
+            grouped.setdefault(where, []).append(ms)
+        parts = [
+            "%s x%d, worst %dms" % (where, len(values), max(values))
+            for where, values in sorted(
+                grouped.items(), key=lambda kv: -max(kv[1])
+            )
+        ]
+        return "; ".join(parts)
 
 
 def parse_blocked_warnings(stdout: str) -> List[tuple]:
@@ -708,7 +768,7 @@ def parse_blocked_warnings(stdout: str) -> List[tuple]:
             # the function name alone is usually just the harness's own frame.
             source = lines[index + 1].strip() if index + 1 < len(lines) else ""
             where = source or stripped.rsplit(", in ", 1)[1]
-        hits.append((ms, where[:70]))
+        hits.append((ms, where.split("(")[0][:60]))
     return hits
 
 
@@ -782,12 +842,14 @@ def run_benchmark(
     else:
         sync_skip = "no sync server (--no-sync was passed)"
 
+    load_before = _load_average()
     try:
         # --- cold start: a fresh process per sample, on its own copy so no
         #     earlier run has warmed anything it should not have.
         cold_ready: List[float] = []
         cold_open: List[float] = []
         cold_rss: List[float] = []
+        cold_dashboard: List[float] = []
         for index in range(cold_runs):
             copy = work / ("cold%d.anki2" % index)
             shutil.copy2(collection, copy)
@@ -795,6 +857,7 @@ def run_benchmark(
             cold_ready.append(run.payload["ready_ms"])
             cold_open.append(run.payload["open_ms"])
             cold_rss.append(run.payload["peak_rss_mb"])
+            cold_dashboard.append(run.payload["dashboard_cold_ms"])
             copy.unlink(missing_ok=True)
 
         metrics.append(
@@ -869,8 +932,10 @@ def run_benchmark(
                 "dashboard_load",
                 "dashboard first load",
                 1000.0,
-                payload["dashboard_load_ms"],
-                note="one cold compute_transfer_scores in a fresh process",
+                payload["dashboard_load_ms"] + cold_dashboard,
+                note="the first compute_transfer_scores in a fresh process, one "
+                "per process over %d processes -- a load is only cold once"
+                % (len(cold_dashboard) + 1),
             )
         )
         metrics.append(
@@ -905,7 +970,9 @@ def run_benchmark(
                     "sync_session",
                     "normal session sync",
                     5000.0,
-                    payload["sync_skip_reason"] or sync_skip or "no sync server",
+                    # The parent knows *why* there is no server; the child only
+                    # knows it was not given one. Prefer the informative one.
+                    sync_skip or payload["sync_skip_reason"] or "no sync server",
                 )
             )
 
@@ -953,6 +1020,7 @@ def run_benchmark(
                 "{:,}".format(payload["revlog_count"]),
             )
         )
+        notes.append(_machine_note(load_before))
     finally:
         if server:
             server.stop()

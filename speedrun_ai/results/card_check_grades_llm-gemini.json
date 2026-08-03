@@ -1,0 +1,73 @@
+{
+  "grader": "llm-gemini",
+  "grades": {
+    "0e3123c9641f6ed51e6c5e71": {
+      "bucket": "correct-and-useful",
+      "reason": "The front is self-contained, the back targets the load-bearing idea directly, and the content is fully supported by the cited source span."
+    },
+    "2cdf2c9e03417053ffe30c05": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually supported by the source span, asks a self-contained and clear question, and tests a single load-bearing fact."
+    },
+    "54053502c325ce831252b1df": {
+      "bucket": "correct-and-useful",
+      "reason": "The front is self-contained, the back accurately captures the load-bearing definition from the source span without bundling multiple independent concepts, and it aligns with the reference answer key."
+    },
+    "65c67f8fb1e89a6c1ff1b726": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually supported by the source span, tests a single load-bearing idea, and has a self-contained front answerable without seeing the source."
+    },
+    "6d3a0d0543714b084073d7e0": {
+      "bucket": "correct-and-useful",
+      "reason": "The card asks a self-contained, high-yield question directly supported by the source span and reference answer key, testing a single load-bearing fact with a concise and accurate back."
+    },
+    "6f5933411d94f55fdc07da37": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually accurate according to the source span, self-contained, tests a single load-bearing concept, and is well-formatted for active recall."
+    },
+    "76ba690f9b3b32cbc87acdc7": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct based on the cited source span, asks a clear and self-contained question about the load-bearing idea, and tests exactly one concept."
+    },
+    "9707baf18615f3c73df1339d": {
+      "bucket": "correct-and-useful",
+      "reason": "The front is self-contained, the back is the direct load-bearing answer, and it is factually correct according to the source and reference answer key."
+    },
+    "9e6557ca41f95cee6da865f5": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct based on the source text, self-contained, tests a single load-bearing idea, and has a clear, concise answer."
+    },
+    "bc1417e2d000c1945fef7089": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct, self-contained, tests the load-bearing idea, and aligns with the reference answer and source span."
+    },
+    "c14ed12e9432be3abea9a558": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct based on the source span, self-contained, tests a single load-bearing idea, and has no pedagogical flaws."
+    },
+    "cb785cc9527a7610bb1ce15b": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing concept, and directly matches the cited source span."
+    },
+    "d3c1756014e763158684293a": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct, self-contained, tests a load-bearing idea directly supported by the source span, and is well-formulated."
+    },
+    "d3c713e529c04bfaf4ffc196": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct based on the source text, the front is self-contained and specific, and the back targets the load-bearing mechanism of cholesterol's effect on membrane fluidity."
+    },
+    "e59417c61a9fb322c5e5caaa": {
+      "bucket": "correct-and-useful",
+      "reason": "The card is factually correct, self-contained, tests a single load-bearing idea, and aligns with the reference answer key and source span."
+    },
+    "eaec56dc031ea1aebddb1536": {
+      "bucket": "correct-but-bad-teaching",
+      "reason": "The back is a direct copy of the source sentence rather than a concise, discrete answer, and it gives away the second half of the definition in the prompt."
+    },
+    "fd2af2df4092f91ad793b782": {
+      "bucket": "correct-but-bad-teaching",
+      "reason": "The back repeats the question and answers it with a full sentence rather than isolating the specific load-bearing fact requested."
+    }
+  }
+}

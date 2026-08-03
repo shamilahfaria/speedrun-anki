@@ -1,0 +1,188 @@
+[
+  {
+    "code": "1A",
+    "section": "Bio/Biochem",
+    "title": "Structure and function of proteins and their constituent amino acids",
+    "exam_weight": 0.027778
+  },
+  {
+    "code": "1B",
+    "section": "Bio/Biochem",
+    "title": "Transmission of genetic information from the gene to the protein",
+    "exam_weight": 0.027778
+  },
+  {
+    "code": "1C",
+    "section": "Bio/Biochem",
+    "title": "Transmission of heritable information from generation to generation and the processes that increase genetic diversity",
+    "exam_weight": 0.027778
+  },
+  {
+    "code": "1D",
+    "section": "Bio/Biochem",
+    "title": "Principles of bioenergetics and fuel molecule metabolism",
+    "exam_weight": 0.027778
+  },
+  {
+    "code": "2A",
+    "section": "Bio/Biochem",
+    "title": "Assemblies of molecules, cells, and groups of cells within single cellular and multicellular organisms",
+    "exam_weight": 0.027778
+  },
+  {
+    "code": "2B",
+    "section": "Bio/Biochem",
+    "title": "The structure, growth, physiology, and genetics of prokaryotes and viruses",
+    "exam_weight": 0.027778
+  },
+  {
+    "code": "2C",
+    "section": "Bio/Biochem",
+    "title": "Processes of cell division, differentiation, and specialization",
+    "exam_weight": 0.027778
+  },
+  {
+    "code": "3A",
+    "section": "Bio/Biochem",
+    "title": "Structure and functions of the nervous and endocrine systems and ways these systems coordinate the organ systems",
+    "exam_weight": 0.027778
+  },
+  {
+    "code": "3B",
+    "section": "Bio/Biochem",
+    "title": "Structure and integrative functions of the main organ systems",
+    "exam_weight": 0.027778
+  },
+  {
+    "code": "4A",
+    "section": "Chem/Phys",
+    "title": "Translational motion, forces, work, energy, and equilibrium in living systems",
+    "exam_weight": 0.025
+  },
+  {
+    "code": "4B",
+    "section": "Chem/Phys",
+    "title": "Importance of fluids for the circulation of blood, gas movement, and gas exchange",
+    "exam_weight": 0.025
+  },
+  {
+    "code": "4C",
+    "section": "Chem/Phys",
+    "title": "Electrochemistry and electrical circuits and their elements",
+    "exam_weight": 0.025
+  },
+  {
+    "code": "4D",
+    "section": "Chem/Phys",
+    "title": "How light and sound interact with matter",
+    "exam_weight": 0.025
+  },
+  {
+    "code": "4E",
+    "section": "Chem/Phys",
+    "title": "Atoms, nuclear decay, electronic structure, and atomic chemical behavior",
+    "exam_weight": 0.025
+  },
+  {
+    "code": "5A",
+    "section": "Chem/Phys",
+    "title": "Unique nature of water and its solutions",
+    "exam_weight": 0.025
+  },
+  {
+    "code": "5B",
+    "section": "Chem/Phys",
+    "title": "Nature of molecules and intermolecular interactions",
+    "exam_weight": 0.025
+  },
+  {
+    "code": "5C",
+    "section": "Chem/Phys",
+    "title": "Separation and purification methods",
+    "exam_weight": 0.025
+  },
+  {
+    "code": "5D",
+    "section": "Chem/Phys",
+    "title": "Structure, function, and reactivity of biologically relevant molecules",
+    "exam_weight": 0.025
+  },
+  {
+    "code": "5E",
+    "section": "Chem/Phys",
+    "title": "Principles of chemical thermodynamics and kinetics",
+    "exam_weight": 0.025
+  },
+  {
+    "code": "6A",
+    "section": "Psych/Soc",
+    "title": "Sensing the environment",
+    "exam_weight": 0.020833
+  },
+  {
+    "code": "6B",
+    "section": "Psych/Soc",
+    "title": "Making sense of the environment",
+    "exam_weight": 0.020833
+  },
+  {
+    "code": "6C",
+    "section": "Psych/Soc",
+    "title": "Responding to the world",
+    "exam_weight": 0.020833
+  },
+  {
+    "code": "7A",
+    "section": "Psych/Soc",
+    "title": "Individual influences on behavior",
+    "exam_weight": 0.020833
+  },
+  {
+    "code": "7B",
+    "section": "Psych/Soc",
+    "title": "Social processes that influence human behavior",
+    "exam_weight": 0.020833
+  },
+  {
+    "code": "7C",
+    "section": "Psych/Soc",
+    "title": "Attitude and behavior change",
+    "exam_weight": 0.020833
+  },
+  {
+    "code": "8A",
+    "section": "Psych/Soc",
+    "title": "Self-identity",
+    "exam_weight": 0.020833
+  },
+  {
+    "code": "8B",
+    "section": "Psych/Soc",
+    "title": "Social thinking",
+    "exam_weight": 0.020833
+  },
+  {
+    "code": "8C",
+    "section": "Psych/Soc",
+    "title": "Social interactions",
+    "exam_weight": 0.020833
+  },
+  {
+    "code": "9A",
+    "section": "Psych/Soc",
+    "title": "Understanding social structure",
+    "exam_weight": 0.020833
+  },
+  {
+    "code": "9B",
+    "section": "Psych/Soc",
+    "title": "Demographic characteristics and processes",
+    "exam_weight": 0.020833
+  },
+  {
+    "code": "10A",
+    "section": "Psych/Soc",
+    "title": "Social inequality",
+    "exam_weight": 0.020833
+  }
+]

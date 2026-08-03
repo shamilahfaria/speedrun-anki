@@ -61,13 +61,22 @@ from speedrun_ai.provider import (
 )
 from speedrun_ai.retrieval import Bm25Retriever, Passage
 
-# The package default (`provider.DEFAULT_MODEL`, gemini-2.5-flash-lite) now
-# returns 404 "no longer available to new users" for a new key, so every call
-# through it degrades silently to the offline extractor and the run stops
-# being an AI card check at all. This harness pins a model it has actually
-# reached. `provider.py` is left alone on purpose: other work is in flight
-# there, and the stale default is reported rather than edited here.
-CARD_CHECK_MODEL = "gemini-3.5-flash-lite"
+# Model this harness generates and grades with. Named here rather than taken
+# from `provider.DEFAULT_MODEL` so the harness pins something it has actually
+# called, not merely something `models.list()` advertises.
+#
+# What was observed on 2026-08-03 with the key in this environment:
+#   gemini-2.5-flash-lite  -- listed by models.list(), but generate_content
+#       returns 404 "no longer available to new users". Listing is not
+#       evidence of callability. This was the original package default, and
+#       every generation call through it degraded silently to the offline
+#       extractor, which stops the run being an AI card check at all.
+#   gemini-3.5-flash-lite  -- callable. It produced the 50-card deck in
+#       results/card_check_deck.json. It later returned 429, which is quota
+#       exhaustion on the key, not a bad model id.
+#   gemini-flash-lite-latest -- callable; an alias, so it survives the next
+#       retirement. Used here for that reason.
+CARD_CHECK_MODEL = "gemini-flash-lite-latest"
 
 # ---------------------------------------------------------------------------
 # THE CUTOFF. Set before generating a single card and before seeing a single
@@ -112,6 +121,27 @@ LLM_GRADING_CAVEAT = (
 
 class GradingError(RuntimeError):
     """A card could not be graded. Never silently bucketed."""
+
+
+def _default_sleep(seconds: float) -> None:
+    import time
+
+    time.sleep(seconds)
+
+
+def _http_status(exc: Exception) -> str:
+    """The HTTP status in an SDK exception, or "" if there is none.
+
+    Only the status code is lifted out, never the message body: an SDK error
+    string can echo request metadata, and the point here is the one field that
+    tells a rerunner what to do differently (429 wait, 404 change the model).
+    """
+    for attribute in ("code", "status_code"):
+        value = getattr(exc, attribute, None)
+        if isinstance(value, int):
+            return str(value)
+    match = re.search(r"\b([45]\d\d)\b", str(exc))
+    return match.group(1) if match else ""
 
 
 # --- the rubric -------------------------------------------------------------
@@ -705,11 +735,29 @@ class LlmGrader(Grader):
     is_llm = True
     limitation_note = LLM_GRADING_CAVEAT
 
-    def __init__(self, model: str = CARD_CHECK_MODEL, api_key: Optional[str] = None):
+    def __init__(
+        self,
+        model: str = CARD_CHECK_MODEL,
+        api_key: Optional[str] = None,
+        retries: int = 5,
+        retry_delay: float = 12.0,
+        pace_seconds: float = 4.5,
+        sleep: Optional[Any] = None,
+    ):
         self.model = model
         self.__api_key = (
             api_key if api_key is not None else os.environ.get(API_KEY_ENV, "")
         ).strip()
+        self.retries = max(1, int(retries))
+        # The API answers a 429 with a retryDelay of about 11 seconds, so the
+        # backoff starts above that rather than below it.
+        self.retry_delay = float(retry_delay)
+        # Spacing between calls. Grading 50 cards back to back exceeds the
+        # free tier's per-minute allowance partway through; pacing is what
+        # lets a 50-card run complete at all.
+        self.pace_seconds = float(pace_seconds)
+        self._sleep = sleep if sleep is not None else _default_sleep
+        self._called_before = False
         self._client: Any = None
 
     def describe(self) -> str:
@@ -746,19 +794,38 @@ class LlmGrader(Grader):
             front=card.front,
             back=card.back,
         )
-        try:
-            client = self._load_client()
-            response = client.models.generate_content(
-                model=self.model,
-                contents=prompt,
-                config={"temperature": 0.0, "response_mime_type": "application/json"},
-            )
-        except ProviderError:
-            raise
-        except Exception as exc:
-            raise GradingError(
-                "Gemini grading request failed: %s" % type(exc).__name__
-            ) from None
+        # Retry transient quota errors. Grading 50 cards is 50 sequential
+        # calls, which trips a free-tier rate limit partway through, and a
+        # partial grading is useless because it changes every denominator.
+        response = None
+        for attempt in range(1, self.retries + 1):
+            if self._called_before and self.pace_seconds > 0:
+                self._sleep(self.pace_seconds)
+            self._called_before = True
+            try:
+                client = self._load_client()
+                response = client.models.generate_content(
+                    model=self.model,
+                    contents=prompt,
+                    config={
+                        "temperature": 0.0,
+                        "response_mime_type": "application/json",
+                    },
+                )
+                break
+            except ProviderError:
+                raise
+            except Exception as exc:  # noqa: BLE001 - reclassified below
+                status = _http_status(exc)
+                transient = status in ("429", "500", "502", "503", "504")
+                if not transient or attempt >= self.retries:
+                    raise GradingError(
+                        "Gemini grading request failed after %d attempt(s): %s "
+                        "(HTTP %s). 429 means the key's quota is exhausted, which "
+                        "is a different problem from a retired model id (404)."
+                        % (attempt, type(exc).__name__, status or "unknown")
+                    ) from None
+                self._sleep(self.retry_delay * attempt)
         text = getattr(response, "text", None)
         if not text:
             raise GradingError("Gemini returned an empty grading response")
@@ -1010,11 +1077,63 @@ def _wrap(text: str, width: int) -> List[str]:
     return lines
 
 
+def _card_key(card: GeneratedCard) -> str:
+    return hashlib.blake2b(
+        ("%s\x1f%s" % (card.front, card.back)).encode("utf-8"), digest_size=12
+    ).hexdigest()
+
+
+class GradeCache:
+    """Grades already obtained, keyed by card and by grader.
+
+    Fifty sequential LLM calls on a rate-limited key do not always finish.
+    Without this, a 429 on card 41 throws away forty completed grades and the
+    harness is effectively unrunnable. Entries are namespaced by grader name so
+    heuristic grades never masquerade as LLM grades.
+    """
+
+    def __init__(self, path: Path, grader_name: str):
+        self.path = Path(path)
+        self.grader_name = grader_name
+        self._entries: Dict[str, Grade] = {}
+        if self.path.exists():
+            raw = json.loads(self.path.read_text(encoding="utf-8"))
+            if raw.get("grader") == grader_name:
+                for key, value in raw.get("grades", {}).items():
+                    self._entries[key] = Grade(
+                        bucket=Bucket(value["bucket"]), reason=value.get("reason", "")
+                    )
+
+    def __len__(self) -> int:
+        return len(self._entries)
+
+    def get(self, card: GeneratedCard) -> Optional[Grade]:
+        return self._entries.get(_card_key(card))
+
+    def put(self, card: GeneratedCard, grade: Grade) -> None:
+        self._entries[_card_key(card)] = grade
+        self.save()
+
+    def save(self) -> None:
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        payload = {
+            "grader": self.grader_name,
+            "grades": {
+                key: {"bucket": grade.bucket.value, "reason": grade.reason}
+                for key, grade in self._entries.items()
+            },
+        }
+        self.path.write_text(
+            json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8"
+        )
+
+
 def run_card_check(
     deck: Deck,
     gold: GoldSet,
     grader: Grader,
     deck_from_cache: bool = False,
+    cache: Optional[GradeCache] = None,
 ) -> CardCheckReport:
     if deck.data_cutoff != gold.data_cutoff:
         raise ValueError(
@@ -1026,7 +1145,13 @@ def run_card_check(
     counts = {bucket: 0 for bucket in Bucket}
     for card in deck.cards:
         references = gold_references(gold, card)
-        grade = grader.grade(card, references)
+        # `is not None`, not truthiness: GradeCache defines __len__, so an
+        # empty cache is falsy and `if cache:` silently skipped every write.
+        grade = cache.get(card) if cache is not None else None
+        if grade is None:
+            grade = grader.grade(card, references)
+            if cache is not None:
+                cache.put(card, grade)
         counts[grade.bucket] += 1
         graded.append(
             GradedCard(
@@ -1094,6 +1219,11 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         default=str(DECK_CACHE),
         help="where the generated deck is cached so runs are repeatable",
     )
+    parser.add_argument(
+        "--regrade",
+        action="store_true",
+        help="ignore cached grades and grade every card again",
+    )
     args = parser.parse_args(argv)
 
     gold = load_gold()
@@ -1123,14 +1253,27 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         choice = "llm" if os.environ.get(API_KEY_ENV, "").strip() else "heuristic"
     grader: Grader = LlmGrader() if choice == "llm" else HeuristicGrader()
 
+    grade_cache = None
+    if not args.regrade:
+        grade_cache = GradeCache(
+            RESULTS_DIR / ("card_check_grades_%s.json" % grader.name),
+            grader_name=grader.name,
+        )
     try:
         report = run_card_check(
-            deck=deck, gold=gold, grader=grader, deck_from_cache=deck_from_cache
+            deck=deck,
+            gold=gold,
+            grader=grader,
+            deck_from_cache=deck_from_cache,
+            cache=grade_cache,
         )
     except (GradingError, ProviderError) as exc:
+        completed = len(grade_cache) if grade_cache is not None else 0
         print(
-            "GRADING FAILED: %s. No partial counts are reported, because a "
-            "partial grading changes every denominator." % exc,
+            "GRADING FAILED: %s\nNo counts are reported: a partial grading "
+            "changes every denominator. %d of %d grades completed so far are "
+            "kept, so rerunning resumes rather than starting over."
+            % (exc, completed, len(deck.cards)),
             file=sys.stderr,
         )
         return 2

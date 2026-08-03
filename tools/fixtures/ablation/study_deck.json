@@ -1,0 +1,7442 @@
+[
+  {
+    "id": "study::1A::000",
+    "topic": "1A",
+    "kind": "probe",
+    "difficulty": 0.7201
+  },
+  {
+    "id": "study::1A::001",
+    "topic": "1A",
+    "kind": "probe",
+    "difficulty": 0.3447
+  },
+  {
+    "id": "study::1A::002",
+    "topic": "1A",
+    "kind": "probe",
+    "difficulty": 0.5785
+  },
+  {
+    "id": "study::1A::003",
+    "topic": "1A",
+    "kind": "probe",
+    "difficulty": 0.2382
+  },
+  {
+    "id": "study::1A::004",
+    "topic": "1A",
+    "kind": "probe",
+    "difficulty": 0.381
+  },
+  {
+    "id": "study::1A::005",
+    "topic": "1A",
+    "kind": "probe",
+    "difficulty": 0.5935
+  },
+  {
+    "id": "study::1A::006",
+    "topic": "1A",
+    "kind": "probe",
+    "difficulty": 0.6072
+  },
+  {
+    "id": "study::1A::007",
+    "topic": "1A",
+    "kind": "probe",
+    "difficulty": 0.6256
+  },
+  {
+    "id": "study::1A::008",
+    "topic": "1A",
+    "kind": "probe",
+    "difficulty": 0.7071
+  },
+  {
+    "id": "study::1A::009",
+    "topic": "1A",
+    "kind": "probe",
+    "difficulty": 0.6684
+  },
+  {
+    "id": "study::1A::010",
+    "topic": "1A",
+    "kind": "probe",
+    "difficulty": 0.3103
+  },
+  {
+    "id": "study::1A::011",
+    "topic": "1A",
+    "kind": "probe",
+    "difficulty": 0.2861
+  },
+  {
+    "id": "study::1A::012",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.7195
+  },
+  {
+    "id": "study::1A::013",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.5436
+  },
+  {
+    "id": "study::1A::014",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.5501
+  },
+  {
+    "id": "study::1A::015",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.731
+  },
+  {
+    "id": "study::1A::016",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.7931
+  },
+  {
+    "id": "study::1A::017",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.7527
+  },
+  {
+    "id": "study::1A::018",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.7696
+  },
+  {
+    "id": "study::1A::019",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.6128
+  },
+  {
+    "id": "study::1A::020",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.2653
+  },
+  {
+    "id": "study::1A::021",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.4545
+  },
+  {
+    "id": "study::1A::022",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.5193
+  },
+  {
+    "id": "study::1A::023",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.7456
+  },
+  {
+    "id": "study::1A::024",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.6561
+  },
+  {
+    "id": "study::1A::025",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.5766
+  },
+  {
+    "id": "study::1A::026",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.2438
+  },
+  {
+    "id": "study::1A::027",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.7674
+  },
+  {
+    "id": "study::1A::028",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.7962
+  },
+  {
+    "id": "study::1A::029",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.4598
+  },
+  {
+    "id": "study::1A::030",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.5229
+  },
+  {
+    "id": "study::1A::031",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.5984
+  },
+  {
+    "id": "study::1A::032",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.2979
+  },
+  {
+    "id": "study::1A::033",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.6267
+  },
+  {
+    "id": "study::1A::034",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.5538
+  },
+  {
+    "id": "study::1A::035",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.2368
+  },
+  {
+    "id": "study::1A::036",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.5436
+  },
+  {
+    "id": "study::1A::037",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.6077
+  },
+  {
+    "id": "study::1A::038",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.7409
+  },
+  {
+    "id": "study::1A::039",
+    "topic": "1A",
+    "kind": "recall",
+    "difficulty": 0.3502
+  },
+  {
+    "id": "study::1B::000",
+    "topic": "1B",
+    "kind": "probe",
+    "difficulty": 0.7528
+  },
+  {
+    "id": "study::1B::001",
+    "topic": "1B",
+    "kind": "probe",
+    "difficulty": 0.2457
+  },
+  {
+    "id": "study::1B::002",
+    "topic": "1B",
+    "kind": "probe",
+    "difficulty": 0.3766
+  },
+  {
+    "id": "study::1B::003",
+    "topic": "1B",
+    "kind": "probe",
+    "difficulty": 0.4498
+  },
+  {
+    "id": "study::1B::004",
+    "topic": "1B",
+    "kind": "probe",
+    "difficulty": 0.207
+  },
+  {
+    "id": "study::1B::005",
+    "topic": "1B",
+    "kind": "probe",
+    "difficulty": 0.2428
+  },
+  {
+    "id": "study::1B::006",
+    "topic": "1B",
+    "kind": "probe",
+    "difficulty": 0.4879
+  },
+  {
+    "id": "study::1B::007",
+    "topic": "1B",
+    "kind": "probe",
+    "difficulty": 0.6275
+  },
+  {
+    "id": "study::1B::008",
+    "topic": "1B",
+    "kind": "probe",
+    "difficulty": 0.5214
+  },
+  {
+    "id": "study::1B::009",
+    "topic": "1B",
+    "kind": "probe",
+    "difficulty": 0.2333
+  },
+  {
+    "id": "study::1B::010",
+    "topic": "1B",
+    "kind": "probe",
+    "difficulty": 0.2453
+  },
+  {
+    "id": "study::1B::011",
+    "topic": "1B",
+    "kind": "probe",
+    "difficulty": 0.415
+  },
+  {
+    "id": "study::1B::012",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.4243
+  },
+  {
+    "id": "study::1B::013",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.7371
+  },
+  {
+    "id": "study::1B::014",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.6186
+  },
+  {
+    "id": "study::1B::015",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.7426
+  },
+  {
+    "id": "study::1B::016",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.5988
+  },
+  {
+    "id": "study::1B::017",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.2659
+  },
+  {
+    "id": "study::1B::018",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.7533
+  },
+  {
+    "id": "study::1B::019",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.3431
+  },
+  {
+    "id": "study::1B::020",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.2628
+  },
+  {
+    "id": "study::1B::021",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.7246
+  },
+  {
+    "id": "study::1B::022",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.5914
+  },
+  {
+    "id": "study::1B::023",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.5301
+  },
+  {
+    "id": "study::1B::024",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.5119
+  },
+  {
+    "id": "study::1B::025",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.2509
+  },
+  {
+    "id": "study::1B::026",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.4165
+  },
+  {
+    "id": "study::1B::027",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.3983
+  },
+  {
+    "id": "study::1B::028",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.5564
+  },
+  {
+    "id": "study::1B::029",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.3529
+  },
+  {
+    "id": "study::1B::030",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.5458
+  },
+  {
+    "id": "study::1B::031",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.4802
+  },
+  {
+    "id": "study::1B::032",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.3157
+  },
+  {
+    "id": "study::1B::033",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.7113
+  },
+  {
+    "id": "study::1B::034",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.6354
+  },
+  {
+    "id": "study::1B::035",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.5079
+  },
+  {
+    "id": "study::1B::036",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.4035
+  },
+  {
+    "id": "study::1B::037",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.4681
+  },
+  {
+    "id": "study::1B::038",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.701
+  },
+  {
+    "id": "study::1B::039",
+    "topic": "1B",
+    "kind": "recall",
+    "difficulty": 0.2032
+  },
+  {
+    "id": "study::1C::000",
+    "topic": "1C",
+    "kind": "probe",
+    "difficulty": 0.4884
+  },
+  {
+    "id": "study::1C::001",
+    "topic": "1C",
+    "kind": "probe",
+    "difficulty": 0.4582
+  },
+  {
+    "id": "study::1C::002",
+    "topic": "1C",
+    "kind": "probe",
+    "difficulty": 0.4712
+  },
+  {
+    "id": "study::1C::003",
+    "topic": "1C",
+    "kind": "probe",
+    "difficulty": 0.271
+  },
+  {
+    "id": "study::1C::004",
+    "topic": "1C",
+    "kind": "probe",
+    "difficulty": 0.6077
+  },
+  {
+    "id": "study::1C::005",
+    "topic": "1C",
+    "kind": "probe",
+    "difficulty": 0.3476
+  },
+  {
+    "id": "study::1C::006",
+    "topic": "1C",
+    "kind": "probe",
+    "difficulty": 0.5733
+  },
+  {
+    "id": "study::1C::007",
+    "topic": "1C",
+    "kind": "probe",
+    "difficulty": 0.4917
+  },
+  {
+    "id": "study::1C::008",
+    "topic": "1C",
+    "kind": "probe",
+    "difficulty": 0.5524
+  },
+  {
+    "id": "study::1C::009",
+    "topic": "1C",
+    "kind": "probe",
+    "difficulty": 0.3541
+  },
+  {
+    "id": "study::1C::010",
+    "topic": "1C",
+    "kind": "probe",
+    "difficulty": 0.7703
+  },
+  {
+    "id": "study::1C::011",
+    "topic": "1C",
+    "kind": "probe",
+    "difficulty": 0.7487
+  },
+  {
+    "id": "study::1C::012",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.324
+  },
+  {
+    "id": "study::1C::013",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.5888
+  },
+  {
+    "id": "study::1C::014",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.7533
+  },
+  {
+    "id": "study::1C::015",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.5505
+  },
+  {
+    "id": "study::1C::016",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.3505
+  },
+  {
+    "id": "study::1C::017",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.4076
+  },
+  {
+    "id": "study::1C::018",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.6408
+  },
+  {
+    "id": "study::1C::019",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.7208
+  },
+  {
+    "id": "study::1C::020",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.5603
+  },
+  {
+    "id": "study::1C::021",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.6383
+  },
+  {
+    "id": "study::1C::022",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.7196
+  },
+  {
+    "id": "study::1C::023",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.6846
+  },
+  {
+    "id": "study::1C::024",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.6821
+  },
+  {
+    "id": "study::1C::025",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.399
+  },
+  {
+    "id": "study::1C::026",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.2212
+  },
+  {
+    "id": "study::1C::027",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.6632
+  },
+  {
+    "id": "study::1C::028",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.6325
+  },
+  {
+    "id": "study::1C::029",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.583
+  },
+  {
+    "id": "study::1C::030",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.4914
+  },
+  {
+    "id": "study::1C::031",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.3711
+  },
+  {
+    "id": "study::1C::032",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.7939
+  },
+  {
+    "id": "study::1C::033",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.6182
+  },
+  {
+    "id": "study::1C::034",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.5545
+  },
+  {
+    "id": "study::1C::035",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.601
+  },
+  {
+    "id": "study::1C::036",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.5249
+  },
+  {
+    "id": "study::1C::037",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.3959
+  },
+  {
+    "id": "study::1C::038",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.7763
+  },
+  {
+    "id": "study::1C::039",
+    "topic": "1C",
+    "kind": "recall",
+    "difficulty": 0.7612
+  },
+  {
+    "id": "study::1D::000",
+    "topic": "1D",
+    "kind": "probe",
+    "difficulty": 0.3319
+  },
+  {
+    "id": "study::1D::001",
+    "topic": "1D",
+    "kind": "probe",
+    "difficulty": 0.7814
+  },
+  {
+    "id": "study::1D::002",
+    "topic": "1D",
+    "kind": "probe",
+    "difficulty": 0.7222
+  },
+  {
+    "id": "study::1D::003",
+    "topic": "1D",
+    "kind": "probe",
+    "difficulty": 0.5131
+  },
+  {
+    "id": "study::1D::004",
+    "topic": "1D",
+    "kind": "probe",
+    "difficulty": 0.2668
+  },
+  {
+    "id": "study::1D::005",
+    "topic": "1D",
+    "kind": "probe",
+    "difficulty": 0.2616
+  },
+  {
+    "id": "study::1D::006",
+    "topic": "1D",
+    "kind": "probe",
+    "difficulty": 0.614
+  },
+  {
+    "id": "study::1D::007",
+    "topic": "1D",
+    "kind": "probe",
+    "difficulty": 0.605
+  },
+  {
+    "id": "study::1D::008",
+    "topic": "1D",
+    "kind": "probe",
+    "difficulty": 0.4539
+  },
+  {
+    "id": "study::1D::009",
+    "topic": "1D",
+    "kind": "probe",
+    "difficulty": 0.6224
+  },
+  {
+    "id": "study::1D::010",
+    "topic": "1D",
+    "kind": "probe",
+    "difficulty": 0.7052
+  },
+  {
+    "id": "study::1D::011",
+    "topic": "1D",
+    "kind": "probe",
+    "difficulty": 0.4461
+  },
+  {
+    "id": "study::1D::012",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.4444
+  },
+  {
+    "id": "study::1D::013",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.5363
+  },
+  {
+    "id": "study::1D::014",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.2453
+  },
+  {
+    "id": "study::1D::015",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.793
+  },
+  {
+    "id": "study::1D::016",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.2389
+  },
+  {
+    "id": "study::1D::017",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.7549
+  },
+  {
+    "id": "study::1D::018",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.6395
+  },
+  {
+    "id": "study::1D::019",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.4543
+  },
+  {
+    "id": "study::1D::020",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.278
+  },
+  {
+    "id": "study::1D::021",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.7965
+  },
+  {
+    "id": "study::1D::022",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.6496
+  },
+  {
+    "id": "study::1D::023",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.4026
+  },
+  {
+    "id": "study::1D::024",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.7435
+  },
+  {
+    "id": "study::1D::025",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.5272
+  },
+  {
+    "id": "study::1D::026",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.4126
+  },
+  {
+    "id": "study::1D::027",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.5333
+  },
+  {
+    "id": "study::1D::028",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.3507
+  },
+  {
+    "id": "study::1D::029",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.7865
+  },
+  {
+    "id": "study::1D::030",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.622
+  },
+  {
+    "id": "study::1D::031",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.4076
+  },
+  {
+    "id": "study::1D::032",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.5724
+  },
+  {
+    "id": "study::1D::033",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.2565
+  },
+  {
+    "id": "study::1D::034",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.6183
+  },
+  {
+    "id": "study::1D::035",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.7863
+  },
+  {
+    "id": "study::1D::036",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.2915
+  },
+  {
+    "id": "study::1D::037",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.2101
+  },
+  {
+    "id": "study::1D::038",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.7764
+  },
+  {
+    "id": "study::1D::039",
+    "topic": "1D",
+    "kind": "recall",
+    "difficulty": 0.3391
+  },
+  {
+    "id": "study::2A::000",
+    "topic": "2A",
+    "kind": "probe",
+    "difficulty": 0.6732
+  },
+  {
+    "id": "study::2A::001",
+    "topic": "2A",
+    "kind": "probe",
+    "difficulty": 0.599
+  },
+  {
+    "id": "study::2A::002",
+    "topic": "2A",
+    "kind": "probe",
+    "difficulty": 0.4799
+  },
+  {
+    "id": "study::2A::003",
+    "topic": "2A",
+    "kind": "probe",
+    "difficulty": 0.5734
+  },
+  {
+    "id": "study::2A::004",
+    "topic": "2A",
+    "kind": "probe",
+    "difficulty": 0.3096
+  },
+  {
+    "id": "study::2A::005",
+    "topic": "2A",
+    "kind": "probe",
+    "difficulty": 0.2713
+  },
+  {
+    "id": "study::2A::006",
+    "topic": "2A",
+    "kind": "probe",
+    "difficulty": 0.348
+  },
+  {
+    "id": "study::2A::007",
+    "topic": "2A",
+    "kind": "probe",
+    "difficulty": 0.5977
+  },
+  {
+    "id": "study::2A::008",
+    "topic": "2A",
+    "kind": "probe",
+    "difficulty": 0.4397
+  },
+  {
+    "id": "study::2A::009",
+    "topic": "2A",
+    "kind": "probe",
+    "difficulty": 0.4938
+  },
+  {
+    "id": "study::2A::010",
+    "topic": "2A",
+    "kind": "probe",
+    "difficulty": 0.6623
+  },
+  {
+    "id": "study::2A::011",
+    "topic": "2A",
+    "kind": "probe",
+    "difficulty": 0.4927
+  },
+  {
+    "id": "study::2A::012",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.7851
+  },
+  {
+    "id": "study::2A::013",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.7807
+  },
+  {
+    "id": "study::2A::014",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.4618
+  },
+  {
+    "id": "study::2A::015",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.4343
+  },
+  {
+    "id": "study::2A::016",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.357
+  },
+  {
+    "id": "study::2A::017",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.456
+  },
+  {
+    "id": "study::2A::018",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.5427
+  },
+  {
+    "id": "study::2A::019",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.4233
+  },
+  {
+    "id": "study::2A::020",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.595
+  },
+  {
+    "id": "study::2A::021",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.7838
+  },
+  {
+    "id": "study::2A::022",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.5312
+  },
+  {
+    "id": "study::2A::023",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.6183
+  },
+  {
+    "id": "study::2A::024",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.3699
+  },
+  {
+    "id": "study::2A::025",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.5687
+  },
+  {
+    "id": "study::2A::026",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.6499
+  },
+  {
+    "id": "study::2A::027",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.2164
+  },
+  {
+    "id": "study::2A::028",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.3416
+  },
+  {
+    "id": "study::2A::029",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.6171
+  },
+  {
+    "id": "study::2A::030",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.5105
+  },
+  {
+    "id": "study::2A::031",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.2795
+  },
+  {
+    "id": "study::2A::032",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.3213
+  },
+  {
+    "id": "study::2A::033",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.6617
+  },
+  {
+    "id": "study::2A::034",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.2316
+  },
+  {
+    "id": "study::2A::035",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.7142
+  },
+  {
+    "id": "study::2A::036",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.422
+  },
+  {
+    "id": "study::2A::037",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.7897
+  },
+  {
+    "id": "study::2A::038",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.7805
+  },
+  {
+    "id": "study::2A::039",
+    "topic": "2A",
+    "kind": "recall",
+    "difficulty": 0.6234
+  },
+  {
+    "id": "study::2B::000",
+    "topic": "2B",
+    "kind": "probe",
+    "difficulty": 0.4381
+  },
+  {
+    "id": "study::2B::001",
+    "topic": "2B",
+    "kind": "probe",
+    "difficulty": 0.6847
+  },
+  {
+    "id": "study::2B::002",
+    "topic": "2B",
+    "kind": "probe",
+    "difficulty": 0.2313
+  },
+  {
+    "id": "study::2B::003",
+    "topic": "2B",
+    "kind": "probe",
+    "difficulty": 0.3593
+  },
+  {
+    "id": "study::2B::004",
+    "topic": "2B",
+    "kind": "probe",
+    "difficulty": 0.3284
+  },
+  {
+    "id": "study::2B::005",
+    "topic": "2B",
+    "kind": "probe",
+    "difficulty": 0.6048
+  },
+  {
+    "id": "study::2B::006",
+    "topic": "2B",
+    "kind": "probe",
+    "difficulty": 0.7286
+  },
+  {
+    "id": "study::2B::007",
+    "topic": "2B",
+    "kind": "probe",
+    "difficulty": 0.6931
+  },
+  {
+    "id": "study::2B::008",
+    "topic": "2B",
+    "kind": "probe",
+    "difficulty": 0.7269
+  },
+  {
+    "id": "study::2B::009",
+    "topic": "2B",
+    "kind": "probe",
+    "difficulty": 0.5698
+  },
+  {
+    "id": "study::2B::010",
+    "topic": "2B",
+    "kind": "probe",
+    "difficulty": 0.6037
+  },
+  {
+    "id": "study::2B::011",
+    "topic": "2B",
+    "kind": "probe",
+    "difficulty": 0.6983
+  },
+  {
+    "id": "study::2B::012",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.2348
+  },
+  {
+    "id": "study::2B::013",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.4108
+  },
+  {
+    "id": "study::2B::014",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.2966
+  },
+  {
+    "id": "study::2B::015",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.4491
+  },
+  {
+    "id": "study::2B::016",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.4417
+  },
+  {
+    "id": "study::2B::017",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.7578
+  },
+  {
+    "id": "study::2B::018",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.7993
+  },
+  {
+    "id": "study::2B::019",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.3922
+  },
+  {
+    "id": "study::2B::020",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.4665
+  },
+  {
+    "id": "study::2B::021",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.2432
+  },
+  {
+    "id": "study::2B::022",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.4963
+  },
+  {
+    "id": "study::2B::023",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.7922
+  },
+  {
+    "id": "study::2B::024",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.3858
+  },
+  {
+    "id": "study::2B::025",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.5411
+  },
+  {
+    "id": "study::2B::026",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.6011
+  },
+  {
+    "id": "study::2B::027",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.2793
+  },
+  {
+    "id": "study::2B::028",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.7209
+  },
+  {
+    "id": "study::2B::029",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.7129
+  },
+  {
+    "id": "study::2B::030",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.2279
+  },
+  {
+    "id": "study::2B::031",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.7869
+  },
+  {
+    "id": "study::2B::032",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.5941
+  },
+  {
+    "id": "study::2B::033",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.3207
+  },
+  {
+    "id": "study::2B::034",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.423
+  },
+  {
+    "id": "study::2B::035",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.4241
+  },
+  {
+    "id": "study::2B::036",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.6188
+  },
+  {
+    "id": "study::2B::037",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.2119
+  },
+  {
+    "id": "study::2B::038",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.5993
+  },
+  {
+    "id": "study::2B::039",
+    "topic": "2B",
+    "kind": "recall",
+    "difficulty": 0.2205
+  },
+  {
+    "id": "study::2C::000",
+    "topic": "2C",
+    "kind": "probe",
+    "difficulty": 0.5372
+  },
+  {
+    "id": "study::2C::001",
+    "topic": "2C",
+    "kind": "probe",
+    "difficulty": 0.561
+  },
+  {
+    "id": "study::2C::002",
+    "topic": "2C",
+    "kind": "probe",
+    "difficulty": 0.2567
+  },
+  {
+    "id": "study::2C::003",
+    "topic": "2C",
+    "kind": "probe",
+    "difficulty": 0.357
+  },
+  {
+    "id": "study::2C::004",
+    "topic": "2C",
+    "kind": "probe",
+    "difficulty": 0.3447
+  },
+  {
+    "id": "study::2C::005",
+    "topic": "2C",
+    "kind": "probe",
+    "difficulty": 0.3304
+  },
+  {
+    "id": "study::2C::006",
+    "topic": "2C",
+    "kind": "probe",
+    "difficulty": 0.397
+  },
+  {
+    "id": "study::2C::007",
+    "topic": "2C",
+    "kind": "probe",
+    "difficulty": 0.335
+  },
+  {
+    "id": "study::2C::008",
+    "topic": "2C",
+    "kind": "probe",
+    "difficulty": 0.7253
+  },
+  {
+    "id": "study::2C::009",
+    "topic": "2C",
+    "kind": "probe",
+    "difficulty": 0.5798
+  },
+  {
+    "id": "study::2C::010",
+    "topic": "2C",
+    "kind": "probe",
+    "difficulty": 0.5908
+  },
+  {
+    "id": "study::2C::011",
+    "topic": "2C",
+    "kind": "probe",
+    "difficulty": 0.7724
+  },
+  {
+    "id": "study::2C::012",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.6737
+  },
+  {
+    "id": "study::2C::013",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.3461
+  },
+  {
+    "id": "study::2C::014",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.4288
+  },
+  {
+    "id": "study::2C::015",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.3293
+  },
+  {
+    "id": "study::2C::016",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.6751
+  },
+  {
+    "id": "study::2C::017",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.2125
+  },
+  {
+    "id": "study::2C::018",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.4512
+  },
+  {
+    "id": "study::2C::019",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.4545
+  },
+  {
+    "id": "study::2C::020",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.5767
+  },
+  {
+    "id": "study::2C::021",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.6404
+  },
+  {
+    "id": "study::2C::022",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.2249
+  },
+  {
+    "id": "study::2C::023",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.5823
+  },
+  {
+    "id": "study::2C::024",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.5464
+  },
+  {
+    "id": "study::2C::025",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.4775
+  },
+  {
+    "id": "study::2C::026",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.2638
+  },
+  {
+    "id": "study::2C::027",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.4538
+  },
+  {
+    "id": "study::2C::028",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.2871
+  },
+  {
+    "id": "study::2C::029",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.5655
+  },
+  {
+    "id": "study::2C::030",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.4767
+  },
+  {
+    "id": "study::2C::031",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.749
+  },
+  {
+    "id": "study::2C::032",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.6771
+  },
+  {
+    "id": "study::2C::033",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.5894
+  },
+  {
+    "id": "study::2C::034",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.6548
+  },
+  {
+    "id": "study::2C::035",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.6723
+  },
+  {
+    "id": "study::2C::036",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.65
+  },
+  {
+    "id": "study::2C::037",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.3435
+  },
+  {
+    "id": "study::2C::038",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.6648
+  },
+  {
+    "id": "study::2C::039",
+    "topic": "2C",
+    "kind": "recall",
+    "difficulty": 0.5263
+  },
+  {
+    "id": "study::3A::000",
+    "topic": "3A",
+    "kind": "probe",
+    "difficulty": 0.463
+  },
+  {
+    "id": "study::3A::001",
+    "topic": "3A",
+    "kind": "probe",
+    "difficulty": 0.6924
+  },
+  {
+    "id": "study::3A::002",
+    "topic": "3A",
+    "kind": "probe",
+    "difficulty": 0.4056
+  },
+  {
+    "id": "study::3A::003",
+    "topic": "3A",
+    "kind": "probe",
+    "difficulty": 0.7007
+  },
+  {
+    "id": "study::3A::004",
+    "topic": "3A",
+    "kind": "probe",
+    "difficulty": 0.454
+  },
+  {
+    "id": "study::3A::005",
+    "topic": "3A",
+    "kind": "probe",
+    "difficulty": 0.3561
+  },
+  {
+    "id": "study::3A::006",
+    "topic": "3A",
+    "kind": "probe",
+    "difficulty": 0.2111
+  },
+  {
+    "id": "study::3A::007",
+    "topic": "3A",
+    "kind": "probe",
+    "difficulty": 0.2452
+  },
+  {
+    "id": "study::3A::008",
+    "topic": "3A",
+    "kind": "probe",
+    "difficulty": 0.2236
+  },
+  {
+    "id": "study::3A::009",
+    "topic": "3A",
+    "kind": "probe",
+    "difficulty": 0.7913
+  },
+  {
+    "id": "study::3A::010",
+    "topic": "3A",
+    "kind": "probe",
+    "difficulty": 0.2285
+  },
+  {
+    "id": "study::3A::011",
+    "topic": "3A",
+    "kind": "probe",
+    "difficulty": 0.461
+  },
+  {
+    "id": "study::3A::012",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.6175
+  },
+  {
+    "id": "study::3A::013",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.5573
+  },
+  {
+    "id": "study::3A::014",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.5221
+  },
+  {
+    "id": "study::3A::015",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.3892
+  },
+  {
+    "id": "study::3A::016",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.2009
+  },
+  {
+    "id": "study::3A::017",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.6652
+  },
+  {
+    "id": "study::3A::018",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.3574
+  },
+  {
+    "id": "study::3A::019",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.6645
+  },
+  {
+    "id": "study::3A::020",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.7757
+  },
+  {
+    "id": "study::3A::021",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.3146
+  },
+  {
+    "id": "study::3A::022",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.3484
+  },
+  {
+    "id": "study::3A::023",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.4373
+  },
+  {
+    "id": "study::3A::024",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.3599
+  },
+  {
+    "id": "study::3A::025",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.6405
+  },
+  {
+    "id": "study::3A::026",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.3044
+  },
+  {
+    "id": "study::3A::027",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.5695
+  },
+  {
+    "id": "study::3A::028",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.459
+  },
+  {
+    "id": "study::3A::029",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.6153
+  },
+  {
+    "id": "study::3A::030",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.4793
+  },
+  {
+    "id": "study::3A::031",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.5272
+  },
+  {
+    "id": "study::3A::032",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.6301
+  },
+  {
+    "id": "study::3A::033",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.4145
+  },
+  {
+    "id": "study::3A::034",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.489
+  },
+  {
+    "id": "study::3A::035",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.7852
+  },
+  {
+    "id": "study::3A::036",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.5225
+  },
+  {
+    "id": "study::3A::037",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.2448
+  },
+  {
+    "id": "study::3A::038",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.5658
+  },
+  {
+    "id": "study::3A::039",
+    "topic": "3A",
+    "kind": "recall",
+    "difficulty": 0.3642
+  },
+  {
+    "id": "study::3B::000",
+    "topic": "3B",
+    "kind": "probe",
+    "difficulty": 0.4481
+  },
+  {
+    "id": "study::3B::001",
+    "topic": "3B",
+    "kind": "probe",
+    "difficulty": 0.7969
+  },
+  {
+    "id": "study::3B::002",
+    "topic": "3B",
+    "kind": "probe",
+    "difficulty": 0.4199
+  },
+  {
+    "id": "study::3B::003",
+    "topic": "3B",
+    "kind": "probe",
+    "difficulty": 0.6113
+  },
+  {
+    "id": "study::3B::004",
+    "topic": "3B",
+    "kind": "probe",
+    "difficulty": 0.3547
+  },
+  {
+    "id": "study::3B::005",
+    "topic": "3B",
+    "kind": "probe",
+    "difficulty": 0.3826
+  },
+  {
+    "id": "study::3B::006",
+    "topic": "3B",
+    "kind": "probe",
+    "difficulty": 0.6587
+  },
+  {
+    "id": "study::3B::007",
+    "topic": "3B",
+    "kind": "probe",
+    "difficulty": 0.5626
+  },
+  {
+    "id": "study::3B::008",
+    "topic": "3B",
+    "kind": "probe",
+    "difficulty": 0.2988
+  },
+  {
+    "id": "study::3B::009",
+    "topic": "3B",
+    "kind": "probe",
+    "difficulty": 0.3388
+  },
+  {
+    "id": "study::3B::010",
+    "topic": "3B",
+    "kind": "probe",
+    "difficulty": 0.2489
+  },
+  {
+    "id": "study::3B::011",
+    "topic": "3B",
+    "kind": "probe",
+    "difficulty": 0.3538
+  },
+  {
+    "id": "study::3B::012",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.3646
+  },
+  {
+    "id": "study::3B::013",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.7532
+  },
+  {
+    "id": "study::3B::014",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.3793
+  },
+  {
+    "id": "study::3B::015",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.5517
+  },
+  {
+    "id": "study::3B::016",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.6021
+  },
+  {
+    "id": "study::3B::017",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.7853
+  },
+  {
+    "id": "study::3B::018",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.3975
+  },
+  {
+    "id": "study::3B::019",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.2287
+  },
+  {
+    "id": "study::3B::020",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.2638
+  },
+  {
+    "id": "study::3B::021",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.2602
+  },
+  {
+    "id": "study::3B::022",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.4576
+  },
+  {
+    "id": "study::3B::023",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.4226
+  },
+  {
+    "id": "study::3B::024",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.4566
+  },
+  {
+    "id": "study::3B::025",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.3397
+  },
+  {
+    "id": "study::3B::026",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.3252
+  },
+  {
+    "id": "study::3B::027",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.6821
+  },
+  {
+    "id": "study::3B::028",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.2278
+  },
+  {
+    "id": "study::3B::029",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.6502
+  },
+  {
+    "id": "study::3B::030",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.6325
+  },
+  {
+    "id": "study::3B::031",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.6259
+  },
+  {
+    "id": "study::3B::032",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.3775
+  },
+  {
+    "id": "study::3B::033",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.5945
+  },
+  {
+    "id": "study::3B::034",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.5196
+  },
+  {
+    "id": "study::3B::035",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.6378
+  },
+  {
+    "id": "study::3B::036",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.3953
+  },
+  {
+    "id": "study::3B::037",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.3485
+  },
+  {
+    "id": "study::3B::038",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.5746
+  },
+  {
+    "id": "study::3B::039",
+    "topic": "3B",
+    "kind": "recall",
+    "difficulty": 0.6119
+  },
+  {
+    "id": "study::4A::000",
+    "topic": "4A",
+    "kind": "probe",
+    "difficulty": 0.5072
+  },
+  {
+    "id": "study::4A::001",
+    "topic": "4A",
+    "kind": "probe",
+    "difficulty": 0.2238
+  },
+  {
+    "id": "study::4A::002",
+    "topic": "4A",
+    "kind": "probe",
+    "difficulty": 0.2926
+  },
+  {
+    "id": "study::4A::003",
+    "topic": "4A",
+    "kind": "probe",
+    "difficulty": 0.5543
+  },
+  {
+    "id": "study::4A::004",
+    "topic": "4A",
+    "kind": "probe",
+    "difficulty": 0.5418
+  },
+  {
+    "id": "study::4A::005",
+    "topic": "4A",
+    "kind": "probe",
+    "difficulty": 0.291
+  },
+  {
+    "id": "study::4A::006",
+    "topic": "4A",
+    "kind": "probe",
+    "difficulty": 0.5114
+  },
+  {
+    "id": "study::4A::007",
+    "topic": "4A",
+    "kind": "probe",
+    "difficulty": 0.6047
+  },
+  {
+    "id": "study::4A::008",
+    "topic": "4A",
+    "kind": "probe",
+    "difficulty": 0.7017
+  },
+  {
+    "id": "study::4A::009",
+    "topic": "4A",
+    "kind": "probe",
+    "difficulty": 0.2184
+  },
+  {
+    "id": "study::4A::010",
+    "topic": "4A",
+    "kind": "probe",
+    "difficulty": 0.2983
+  },
+  {
+    "id": "study::4A::011",
+    "topic": "4A",
+    "kind": "probe",
+    "difficulty": 0.7806
+  },
+  {
+    "id": "study::4A::012",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.3378
+  },
+  {
+    "id": "study::4A::013",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.7894
+  },
+  {
+    "id": "study::4A::014",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.2157
+  },
+  {
+    "id": "study::4A::015",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.7402
+  },
+  {
+    "id": "study::4A::016",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.3172
+  },
+  {
+    "id": "study::4A::017",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.3459
+  },
+  {
+    "id": "study::4A::018",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.487
+  },
+  {
+    "id": "study::4A::019",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.7856
+  },
+  {
+    "id": "study::4A::020",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.7624
+  },
+  {
+    "id": "study::4A::021",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.4064
+  },
+  {
+    "id": "study::4A::022",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.6565
+  },
+  {
+    "id": "study::4A::023",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.7016
+  },
+  {
+    "id": "study::4A::024",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.6188
+  },
+  {
+    "id": "study::4A::025",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.4098
+  },
+  {
+    "id": "study::4A::026",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.2435
+  },
+  {
+    "id": "study::4A::027",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.7356
+  },
+  {
+    "id": "study::4A::028",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.5055
+  },
+  {
+    "id": "study::4A::029",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.7507
+  },
+  {
+    "id": "study::4A::030",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.2817
+  },
+  {
+    "id": "study::4A::031",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.7327
+  },
+  {
+    "id": "study::4A::032",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.5392
+  },
+  {
+    "id": "study::4A::033",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.4816
+  },
+  {
+    "id": "study::4A::034",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.2626
+  },
+  {
+    "id": "study::4A::035",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.5634
+  },
+  {
+    "id": "study::4A::036",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.6941
+  },
+  {
+    "id": "study::4A::037",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.2139
+  },
+  {
+    "id": "study::4A::038",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.6706
+  },
+  {
+    "id": "study::4A::039",
+    "topic": "4A",
+    "kind": "recall",
+    "difficulty": 0.2414
+  },
+  {
+    "id": "study::4B::000",
+    "topic": "4B",
+    "kind": "probe",
+    "difficulty": 0.2621
+  },
+  {
+    "id": "study::4B::001",
+    "topic": "4B",
+    "kind": "probe",
+    "difficulty": 0.5206
+  },
+  {
+    "id": "study::4B::002",
+    "topic": "4B",
+    "kind": "probe",
+    "difficulty": 0.3304
+  },
+  {
+    "id": "study::4B::003",
+    "topic": "4B",
+    "kind": "probe",
+    "difficulty": 0.5725
+  },
+  {
+    "id": "study::4B::004",
+    "topic": "4B",
+    "kind": "probe",
+    "difficulty": 0.2603
+  },
+  {
+    "id": "study::4B::005",
+    "topic": "4B",
+    "kind": "probe",
+    "difficulty": 0.4789
+  },
+  {
+    "id": "study::4B::006",
+    "topic": "4B",
+    "kind": "probe",
+    "difficulty": 0.2749
+  },
+  {
+    "id": "study::4B::007",
+    "topic": "4B",
+    "kind": "probe",
+    "difficulty": 0.4992
+  },
+  {
+    "id": "study::4B::008",
+    "topic": "4B",
+    "kind": "probe",
+    "difficulty": 0.622
+  },
+  {
+    "id": "study::4B::009",
+    "topic": "4B",
+    "kind": "probe",
+    "difficulty": 0.2596
+  },
+  {
+    "id": "study::4B::010",
+    "topic": "4B",
+    "kind": "probe",
+    "difficulty": 0.7775
+  },
+  {
+    "id": "study::4B::011",
+    "topic": "4B",
+    "kind": "probe",
+    "difficulty": 0.6305
+  },
+  {
+    "id": "study::4B::012",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.4707
+  },
+  {
+    "id": "study::4B::013",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.3665
+  },
+  {
+    "id": "study::4B::014",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.6072
+  },
+  {
+    "id": "study::4B::015",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.5613
+  },
+  {
+    "id": "study::4B::016",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.4698
+  },
+  {
+    "id": "study::4B::017",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.358
+  },
+  {
+    "id": "study::4B::018",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.4809
+  },
+  {
+    "id": "study::4B::019",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.5139
+  },
+  {
+    "id": "study::4B::020",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.6123
+  },
+  {
+    "id": "study::4B::021",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.6648
+  },
+  {
+    "id": "study::4B::022",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.358
+  },
+  {
+    "id": "study::4B::023",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.4917
+  },
+  {
+    "id": "study::4B::024",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.5096
+  },
+  {
+    "id": "study::4B::025",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.5961
+  },
+  {
+    "id": "study::4B::026",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.3766
+  },
+  {
+    "id": "study::4B::027",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.7574
+  },
+  {
+    "id": "study::4B::028",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.5956
+  },
+  {
+    "id": "study::4B::029",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.6963
+  },
+  {
+    "id": "study::4B::030",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.7533
+  },
+  {
+    "id": "study::4B::031",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.4418
+  },
+  {
+    "id": "study::4B::032",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.5539
+  },
+  {
+    "id": "study::4B::033",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.7051
+  },
+  {
+    "id": "study::4B::034",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.4505
+  },
+  {
+    "id": "study::4B::035",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.63
+  },
+  {
+    "id": "study::4B::036",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.2061
+  },
+  {
+    "id": "study::4B::037",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.7061
+  },
+  {
+    "id": "study::4B::038",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.4818
+  },
+  {
+    "id": "study::4B::039",
+    "topic": "4B",
+    "kind": "recall",
+    "difficulty": 0.2319
+  },
+  {
+    "id": "study::4C::000",
+    "topic": "4C",
+    "kind": "probe",
+    "difficulty": 0.7629
+  },
+  {
+    "id": "study::4C::001",
+    "topic": "4C",
+    "kind": "probe",
+    "difficulty": 0.6321
+  },
+  {
+    "id": "study::4C::002",
+    "topic": "4C",
+    "kind": "probe",
+    "difficulty": 0.5064
+  },
+  {
+    "id": "study::4C::003",
+    "topic": "4C",
+    "kind": "probe",
+    "difficulty": 0.6282
+  },
+  {
+    "id": "study::4C::004",
+    "topic": "4C",
+    "kind": "probe",
+    "difficulty": 0.7993
+  },
+  {
+    "id": "study::4C::005",
+    "topic": "4C",
+    "kind": "probe",
+    "difficulty": 0.4096
+  },
+  {
+    "id": "study::4C::006",
+    "topic": "4C",
+    "kind": "probe",
+    "difficulty": 0.6629
+  },
+  {
+    "id": "study::4C::007",
+    "topic": "4C",
+    "kind": "probe",
+    "difficulty": 0.3893
+  },
+  {
+    "id": "study::4C::008",
+    "topic": "4C",
+    "kind": "probe",
+    "difficulty": 0.3517
+  },
+  {
+    "id": "study::4C::009",
+    "topic": "4C",
+    "kind": "probe",
+    "difficulty": 0.5326
+  },
+  {
+    "id": "study::4C::010",
+    "topic": "4C",
+    "kind": "probe",
+    "difficulty": 0.7354
+  },
+  {
+    "id": "study::4C::011",
+    "topic": "4C",
+    "kind": "probe",
+    "difficulty": 0.3995
+  },
+  {
+    "id": "study::4C::012",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.7946
+  },
+  {
+    "id": "study::4C::013",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.5688
+  },
+  {
+    "id": "study::4C::014",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.504
+  },
+  {
+    "id": "study::4C::015",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.596
+  },
+  {
+    "id": "study::4C::016",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.5884
+  },
+  {
+    "id": "study::4C::017",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.7001
+  },
+  {
+    "id": "study::4C::018",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.3693
+  },
+  {
+    "id": "study::4C::019",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.5304
+  },
+  {
+    "id": "study::4C::020",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.7958
+  },
+  {
+    "id": "study::4C::021",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.2897
+  },
+  {
+    "id": "study::4C::022",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.7752
+  },
+  {
+    "id": "study::4C::023",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.4798
+  },
+  {
+    "id": "study::4C::024",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.226
+  },
+  {
+    "id": "study::4C::025",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.4739
+  },
+  {
+    "id": "study::4C::026",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.5153
+  },
+  {
+    "id": "study::4C::027",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.6679
+  },
+  {
+    "id": "study::4C::028",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.5957
+  },
+  {
+    "id": "study::4C::029",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.6107
+  },
+  {
+    "id": "study::4C::030",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.5885
+  },
+  {
+    "id": "study::4C::031",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.2185
+  },
+  {
+    "id": "study::4C::032",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.4064
+  },
+  {
+    "id": "study::4C::033",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.7209
+  },
+  {
+    "id": "study::4C::034",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.2614
+  },
+  {
+    "id": "study::4C::035",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.6355
+  },
+  {
+    "id": "study::4C::036",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.7957
+  },
+  {
+    "id": "study::4C::037",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.2215
+  },
+  {
+    "id": "study::4C::038",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.273
+  },
+  {
+    "id": "study::4C::039",
+    "topic": "4C",
+    "kind": "recall",
+    "difficulty": 0.3617
+  },
+  {
+    "id": "study::4D::000",
+    "topic": "4D",
+    "kind": "probe",
+    "difficulty": 0.3141
+  },
+  {
+    "id": "study::4D::001",
+    "topic": "4D",
+    "kind": "probe",
+    "difficulty": 0.274
+  },
+  {
+    "id": "study::4D::002",
+    "topic": "4D",
+    "kind": "probe",
+    "difficulty": 0.541
+  },
+  {
+    "id": "study::4D::003",
+    "topic": "4D",
+    "kind": "probe",
+    "difficulty": 0.7224
+  },
+  {
+    "id": "study::4D::004",
+    "topic": "4D",
+    "kind": "probe",
+    "difficulty": 0.6033
+  },
+  {
+    "id": "study::4D::005",
+    "topic": "4D",
+    "kind": "probe",
+    "difficulty": 0.5207
+  },
+  {
+    "id": "study::4D::006",
+    "topic": "4D",
+    "kind": "probe",
+    "difficulty": 0.401
+  },
+  {
+    "id": "study::4D::007",
+    "topic": "4D",
+    "kind": "probe",
+    "difficulty": 0.7514
+  },
+  {
+    "id": "study::4D::008",
+    "topic": "4D",
+    "kind": "probe",
+    "difficulty": 0.7344
+  },
+  {
+    "id": "study::4D::009",
+    "topic": "4D",
+    "kind": "probe",
+    "difficulty": 0.4072
+  },
+  {
+    "id": "study::4D::010",
+    "topic": "4D",
+    "kind": "probe",
+    "difficulty": 0.6268
+  },
+  {
+    "id": "study::4D::011",
+    "topic": "4D",
+    "kind": "probe",
+    "difficulty": 0.7609
+  },
+  {
+    "id": "study::4D::012",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.2741
+  },
+  {
+    "id": "study::4D::013",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.2119
+  },
+  {
+    "id": "study::4D::014",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.3634
+  },
+  {
+    "id": "study::4D::015",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.2048
+  },
+  {
+    "id": "study::4D::016",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.5518
+  },
+  {
+    "id": "study::4D::017",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.3327
+  },
+  {
+    "id": "study::4D::018",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.7701
+  },
+  {
+    "id": "study::4D::019",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.7365
+  },
+  {
+    "id": "study::4D::020",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.6689
+  },
+  {
+    "id": "study::4D::021",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.3304
+  },
+  {
+    "id": "study::4D::022",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.3844
+  },
+  {
+    "id": "study::4D::023",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.3508
+  },
+  {
+    "id": "study::4D::024",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.7816
+  },
+  {
+    "id": "study::4D::025",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.446
+  },
+  {
+    "id": "study::4D::026",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.7462
+  },
+  {
+    "id": "study::4D::027",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.5558
+  },
+  {
+    "id": "study::4D::028",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.4664
+  },
+  {
+    "id": "study::4D::029",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.3808
+  },
+  {
+    "id": "study::4D::030",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.3537
+  },
+  {
+    "id": "study::4D::031",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.3264
+  },
+  {
+    "id": "study::4D::032",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.3873
+  },
+  {
+    "id": "study::4D::033",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.5888
+  },
+  {
+    "id": "study::4D::034",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.566
+  },
+  {
+    "id": "study::4D::035",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.4668
+  },
+  {
+    "id": "study::4D::036",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.3101
+  },
+  {
+    "id": "study::4D::037",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.2035
+  },
+  {
+    "id": "study::4D::038",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.3513
+  },
+  {
+    "id": "study::4D::039",
+    "topic": "4D",
+    "kind": "recall",
+    "difficulty": 0.3134
+  },
+  {
+    "id": "study::4E::000",
+    "topic": "4E",
+    "kind": "probe",
+    "difficulty": 0.4922
+  },
+  {
+    "id": "study::4E::001",
+    "topic": "4E",
+    "kind": "probe",
+    "difficulty": 0.2875
+  },
+  {
+    "id": "study::4E::002",
+    "topic": "4E",
+    "kind": "probe",
+    "difficulty": 0.2873
+  },
+  {
+    "id": "study::4E::003",
+    "topic": "4E",
+    "kind": "probe",
+    "difficulty": 0.4472
+  },
+  {
+    "id": "study::4E::004",
+    "topic": "4E",
+    "kind": "probe",
+    "difficulty": 0.7434
+  },
+  {
+    "id": "study::4E::005",
+    "topic": "4E",
+    "kind": "probe",
+    "difficulty": 0.4587
+  },
+  {
+    "id": "study::4E::006",
+    "topic": "4E",
+    "kind": "probe",
+    "difficulty": 0.4301
+  },
+  {
+    "id": "study::4E::007",
+    "topic": "4E",
+    "kind": "probe",
+    "difficulty": 0.7169
+  },
+  {
+    "id": "study::4E::008",
+    "topic": "4E",
+    "kind": "probe",
+    "difficulty": 0.3575
+  },
+  {
+    "id": "study::4E::009",
+    "topic": "4E",
+    "kind": "probe",
+    "difficulty": 0.6612
+  },
+  {
+    "id": "study::4E::010",
+    "topic": "4E",
+    "kind": "probe",
+    "difficulty": 0.7483
+  },
+  {
+    "id": "study::4E::011",
+    "topic": "4E",
+    "kind": "probe",
+    "difficulty": 0.5605
+  },
+  {
+    "id": "study::4E::012",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.6983
+  },
+  {
+    "id": "study::4E::013",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.225
+  },
+  {
+    "id": "study::4E::014",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.3047
+  },
+  {
+    "id": "study::4E::015",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.4587
+  },
+  {
+    "id": "study::4E::016",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.7954
+  },
+  {
+    "id": "study::4E::017",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.3147
+  },
+  {
+    "id": "study::4E::018",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.6184
+  },
+  {
+    "id": "study::4E::019",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.4866
+  },
+  {
+    "id": "study::4E::020",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.3388
+  },
+  {
+    "id": "study::4E::021",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.7892
+  },
+  {
+    "id": "study::4E::022",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.5575
+  },
+  {
+    "id": "study::4E::023",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.4807
+  },
+  {
+    "id": "study::4E::024",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.2038
+  },
+  {
+    "id": "study::4E::025",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.7709
+  },
+  {
+    "id": "study::4E::026",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.264
+  },
+  {
+    "id": "study::4E::027",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.342
+  },
+  {
+    "id": "study::4E::028",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.3148
+  },
+  {
+    "id": "study::4E::029",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.5902
+  },
+  {
+    "id": "study::4E::030",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.2642
+  },
+  {
+    "id": "study::4E::031",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.3525
+  },
+  {
+    "id": "study::4E::032",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.4824
+  },
+  {
+    "id": "study::4E::033",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.2093
+  },
+  {
+    "id": "study::4E::034",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.2562
+  },
+  {
+    "id": "study::4E::035",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.4014
+  },
+  {
+    "id": "study::4E::036",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.7767
+  },
+  {
+    "id": "study::4E::037",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.2996
+  },
+  {
+    "id": "study::4E::038",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.5557
+  },
+  {
+    "id": "study::4E::039",
+    "topic": "4E",
+    "kind": "recall",
+    "difficulty": 0.6578
+  },
+  {
+    "id": "study::5A::000",
+    "topic": "5A",
+    "kind": "probe",
+    "difficulty": 0.5009
+  },
+  {
+    "id": "study::5A::001",
+    "topic": "5A",
+    "kind": "probe",
+    "difficulty": 0.713
+  },
+  {
+    "id": "study::5A::002",
+    "topic": "5A",
+    "kind": "probe",
+    "difficulty": 0.3975
+  },
+  {
+    "id": "study::5A::003",
+    "topic": "5A",
+    "kind": "probe",
+    "difficulty": 0.3209
+  },
+  {
+    "id": "study::5A::004",
+    "topic": "5A",
+    "kind": "probe",
+    "difficulty": 0.3416
+  },
+  {
+    "id": "study::5A::005",
+    "topic": "5A",
+    "kind": "probe",
+    "difficulty": 0.5414
+  },
+  {
+    "id": "study::5A::006",
+    "topic": "5A",
+    "kind": "probe",
+    "difficulty": 0.6899
+  },
+  {
+    "id": "study::5A::007",
+    "topic": "5A",
+    "kind": "probe",
+    "difficulty": 0.6804
+  },
+  {
+    "id": "study::5A::008",
+    "topic": "5A",
+    "kind": "probe",
+    "difficulty": 0.4861
+  },
+  {
+    "id": "study::5A::009",
+    "topic": "5A",
+    "kind": "probe",
+    "difficulty": 0.7255
+  },
+  {
+    "id": "study::5A::010",
+    "topic": "5A",
+    "kind": "probe",
+    "difficulty": 0.4827
+  },
+  {
+    "id": "study::5A::011",
+    "topic": "5A",
+    "kind": "probe",
+    "difficulty": 0.3056
+  },
+  {
+    "id": "study::5A::012",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.6838
+  },
+  {
+    "id": "study::5A::013",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.458
+  },
+  {
+    "id": "study::5A::014",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.5755
+  },
+  {
+    "id": "study::5A::015",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.5426
+  },
+  {
+    "id": "study::5A::016",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.6881
+  },
+  {
+    "id": "study::5A::017",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.4498
+  },
+  {
+    "id": "study::5A::018",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.4047
+  },
+  {
+    "id": "study::5A::019",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.3597
+  },
+  {
+    "id": "study::5A::020",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.4474
+  },
+  {
+    "id": "study::5A::021",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.3581
+  },
+  {
+    "id": "study::5A::022",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.3531
+  },
+  {
+    "id": "study::5A::023",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.503
+  },
+  {
+    "id": "study::5A::024",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.6854
+  },
+  {
+    "id": "study::5A::025",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.3822
+  },
+  {
+    "id": "study::5A::026",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.7336
+  },
+  {
+    "id": "study::5A::027",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.2473
+  },
+  {
+    "id": "study::5A::028",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.3039
+  },
+  {
+    "id": "study::5A::029",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.3734
+  },
+  {
+    "id": "study::5A::030",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.7684
+  },
+  {
+    "id": "study::5A::031",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.3711
+  },
+  {
+    "id": "study::5A::032",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.7916
+  },
+  {
+    "id": "study::5A::033",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.564
+  },
+  {
+    "id": "study::5A::034",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.4484
+  },
+  {
+    "id": "study::5A::035",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.263
+  },
+  {
+    "id": "study::5A::036",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.4827
+  },
+  {
+    "id": "study::5A::037",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.5485
+  },
+  {
+    "id": "study::5A::038",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.4086
+  },
+  {
+    "id": "study::5A::039",
+    "topic": "5A",
+    "kind": "recall",
+    "difficulty": 0.3945
+  },
+  {
+    "id": "study::5B::000",
+    "topic": "5B",
+    "kind": "probe",
+    "difficulty": 0.7516
+  },
+  {
+    "id": "study::5B::001",
+    "topic": "5B",
+    "kind": "probe",
+    "difficulty": 0.3937
+  },
+  {
+    "id": "study::5B::002",
+    "topic": "5B",
+    "kind": "probe",
+    "difficulty": 0.7501
+  },
+  {
+    "id": "study::5B::003",
+    "topic": "5B",
+    "kind": "probe",
+    "difficulty": 0.7751
+  },
+  {
+    "id": "study::5B::004",
+    "topic": "5B",
+    "kind": "probe",
+    "difficulty": 0.7433
+  },
+  {
+    "id": "study::5B::005",
+    "topic": "5B",
+    "kind": "probe",
+    "difficulty": 0.581
+  },
+  {
+    "id": "study::5B::006",
+    "topic": "5B",
+    "kind": "probe",
+    "difficulty": 0.2929
+  },
+  {
+    "id": "study::5B::007",
+    "topic": "5B",
+    "kind": "probe",
+    "difficulty": 0.6459
+  },
+  {
+    "id": "study::5B::008",
+    "topic": "5B",
+    "kind": "probe",
+    "difficulty": 0.5968
+  },
+  {
+    "id": "study::5B::009",
+    "topic": "5B",
+    "kind": "probe",
+    "difficulty": 0.3191
+  },
+  {
+    "id": "study::5B::010",
+    "topic": "5B",
+    "kind": "probe",
+    "difficulty": 0.5039
+  },
+  {
+    "id": "study::5B::011",
+    "topic": "5B",
+    "kind": "probe",
+    "difficulty": 0.4938
+  },
+  {
+    "id": "study::5B::012",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.4737
+  },
+  {
+    "id": "study::5B::013",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.6694
+  },
+  {
+    "id": "study::5B::014",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.6441
+  },
+  {
+    "id": "study::5B::015",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.7202
+  },
+  {
+    "id": "study::5B::016",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.5768
+  },
+  {
+    "id": "study::5B::017",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.345
+  },
+  {
+    "id": "study::5B::018",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.7075
+  },
+  {
+    "id": "study::5B::019",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.6915
+  },
+  {
+    "id": "study::5B::020",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.3976
+  },
+  {
+    "id": "study::5B::021",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.626
+  },
+  {
+    "id": "study::5B::022",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.5199
+  },
+  {
+    "id": "study::5B::023",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.6973
+  },
+  {
+    "id": "study::5B::024",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.6556
+  },
+  {
+    "id": "study::5B::025",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.6116
+  },
+  {
+    "id": "study::5B::026",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.7866
+  },
+  {
+    "id": "study::5B::027",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.3315
+  },
+  {
+    "id": "study::5B::028",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.7127
+  },
+  {
+    "id": "study::5B::029",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.6688
+  },
+  {
+    "id": "study::5B::030",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.6849
+  },
+  {
+    "id": "study::5B::031",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.3273
+  },
+  {
+    "id": "study::5B::032",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.7388
+  },
+  {
+    "id": "study::5B::033",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.687
+  },
+  {
+    "id": "study::5B::034",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.3552
+  },
+  {
+    "id": "study::5B::035",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.7704
+  },
+  {
+    "id": "study::5B::036",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.3714
+  },
+  {
+    "id": "study::5B::037",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.7987
+  },
+  {
+    "id": "study::5B::038",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.4539
+  },
+  {
+    "id": "study::5B::039",
+    "topic": "5B",
+    "kind": "recall",
+    "difficulty": 0.4569
+  },
+  {
+    "id": "study::5C::000",
+    "topic": "5C",
+    "kind": "probe",
+    "difficulty": 0.4286
+  },
+  {
+    "id": "study::5C::001",
+    "topic": "5C",
+    "kind": "probe",
+    "difficulty": 0.2885
+  },
+  {
+    "id": "study::5C::002",
+    "topic": "5C",
+    "kind": "probe",
+    "difficulty": 0.3937
+  },
+  {
+    "id": "study::5C::003",
+    "topic": "5C",
+    "kind": "probe",
+    "difficulty": 0.7552
+  },
+  {
+    "id": "study::5C::004",
+    "topic": "5C",
+    "kind": "probe",
+    "difficulty": 0.5749
+  },
+  {
+    "id": "study::5C::005",
+    "topic": "5C",
+    "kind": "probe",
+    "difficulty": 0.4609
+  },
+  {
+    "id": "study::5C::006",
+    "topic": "5C",
+    "kind": "probe",
+    "difficulty": 0.2967
+  },
+  {
+    "id": "study::5C::007",
+    "topic": "5C",
+    "kind": "probe",
+    "difficulty": 0.3286
+  },
+  {
+    "id": "study::5C::008",
+    "topic": "5C",
+    "kind": "probe",
+    "difficulty": 0.4617
+  },
+  {
+    "id": "study::5C::009",
+    "topic": "5C",
+    "kind": "probe",
+    "difficulty": 0.6371
+  },
+  {
+    "id": "study::5C::010",
+    "topic": "5C",
+    "kind": "probe",
+    "difficulty": 0.3082
+  },
+  {
+    "id": "study::5C::011",
+    "topic": "5C",
+    "kind": "probe",
+    "difficulty": 0.625
+  },
+  {
+    "id": "study::5C::012",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.5167
+  },
+  {
+    "id": "study::5C::013",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.4593
+  },
+  {
+    "id": "study::5C::014",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.6396
+  },
+  {
+    "id": "study::5C::015",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.5735
+  },
+  {
+    "id": "study::5C::016",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.3908
+  },
+  {
+    "id": "study::5C::017",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.4284
+  },
+  {
+    "id": "study::5C::018",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.6097
+  },
+  {
+    "id": "study::5C::019",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.4602
+  },
+  {
+    "id": "study::5C::020",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.6371
+  },
+  {
+    "id": "study::5C::021",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.3056
+  },
+  {
+    "id": "study::5C::022",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.2351
+  },
+  {
+    "id": "study::5C::023",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.3621
+  },
+  {
+    "id": "study::5C::024",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.6347
+  },
+  {
+    "id": "study::5C::025",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.3017
+  },
+  {
+    "id": "study::5C::026",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.6342
+  },
+  {
+    "id": "study::5C::027",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.6255
+  },
+  {
+    "id": "study::5C::028",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.3507
+  },
+  {
+    "id": "study::5C::029",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.6207
+  },
+  {
+    "id": "study::5C::030",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.5382
+  },
+  {
+    "id": "study::5C::031",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.4053
+  },
+  {
+    "id": "study::5C::032",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.5563
+  },
+  {
+    "id": "study::5C::033",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.7347
+  },
+  {
+    "id": "study::5C::034",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.6595
+  },
+  {
+    "id": "study::5C::035",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.6704
+  },
+  {
+    "id": "study::5C::036",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.5405
+  },
+  {
+    "id": "study::5C::037",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.2717
+  },
+  {
+    "id": "study::5C::038",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.3358
+  },
+  {
+    "id": "study::5C::039",
+    "topic": "5C",
+    "kind": "recall",
+    "difficulty": 0.5088
+  },
+  {
+    "id": "study::5D::000",
+    "topic": "5D",
+    "kind": "probe",
+    "difficulty": 0.662
+  },
+  {
+    "id": "study::5D::001",
+    "topic": "5D",
+    "kind": "probe",
+    "difficulty": 0.2089
+  },
+  {
+    "id": "study::5D::002",
+    "topic": "5D",
+    "kind": "probe",
+    "difficulty": 0.7756
+  },
+  {
+    "id": "study::5D::003",
+    "topic": "5D",
+    "kind": "probe",
+    "difficulty": 0.505
+  },
+  {
+    "id": "study::5D::004",
+    "topic": "5D",
+    "kind": "probe",
+    "difficulty": 0.4023
+  },
+  {
+    "id": "study::5D::005",
+    "topic": "5D",
+    "kind": "probe",
+    "difficulty": 0.4614
+  },
+  {
+    "id": "study::5D::006",
+    "topic": "5D",
+    "kind": "probe",
+    "difficulty": 0.3507
+  },
+  {
+    "id": "study::5D::007",
+    "topic": "5D",
+    "kind": "probe",
+    "difficulty": 0.7063
+  },
+  {
+    "id": "study::5D::008",
+    "topic": "5D",
+    "kind": "probe",
+    "difficulty": 0.5484
+  },
+  {
+    "id": "study::5D::009",
+    "topic": "5D",
+    "kind": "probe",
+    "difficulty": 0.2015
+  },
+  {
+    "id": "study::5D::010",
+    "topic": "5D",
+    "kind": "probe",
+    "difficulty": 0.4992
+  },
+  {
+    "id": "study::5D::011",
+    "topic": "5D",
+    "kind": "probe",
+    "difficulty": 0.6821
+  },
+  {
+    "id": "study::5D::012",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.2062
+  },
+  {
+    "id": "study::5D::013",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.4421
+  },
+  {
+    "id": "study::5D::014",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.3045
+  },
+  {
+    "id": "study::5D::015",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.4209
+  },
+  {
+    "id": "study::5D::016",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.5771
+  },
+  {
+    "id": "study::5D::017",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.2322
+  },
+  {
+    "id": "study::5D::018",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.4697
+  },
+  {
+    "id": "study::5D::019",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.2224
+  },
+  {
+    "id": "study::5D::020",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.5793
+  },
+  {
+    "id": "study::5D::021",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.2224
+  },
+  {
+    "id": "study::5D::022",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.6812
+  },
+  {
+    "id": "study::5D::023",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.631
+  },
+  {
+    "id": "study::5D::024",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.3938
+  },
+  {
+    "id": "study::5D::025",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.4427
+  },
+  {
+    "id": "study::5D::026",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.4482
+  },
+  {
+    "id": "study::5D::027",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.3222
+  },
+  {
+    "id": "study::5D::028",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.5875
+  },
+  {
+    "id": "study::5D::029",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.7844
+  },
+  {
+    "id": "study::5D::030",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.3689
+  },
+  {
+    "id": "study::5D::031",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.7002
+  },
+  {
+    "id": "study::5D::032",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.2844
+  },
+  {
+    "id": "study::5D::033",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.5202
+  },
+  {
+    "id": "study::5D::034",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.7707
+  },
+  {
+    "id": "study::5D::035",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.4264
+  },
+  {
+    "id": "study::5D::036",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.603
+  },
+  {
+    "id": "study::5D::037",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.6894
+  },
+  {
+    "id": "study::5D::038",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.7461
+  },
+  {
+    "id": "study::5D::039",
+    "topic": "5D",
+    "kind": "recall",
+    "difficulty": 0.7672
+  },
+  {
+    "id": "study::5E::000",
+    "topic": "5E",
+    "kind": "probe",
+    "difficulty": 0.6576
+  },
+  {
+    "id": "study::5E::001",
+    "topic": "5E",
+    "kind": "probe",
+    "difficulty": 0.6416
+  },
+  {
+    "id": "study::5E::002",
+    "topic": "5E",
+    "kind": "probe",
+    "difficulty": 0.597
+  },
+  {
+    "id": "study::5E::003",
+    "topic": "5E",
+    "kind": "probe",
+    "difficulty": 0.5176
+  },
+  {
+    "id": "study::5E::004",
+    "topic": "5E",
+    "kind": "probe",
+    "difficulty": 0.657
+  },
+  {
+    "id": "study::5E::005",
+    "topic": "5E",
+    "kind": "probe",
+    "difficulty": 0.6589
+  },
+  {
+    "id": "study::5E::006",
+    "topic": "5E",
+    "kind": "probe",
+    "difficulty": 0.7586
+  },
+  {
+    "id": "study::5E::007",
+    "topic": "5E",
+    "kind": "probe",
+    "difficulty": 0.5769
+  },
+  {
+    "id": "study::5E::008",
+    "topic": "5E",
+    "kind": "probe",
+    "difficulty": 0.3947
+  },
+  {
+    "id": "study::5E::009",
+    "topic": "5E",
+    "kind": "probe",
+    "difficulty": 0.4179
+  },
+  {
+    "id": "study::5E::010",
+    "topic": "5E",
+    "kind": "probe",
+    "difficulty": 0.5436
+  },
+  {
+    "id": "study::5E::011",
+    "topic": "5E",
+    "kind": "probe",
+    "difficulty": 0.5407
+  },
+  {
+    "id": "study::5E::012",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.2157
+  },
+  {
+    "id": "study::5E::013",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.3799
+  },
+  {
+    "id": "study::5E::014",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.2158
+  },
+  {
+    "id": "study::5E::015",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.5016
+  },
+  {
+    "id": "study::5E::016",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.761
+  },
+  {
+    "id": "study::5E::017",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.4366
+  },
+  {
+    "id": "study::5E::018",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.4638
+  },
+  {
+    "id": "study::5E::019",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.6386
+  },
+  {
+    "id": "study::5E::020",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.3303
+  },
+  {
+    "id": "study::5E::021",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.7961
+  },
+  {
+    "id": "study::5E::022",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.7363
+  },
+  {
+    "id": "study::5E::023",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.5031
+  },
+  {
+    "id": "study::5E::024",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.5874
+  },
+  {
+    "id": "study::5E::025",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.6206
+  },
+  {
+    "id": "study::5E::026",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.7944
+  },
+  {
+    "id": "study::5E::027",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.398
+  },
+  {
+    "id": "study::5E::028",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.7688
+  },
+  {
+    "id": "study::5E::029",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.7877
+  },
+  {
+    "id": "study::5E::030",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.2865
+  },
+  {
+    "id": "study::5E::031",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.2891
+  },
+  {
+    "id": "study::5E::032",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.643
+  },
+  {
+    "id": "study::5E::033",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.5694
+  },
+  {
+    "id": "study::5E::034",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.6782
+  },
+  {
+    "id": "study::5E::035",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.6205
+  },
+  {
+    "id": "study::5E::036",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.506
+  },
+  {
+    "id": "study::5E::037",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.7849
+  },
+  {
+    "id": "study::5E::038",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.2467
+  },
+  {
+    "id": "study::5E::039",
+    "topic": "5E",
+    "kind": "recall",
+    "difficulty": 0.5123
+  },
+  {
+    "id": "study::6A::000",
+    "topic": "6A",
+    "kind": "probe",
+    "difficulty": 0.5784
+  },
+  {
+    "id": "study::6A::001",
+    "topic": "6A",
+    "kind": "probe",
+    "difficulty": 0.6547
+  },
+  {
+    "id": "study::6A::002",
+    "topic": "6A",
+    "kind": "probe",
+    "difficulty": 0.4478
+  },
+  {
+    "id": "study::6A::003",
+    "topic": "6A",
+    "kind": "probe",
+    "difficulty": 0.5119
+  },
+  {
+    "id": "study::6A::004",
+    "topic": "6A",
+    "kind": "probe",
+    "difficulty": 0.6304
+  },
+  {
+    "id": "study::6A::005",
+    "topic": "6A",
+    "kind": "probe",
+    "difficulty": 0.7644
+  },
+  {
+    "id": "study::6A::006",
+    "topic": "6A",
+    "kind": "probe",
+    "difficulty": 0.3235
+  },
+  {
+    "id": "study::6A::007",
+    "topic": "6A",
+    "kind": "probe",
+    "difficulty": 0.4079
+  },
+  {
+    "id": "study::6A::008",
+    "topic": "6A",
+    "kind": "probe",
+    "difficulty": 0.5952
+  },
+  {
+    "id": "study::6A::009",
+    "topic": "6A",
+    "kind": "probe",
+    "difficulty": 0.6288
+  },
+  {
+    "id": "study::6A::010",
+    "topic": "6A",
+    "kind": "probe",
+    "difficulty": 0.3202
+  },
+  {
+    "id": "study::6A::011",
+    "topic": "6A",
+    "kind": "probe",
+    "difficulty": 0.6387
+  },
+  {
+    "id": "study::6A::012",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.2035
+  },
+  {
+    "id": "study::6A::013",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.2037
+  },
+  {
+    "id": "study::6A::014",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.7543
+  },
+  {
+    "id": "study::6A::015",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.5222
+  },
+  {
+    "id": "study::6A::016",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.5706
+  },
+  {
+    "id": "study::6A::017",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.7514
+  },
+  {
+    "id": "study::6A::018",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.4263
+  },
+  {
+    "id": "study::6A::019",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.4863
+  },
+  {
+    "id": "study::6A::020",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.5046
+  },
+  {
+    "id": "study::6A::021",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.5478
+  },
+  {
+    "id": "study::6A::022",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.6566
+  },
+  {
+    "id": "study::6A::023",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.7226
+  },
+  {
+    "id": "study::6A::024",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.3634
+  },
+  {
+    "id": "study::6A::025",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.7512
+  },
+  {
+    "id": "study::6A::026",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.2942
+  },
+  {
+    "id": "study::6A::027",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.4078
+  },
+  {
+    "id": "study::6A::028",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.267
+  },
+  {
+    "id": "study::6A::029",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.4412
+  },
+  {
+    "id": "study::6A::030",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.2358
+  },
+  {
+    "id": "study::6A::031",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.3717
+  },
+  {
+    "id": "study::6A::032",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.252
+  },
+  {
+    "id": "study::6A::033",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.7858
+  },
+  {
+    "id": "study::6A::034",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.6513
+  },
+  {
+    "id": "study::6A::035",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.3515
+  },
+  {
+    "id": "study::6A::036",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.4935
+  },
+  {
+    "id": "study::6A::037",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.5228
+  },
+  {
+    "id": "study::6A::038",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.3813
+  },
+  {
+    "id": "study::6A::039",
+    "topic": "6A",
+    "kind": "recall",
+    "difficulty": 0.57
+  },
+  {
+    "id": "study::6B::000",
+    "topic": "6B",
+    "kind": "probe",
+    "difficulty": 0.5913
+  },
+  {
+    "id": "study::6B::001",
+    "topic": "6B",
+    "kind": "probe",
+    "difficulty": 0.597
+  },
+  {
+    "id": "study::6B::002",
+    "topic": "6B",
+    "kind": "probe",
+    "difficulty": 0.363
+  },
+  {
+    "id": "study::6B::003",
+    "topic": "6B",
+    "kind": "probe",
+    "difficulty": 0.7472
+  },
+  {
+    "id": "study::6B::004",
+    "topic": "6B",
+    "kind": "probe",
+    "difficulty": 0.5786
+  },
+  {
+    "id": "study::6B::005",
+    "topic": "6B",
+    "kind": "probe",
+    "difficulty": 0.6956
+  },
+  {
+    "id": "study::6B::006",
+    "topic": "6B",
+    "kind": "probe",
+    "difficulty": 0.341
+  },
+  {
+    "id": "study::6B::007",
+    "topic": "6B",
+    "kind": "probe",
+    "difficulty": 0.3996
+  },
+  {
+    "id": "study::6B::008",
+    "topic": "6B",
+    "kind": "probe",
+    "difficulty": 0.4929
+  },
+  {
+    "id": "study::6B::009",
+    "topic": "6B",
+    "kind": "probe",
+    "difficulty": 0.7106
+  },
+  {
+    "id": "study::6B::010",
+    "topic": "6B",
+    "kind": "probe",
+    "difficulty": 0.6428
+  },
+  {
+    "id": "study::6B::011",
+    "topic": "6B",
+    "kind": "probe",
+    "difficulty": 0.4293
+  },
+  {
+    "id": "study::6B::012",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.3359
+  },
+  {
+    "id": "study::6B::013",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.4123
+  },
+  {
+    "id": "study::6B::014",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.3249
+  },
+  {
+    "id": "study::6B::015",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.6757
+  },
+  {
+    "id": "study::6B::016",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.7514
+  },
+  {
+    "id": "study::6B::017",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.4078
+  },
+  {
+    "id": "study::6B::018",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.5861
+  },
+  {
+    "id": "study::6B::019",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.2999
+  },
+  {
+    "id": "study::6B::020",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.3842
+  },
+  {
+    "id": "study::6B::021",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.4689
+  },
+  {
+    "id": "study::6B::022",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.3874
+  },
+  {
+    "id": "study::6B::023",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.2835
+  },
+  {
+    "id": "study::6B::024",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.2339
+  },
+  {
+    "id": "study::6B::025",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.6426
+  },
+  {
+    "id": "study::6B::026",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.577
+  },
+  {
+    "id": "study::6B::027",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.6208
+  },
+  {
+    "id": "study::6B::028",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.5408
+  },
+  {
+    "id": "study::6B::029",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.219
+  },
+  {
+    "id": "study::6B::030",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.3174
+  },
+  {
+    "id": "study::6B::031",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.3024
+  },
+  {
+    "id": "study::6B::032",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.2056
+  },
+  {
+    "id": "study::6B::033",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.6071
+  },
+  {
+    "id": "study::6B::034",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.3907
+  },
+  {
+    "id": "study::6B::035",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.2288
+  },
+  {
+    "id": "study::6B::036",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.638
+  },
+  {
+    "id": "study::6B::037",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.7473
+  },
+  {
+    "id": "study::6B::038",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.3906
+  },
+  {
+    "id": "study::6B::039",
+    "topic": "6B",
+    "kind": "recall",
+    "difficulty": 0.3943
+  },
+  {
+    "id": "study::6C::000",
+    "topic": "6C",
+    "kind": "probe",
+    "difficulty": 0.6438
+  },
+  {
+    "id": "study::6C::001",
+    "topic": "6C",
+    "kind": "probe",
+    "difficulty": 0.777
+  },
+  {
+    "id": "study::6C::002",
+    "topic": "6C",
+    "kind": "probe",
+    "difficulty": 0.6778
+  },
+  {
+    "id": "study::6C::003",
+    "topic": "6C",
+    "kind": "probe",
+    "difficulty": 0.5571
+  },
+  {
+    "id": "study::6C::004",
+    "topic": "6C",
+    "kind": "probe",
+    "difficulty": 0.5368
+  },
+  {
+    "id": "study::6C::005",
+    "topic": "6C",
+    "kind": "probe",
+    "difficulty": 0.2754
+  },
+  {
+    "id": "study::6C::006",
+    "topic": "6C",
+    "kind": "probe",
+    "difficulty": 0.3564
+  },
+  {
+    "id": "study::6C::007",
+    "topic": "6C",
+    "kind": "probe",
+    "difficulty": 0.3822
+  },
+  {
+    "id": "study::6C::008",
+    "topic": "6C",
+    "kind": "probe",
+    "difficulty": 0.6429
+  },
+  {
+    "id": "study::6C::009",
+    "topic": "6C",
+    "kind": "probe",
+    "difficulty": 0.4269
+  },
+  {
+    "id": "study::6C::010",
+    "topic": "6C",
+    "kind": "probe",
+    "difficulty": 0.5796
+  },
+  {
+    "id": "study::6C::011",
+    "topic": "6C",
+    "kind": "probe",
+    "difficulty": 0.3723
+  },
+  {
+    "id": "study::6C::012",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.587
+  },
+  {
+    "id": "study::6C::013",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.5336
+  },
+  {
+    "id": "study::6C::014",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.2376
+  },
+  {
+    "id": "study::6C::015",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.6397
+  },
+  {
+    "id": "study::6C::016",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.3964
+  },
+  {
+    "id": "study::6C::017",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.3191
+  },
+  {
+    "id": "study::6C::018",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.5025
+  },
+  {
+    "id": "study::6C::019",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.588
+  },
+  {
+    "id": "study::6C::020",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.4333
+  },
+  {
+    "id": "study::6C::021",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.4446
+  },
+  {
+    "id": "study::6C::022",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.4887
+  },
+  {
+    "id": "study::6C::023",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.7201
+  },
+  {
+    "id": "study::6C::024",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.7185
+  },
+  {
+    "id": "study::6C::025",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.3412
+  },
+  {
+    "id": "study::6C::026",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.2411
+  },
+  {
+    "id": "study::6C::027",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.5648
+  },
+  {
+    "id": "study::6C::028",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.4396
+  },
+  {
+    "id": "study::6C::029",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.5924
+  },
+  {
+    "id": "study::6C::030",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.7985
+  },
+  {
+    "id": "study::6C::031",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.7756
+  },
+  {
+    "id": "study::6C::032",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.4264
+  },
+  {
+    "id": "study::6C::033",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.4571
+  },
+  {
+    "id": "study::6C::034",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.3949
+  },
+  {
+    "id": "study::6C::035",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.5872
+  },
+  {
+    "id": "study::6C::036",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.2457
+  },
+  {
+    "id": "study::6C::037",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.7066
+  },
+  {
+    "id": "study::6C::038",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.3553
+  },
+  {
+    "id": "study::6C::039",
+    "topic": "6C",
+    "kind": "recall",
+    "difficulty": 0.2413
+  },
+  {
+    "id": "study::7A::000",
+    "topic": "7A",
+    "kind": "probe",
+    "difficulty": 0.2226
+  },
+  {
+    "id": "study::7A::001",
+    "topic": "7A",
+    "kind": "probe",
+    "difficulty": 0.7504
+  },
+  {
+    "id": "study::7A::002",
+    "topic": "7A",
+    "kind": "probe",
+    "difficulty": 0.2929
+  },
+  {
+    "id": "study::7A::003",
+    "topic": "7A",
+    "kind": "probe",
+    "difficulty": 0.5635
+  },
+  {
+    "id": "study::7A::004",
+    "topic": "7A",
+    "kind": "probe",
+    "difficulty": 0.418
+  },
+  {
+    "id": "study::7A::005",
+    "topic": "7A",
+    "kind": "probe",
+    "difficulty": 0.5182
+  },
+  {
+    "id": "study::7A::006",
+    "topic": "7A",
+    "kind": "probe",
+    "difficulty": 0.3794
+  },
+  {
+    "id": "study::7A::007",
+    "topic": "7A",
+    "kind": "probe",
+    "difficulty": 0.2417
+  },
+  {
+    "id": "study::7A::008",
+    "topic": "7A",
+    "kind": "probe",
+    "difficulty": 0.5121
+  },
+  {
+    "id": "study::7A::009",
+    "topic": "7A",
+    "kind": "probe",
+    "difficulty": 0.7042
+  },
+  {
+    "id": "study::7A::010",
+    "topic": "7A",
+    "kind": "probe",
+    "difficulty": 0.3148
+  },
+  {
+    "id": "study::7A::011",
+    "topic": "7A",
+    "kind": "probe",
+    "difficulty": 0.3927
+  },
+  {
+    "id": "study::7A::012",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.798
+  },
+  {
+    "id": "study::7A::013",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.7477
+  },
+  {
+    "id": "study::7A::014",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.4491
+  },
+  {
+    "id": "study::7A::015",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.7468
+  },
+  {
+    "id": "study::7A::016",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.6841
+  },
+  {
+    "id": "study::7A::017",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.6608
+  },
+  {
+    "id": "study::7A::018",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.2451
+  },
+  {
+    "id": "study::7A::019",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.7459
+  },
+  {
+    "id": "study::7A::020",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.3507
+  },
+  {
+    "id": "study::7A::021",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.3948
+  },
+  {
+    "id": "study::7A::022",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.7376
+  },
+  {
+    "id": "study::7A::023",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.7635
+  },
+  {
+    "id": "study::7A::024",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.6092
+  },
+  {
+    "id": "study::7A::025",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.6955
+  },
+  {
+    "id": "study::7A::026",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.6682
+  },
+  {
+    "id": "study::7A::027",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.3081
+  },
+  {
+    "id": "study::7A::028",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.6373
+  },
+  {
+    "id": "study::7A::029",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.4801
+  },
+  {
+    "id": "study::7A::030",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.5398
+  },
+  {
+    "id": "study::7A::031",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.3993
+  },
+  {
+    "id": "study::7A::032",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.4528
+  },
+  {
+    "id": "study::7A::033",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.2135
+  },
+  {
+    "id": "study::7A::034",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.4778
+  },
+  {
+    "id": "study::7A::035",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.3358
+  },
+  {
+    "id": "study::7A::036",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.2435
+  },
+  {
+    "id": "study::7A::037",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.6423
+  },
+  {
+    "id": "study::7A::038",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.4722
+  },
+  {
+    "id": "study::7A::039",
+    "topic": "7A",
+    "kind": "recall",
+    "difficulty": 0.5794
+  },
+  {
+    "id": "study::7B::000",
+    "topic": "7B",
+    "kind": "probe",
+    "difficulty": 0.5208
+  },
+  {
+    "id": "study::7B::001",
+    "topic": "7B",
+    "kind": "probe",
+    "difficulty": 0.2273
+  },
+  {
+    "id": "study::7B::002",
+    "topic": "7B",
+    "kind": "probe",
+    "difficulty": 0.3477
+  },
+  {
+    "id": "study::7B::003",
+    "topic": "7B",
+    "kind": "probe",
+    "difficulty": 0.3687
+  },
+  {
+    "id": "study::7B::004",
+    "topic": "7B",
+    "kind": "probe",
+    "difficulty": 0.2738
+  },
+  {
+    "id": "study::7B::005",
+    "topic": "7B",
+    "kind": "probe",
+    "difficulty": 0.7531
+  },
+  {
+    "id": "study::7B::006",
+    "topic": "7B",
+    "kind": "probe",
+    "difficulty": 0.6909
+  },
+  {
+    "id": "study::7B::007",
+    "topic": "7B",
+    "kind": "probe",
+    "difficulty": 0.7134
+  },
+  {
+    "id": "study::7B::008",
+    "topic": "7B",
+    "kind": "probe",
+    "difficulty": 0.279
+  },
+  {
+    "id": "study::7B::009",
+    "topic": "7B",
+    "kind": "probe",
+    "difficulty": 0.3738
+  },
+  {
+    "id": "study::7B::010",
+    "topic": "7B",
+    "kind": "probe",
+    "difficulty": 0.2049
+  },
+  {
+    "id": "study::7B::011",
+    "topic": "7B",
+    "kind": "probe",
+    "difficulty": 0.7194
+  },
+  {
+    "id": "study::7B::012",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.4982
+  },
+  {
+    "id": "study::7B::013",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.5715
+  },
+  {
+    "id": "study::7B::014",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.6896
+  },
+  {
+    "id": "study::7B::015",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.3921
+  },
+  {
+    "id": "study::7B::016",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.6154
+  },
+  {
+    "id": "study::7B::017",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.6429
+  },
+  {
+    "id": "study::7B::018",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.5693
+  },
+  {
+    "id": "study::7B::019",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.4907
+  },
+  {
+    "id": "study::7B::020",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.4908
+  },
+  {
+    "id": "study::7B::021",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.5368
+  },
+  {
+    "id": "study::7B::022",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.7785
+  },
+  {
+    "id": "study::7B::023",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.3382
+  },
+  {
+    "id": "study::7B::024",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.2179
+  },
+  {
+    "id": "study::7B::025",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.5142
+  },
+  {
+    "id": "study::7B::026",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.2112
+  },
+  {
+    "id": "study::7B::027",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.6821
+  },
+  {
+    "id": "study::7B::028",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.5896
+  },
+  {
+    "id": "study::7B::029",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.6138
+  },
+  {
+    "id": "study::7B::030",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.6563
+  },
+  {
+    "id": "study::7B::031",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.6028
+  },
+  {
+    "id": "study::7B::032",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.6994
+  },
+  {
+    "id": "study::7B::033",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.3455
+  },
+  {
+    "id": "study::7B::034",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.6804
+  },
+  {
+    "id": "study::7B::035",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.7553
+  },
+  {
+    "id": "study::7B::036",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.6904
+  },
+  {
+    "id": "study::7B::037",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.5015
+  },
+  {
+    "id": "study::7B::038",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.5857
+  },
+  {
+    "id": "study::7B::039",
+    "topic": "7B",
+    "kind": "recall",
+    "difficulty": 0.7793
+  },
+  {
+    "id": "study::7C::000",
+    "topic": "7C",
+    "kind": "probe",
+    "difficulty": 0.4501
+  },
+  {
+    "id": "study::7C::001",
+    "topic": "7C",
+    "kind": "probe",
+    "difficulty": 0.5074
+  },
+  {
+    "id": "study::7C::002",
+    "topic": "7C",
+    "kind": "probe",
+    "difficulty": 0.6552
+  },
+  {
+    "id": "study::7C::003",
+    "topic": "7C",
+    "kind": "probe",
+    "difficulty": 0.6015
+  },
+  {
+    "id": "study::7C::004",
+    "topic": "7C",
+    "kind": "probe",
+    "difficulty": 0.7012
+  },
+  {
+    "id": "study::7C::005",
+    "topic": "7C",
+    "kind": "probe",
+    "difficulty": 0.7155
+  },
+  {
+    "id": "study::7C::006",
+    "topic": "7C",
+    "kind": "probe",
+    "difficulty": 0.2287
+  },
+  {
+    "id": "study::7C::007",
+    "topic": "7C",
+    "kind": "probe",
+    "difficulty": 0.4316
+  },
+  {
+    "id": "study::7C::008",
+    "topic": "7C",
+    "kind": "probe",
+    "difficulty": 0.7204
+  },
+  {
+    "id": "study::7C::009",
+    "topic": "7C",
+    "kind": "probe",
+    "difficulty": 0.7211
+  },
+  {
+    "id": "study::7C::010",
+    "topic": "7C",
+    "kind": "probe",
+    "difficulty": 0.5603
+  },
+  {
+    "id": "study::7C::011",
+    "topic": "7C",
+    "kind": "probe",
+    "difficulty": 0.409
+  },
+  {
+    "id": "study::7C::012",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.7429
+  },
+  {
+    "id": "study::7C::013",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.5827
+  },
+  {
+    "id": "study::7C::014",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.6448
+  },
+  {
+    "id": "study::7C::015",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.7192
+  },
+  {
+    "id": "study::7C::016",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.7639
+  },
+  {
+    "id": "study::7C::017",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.538
+  },
+  {
+    "id": "study::7C::018",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.4242
+  },
+  {
+    "id": "study::7C::019",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.2217
+  },
+  {
+    "id": "study::7C::020",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.2946
+  },
+  {
+    "id": "study::7C::021",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.7397
+  },
+  {
+    "id": "study::7C::022",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.7923
+  },
+  {
+    "id": "study::7C::023",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.3545
+  },
+  {
+    "id": "study::7C::024",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.7013
+  },
+  {
+    "id": "study::7C::025",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.3657
+  },
+  {
+    "id": "study::7C::026",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.43
+  },
+  {
+    "id": "study::7C::027",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.6155
+  },
+  {
+    "id": "study::7C::028",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.5208
+  },
+  {
+    "id": "study::7C::029",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.5586
+  },
+  {
+    "id": "study::7C::030",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.3546
+  },
+  {
+    "id": "study::7C::031",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.5937
+  },
+  {
+    "id": "study::7C::032",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.3625
+  },
+  {
+    "id": "study::7C::033",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.3196
+  },
+  {
+    "id": "study::7C::034",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.6788
+  },
+  {
+    "id": "study::7C::035",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.6007
+  },
+  {
+    "id": "study::7C::036",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.5785
+  },
+  {
+    "id": "study::7C::037",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.4023
+  },
+  {
+    "id": "study::7C::038",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.5477
+  },
+  {
+    "id": "study::7C::039",
+    "topic": "7C",
+    "kind": "recall",
+    "difficulty": 0.2236
+  },
+  {
+    "id": "study::8A::000",
+    "topic": "8A",
+    "kind": "probe",
+    "difficulty": 0.6918
+  },
+  {
+    "id": "study::8A::001",
+    "topic": "8A",
+    "kind": "probe",
+    "difficulty": 0.2797
+  },
+  {
+    "id": "study::8A::002",
+    "topic": "8A",
+    "kind": "probe",
+    "difficulty": 0.7005
+  },
+  {
+    "id": "study::8A::003",
+    "topic": "8A",
+    "kind": "probe",
+    "difficulty": 0.282
+  },
+  {
+    "id": "study::8A::004",
+    "topic": "8A",
+    "kind": "probe",
+    "difficulty": 0.2928
+  },
+  {
+    "id": "study::8A::005",
+    "topic": "8A",
+    "kind": "probe",
+    "difficulty": 0.6862
+  },
+  {
+    "id": "study::8A::006",
+    "topic": "8A",
+    "kind": "probe",
+    "difficulty": 0.2073
+  },
+  {
+    "id": "study::8A::007",
+    "topic": "8A",
+    "kind": "probe",
+    "difficulty": 0.3451
+  },
+  {
+    "id": "study::8A::008",
+    "topic": "8A",
+    "kind": "probe",
+    "difficulty": 0.5892
+  },
+  {
+    "id": "study::8A::009",
+    "topic": "8A",
+    "kind": "probe",
+    "difficulty": 0.3047
+  },
+  {
+    "id": "study::8A::010",
+    "topic": "8A",
+    "kind": "probe",
+    "difficulty": 0.4856
+  },
+  {
+    "id": "study::8A::011",
+    "topic": "8A",
+    "kind": "probe",
+    "difficulty": 0.2753
+  },
+  {
+    "id": "study::8A::012",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.6371
+  },
+  {
+    "id": "study::8A::013",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.4606
+  },
+  {
+    "id": "study::8A::014",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.3762
+  },
+  {
+    "id": "study::8A::015",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.515
+  },
+  {
+    "id": "study::8A::016",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.3928
+  },
+  {
+    "id": "study::8A::017",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.6697
+  },
+  {
+    "id": "study::8A::018",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.2911
+  },
+  {
+    "id": "study::8A::019",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.3002
+  },
+  {
+    "id": "study::8A::020",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.4135
+  },
+  {
+    "id": "study::8A::021",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.5341
+  },
+  {
+    "id": "study::8A::022",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.4061
+  },
+  {
+    "id": "study::8A::023",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.3972
+  },
+  {
+    "id": "study::8A::024",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.3535
+  },
+  {
+    "id": "study::8A::025",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.4299
+  },
+  {
+    "id": "study::8A::026",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.2983
+  },
+  {
+    "id": "study::8A::027",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.37
+  },
+  {
+    "id": "study::8A::028",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.545
+  },
+  {
+    "id": "study::8A::029",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.5935
+  },
+  {
+    "id": "study::8A::030",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.3169
+  },
+  {
+    "id": "study::8A::031",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.6061
+  },
+  {
+    "id": "study::8A::032",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.4701
+  },
+  {
+    "id": "study::8A::033",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.4906
+  },
+  {
+    "id": "study::8A::034",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.7436
+  },
+  {
+    "id": "study::8A::035",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.6302
+  },
+  {
+    "id": "study::8A::036",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.2956
+  },
+  {
+    "id": "study::8A::037",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.5636
+  },
+  {
+    "id": "study::8A::038",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.6544
+  },
+  {
+    "id": "study::8A::039",
+    "topic": "8A",
+    "kind": "recall",
+    "difficulty": 0.771
+  },
+  {
+    "id": "study::8B::000",
+    "topic": "8B",
+    "kind": "probe",
+    "difficulty": 0.4629
+  },
+  {
+    "id": "study::8B::001",
+    "topic": "8B",
+    "kind": "probe",
+    "difficulty": 0.6175
+  },
+  {
+    "id": "study::8B::002",
+    "topic": "8B",
+    "kind": "probe",
+    "difficulty": 0.2243
+  },
+  {
+    "id": "study::8B::003",
+    "topic": "8B",
+    "kind": "probe",
+    "difficulty": 0.2042
+  },
+  {
+    "id": "study::8B::004",
+    "topic": "8B",
+    "kind": "probe",
+    "difficulty": 0.2968
+  },
+  {
+    "id": "study::8B::005",
+    "topic": "8B",
+    "kind": "probe",
+    "difficulty": 0.6685
+  },
+  {
+    "id": "study::8B::006",
+    "topic": "8B",
+    "kind": "probe",
+    "difficulty": 0.4648
+  },
+  {
+    "id": "study::8B::007",
+    "topic": "8B",
+    "kind": "probe",
+    "difficulty": 0.4442
+  },
+  {
+    "id": "study::8B::008",
+    "topic": "8B",
+    "kind": "probe",
+    "difficulty": 0.4006
+  },
+  {
+    "id": "study::8B::009",
+    "topic": "8B",
+    "kind": "probe",
+    "difficulty": 0.2511
+  },
+  {
+    "id": "study::8B::010",
+    "topic": "8B",
+    "kind": "probe",
+    "difficulty": 0.7854
+  },
+  {
+    "id": "study::8B::011",
+    "topic": "8B",
+    "kind": "probe",
+    "difficulty": 0.7454
+  },
+  {
+    "id": "study::8B::012",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.3003
+  },
+  {
+    "id": "study::8B::013",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.311
+  },
+  {
+    "id": "study::8B::014",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.3552
+  },
+  {
+    "id": "study::8B::015",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.6543
+  },
+  {
+    "id": "study::8B::016",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.6583
+  },
+  {
+    "id": "study::8B::017",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.6174
+  },
+  {
+    "id": "study::8B::018",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.2597
+  },
+  {
+    "id": "study::8B::019",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.7192
+  },
+  {
+    "id": "study::8B::020",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.7912
+  },
+  {
+    "id": "study::8B::021",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.5138
+  },
+  {
+    "id": "study::8B::022",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.7623
+  },
+  {
+    "id": "study::8B::023",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.7515
+  },
+  {
+    "id": "study::8B::024",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.2623
+  },
+  {
+    "id": "study::8B::025",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.4638
+  },
+  {
+    "id": "study::8B::026",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.4291
+  },
+  {
+    "id": "study::8B::027",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.4023
+  },
+  {
+    "id": "study::8B::028",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.2213
+  },
+  {
+    "id": "study::8B::029",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.4231
+  },
+  {
+    "id": "study::8B::030",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.5948
+  },
+  {
+    "id": "study::8B::031",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.6871
+  },
+  {
+    "id": "study::8B::032",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.4442
+  },
+  {
+    "id": "study::8B::033",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.3453
+  },
+  {
+    "id": "study::8B::034",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.7422
+  },
+  {
+    "id": "study::8B::035",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.4446
+  },
+  {
+    "id": "study::8B::036",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.2314
+  },
+  {
+    "id": "study::8B::037",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.5088
+  },
+  {
+    "id": "study::8B::038",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.3055
+  },
+  {
+    "id": "study::8B::039",
+    "topic": "8B",
+    "kind": "recall",
+    "difficulty": 0.7148
+  },
+  {
+    "id": "study::8C::000",
+    "topic": "8C",
+    "kind": "probe",
+    "difficulty": 0.7486
+  },
+  {
+    "id": "study::8C::001",
+    "topic": "8C",
+    "kind": "probe",
+    "difficulty": 0.6159
+  },
+  {
+    "id": "study::8C::002",
+    "topic": "8C",
+    "kind": "probe",
+    "difficulty": 0.2564
+  },
+  {
+    "id": "study::8C::003",
+    "topic": "8C",
+    "kind": "probe",
+    "difficulty": 0.4075
+  },
+  {
+    "id": "study::8C::004",
+    "topic": "8C",
+    "kind": "probe",
+    "difficulty": 0.5945
+  },
+  {
+    "id": "study::8C::005",
+    "topic": "8C",
+    "kind": "probe",
+    "difficulty": 0.2589
+  },
+  {
+    "id": "study::8C::006",
+    "topic": "8C",
+    "kind": "probe",
+    "difficulty": 0.2133
+  },
+  {
+    "id": "study::8C::007",
+    "topic": "8C",
+    "kind": "probe",
+    "difficulty": 0.2729
+  },
+  {
+    "id": "study::8C::008",
+    "topic": "8C",
+    "kind": "probe",
+    "difficulty": 0.6512
+  },
+  {
+    "id": "study::8C::009",
+    "topic": "8C",
+    "kind": "probe",
+    "difficulty": 0.315
+  },
+  {
+    "id": "study::8C::010",
+    "topic": "8C",
+    "kind": "probe",
+    "difficulty": 0.6064
+  },
+  {
+    "id": "study::8C::011",
+    "topic": "8C",
+    "kind": "probe",
+    "difficulty": 0.5171
+  },
+  {
+    "id": "study::8C::012",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.6894
+  },
+  {
+    "id": "study::8C::013",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.7857
+  },
+  {
+    "id": "study::8C::014",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.5091
+  },
+  {
+    "id": "study::8C::015",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.6888
+  },
+  {
+    "id": "study::8C::016",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.2809
+  },
+  {
+    "id": "study::8C::017",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.4351
+  },
+  {
+    "id": "study::8C::018",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.5224
+  },
+  {
+    "id": "study::8C::019",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.5575
+  },
+  {
+    "id": "study::8C::020",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.491
+  },
+  {
+    "id": "study::8C::021",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.6755
+  },
+  {
+    "id": "study::8C::022",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.4902
+  },
+  {
+    "id": "study::8C::023",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.64
+  },
+  {
+    "id": "study::8C::024",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.2377
+  },
+  {
+    "id": "study::8C::025",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.4821
+  },
+  {
+    "id": "study::8C::026",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.536
+  },
+  {
+    "id": "study::8C::027",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.4412
+  },
+  {
+    "id": "study::8C::028",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.5434
+  },
+  {
+    "id": "study::8C::029",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.2646
+  },
+  {
+    "id": "study::8C::030",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.6129
+  },
+  {
+    "id": "study::8C::031",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.5875
+  },
+  {
+    "id": "study::8C::032",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.3274
+  },
+  {
+    "id": "study::8C::033",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.406
+  },
+  {
+    "id": "study::8C::034",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.4478
+  },
+  {
+    "id": "study::8C::035",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.3993
+  },
+  {
+    "id": "study::8C::036",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.4308
+  },
+  {
+    "id": "study::8C::037",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.5841
+  },
+  {
+    "id": "study::8C::038",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.6996
+  },
+  {
+    "id": "study::8C::039",
+    "topic": "8C",
+    "kind": "recall",
+    "difficulty": 0.2087
+  },
+  {
+    "id": "study::9A::000",
+    "topic": "9A",
+    "kind": "probe",
+    "difficulty": 0.5384
+  },
+  {
+    "id": "study::9A::001",
+    "topic": "9A",
+    "kind": "probe",
+    "difficulty": 0.3875
+  },
+  {
+    "id": "study::9A::002",
+    "topic": "9A",
+    "kind": "probe",
+    "difficulty": 0.7977
+  },
+  {
+    "id": "study::9A::003",
+    "topic": "9A",
+    "kind": "probe",
+    "difficulty": 0.7257
+  },
+  {
+    "id": "study::9A::004",
+    "topic": "9A",
+    "kind": "probe",
+    "difficulty": 0.4745
+  },
+  {
+    "id": "study::9A::005",
+    "topic": "9A",
+    "kind": "probe",
+    "difficulty": 0.5088
+  },
+  {
+    "id": "study::9A::006",
+    "topic": "9A",
+    "kind": "probe",
+    "difficulty": 0.251
+  },
+  {
+    "id": "study::9A::007",
+    "topic": "9A",
+    "kind": "probe",
+    "difficulty": 0.7067
+  },
+  {
+    "id": "study::9A::008",
+    "topic": "9A",
+    "kind": "probe",
+    "difficulty": 0.3957
+  },
+  {
+    "id": "study::9A::009",
+    "topic": "9A",
+    "kind": "probe",
+    "difficulty": 0.4363
+  },
+  {
+    "id": "study::9A::010",
+    "topic": "9A",
+    "kind": "probe",
+    "difficulty": 0.396
+  },
+  {
+    "id": "study::9A::011",
+    "topic": "9A",
+    "kind": "probe",
+    "difficulty": 0.7843
+  },
+  {
+    "id": "study::9A::012",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.6467
+  },
+  {
+    "id": "study::9A::013",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.4328
+  },
+  {
+    "id": "study::9A::014",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.4069
+  },
+  {
+    "id": "study::9A::015",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.3678
+  },
+  {
+    "id": "study::9A::016",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.3034
+  },
+  {
+    "id": "study::9A::017",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.7573
+  },
+  {
+    "id": "study::9A::018",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.7839
+  },
+  {
+    "id": "study::9A::019",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.626
+  },
+  {
+    "id": "study::9A::020",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.5145
+  },
+  {
+    "id": "study::9A::021",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.5995
+  },
+  {
+    "id": "study::9A::022",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.2582
+  },
+  {
+    "id": "study::9A::023",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.6087
+  },
+  {
+    "id": "study::9A::024",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.4094
+  },
+  {
+    "id": "study::9A::025",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.6771
+  },
+  {
+    "id": "study::9A::026",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.2572
+  },
+  {
+    "id": "study::9A::027",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.2564
+  },
+  {
+    "id": "study::9A::028",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.3957
+  },
+  {
+    "id": "study::9A::029",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.6769
+  },
+  {
+    "id": "study::9A::030",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.226
+  },
+  {
+    "id": "study::9A::031",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.5419
+  },
+  {
+    "id": "study::9A::032",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.6988
+  },
+  {
+    "id": "study::9A::033",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.6891
+  },
+  {
+    "id": "study::9A::034",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.6138
+  },
+  {
+    "id": "study::9A::035",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.2885
+  },
+  {
+    "id": "study::9A::036",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.6944
+  },
+  {
+    "id": "study::9A::037",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.5799
+  },
+  {
+    "id": "study::9A::038",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.6951
+  },
+  {
+    "id": "study::9A::039",
+    "topic": "9A",
+    "kind": "recall",
+    "difficulty": 0.2746
+  },
+  {
+    "id": "study::9B::000",
+    "topic": "9B",
+    "kind": "probe",
+    "difficulty": 0.6671
+  },
+  {
+    "id": "study::9B::001",
+    "topic": "9B",
+    "kind": "probe",
+    "difficulty": 0.4969
+  },
+  {
+    "id": "study::9B::002",
+    "topic": "9B",
+    "kind": "probe",
+    "difficulty": 0.6414
+  },
+  {
+    "id": "study::9B::003",
+    "topic": "9B",
+    "kind": "probe",
+    "difficulty": 0.6965
+  },
+  {
+    "id": "study::9B::004",
+    "topic": "9B",
+    "kind": "probe",
+    "difficulty": 0.7319
+  },
+  {
+    "id": "study::9B::005",
+    "topic": "9B",
+    "kind": "probe",
+    "difficulty": 0.6705
+  },
+  {
+    "id": "study::9B::006",
+    "topic": "9B",
+    "kind": "probe",
+    "difficulty": 0.4888
+  },
+  {
+    "id": "study::9B::007",
+    "topic": "9B",
+    "kind": "probe",
+    "difficulty": 0.536
+  },
+  {
+    "id": "study::9B::008",
+    "topic": "9B",
+    "kind": "probe",
+    "difficulty": 0.5651
+  },
+  {
+    "id": "study::9B::009",
+    "topic": "9B",
+    "kind": "probe",
+    "difficulty": 0.4532
+  },
+  {
+    "id": "study::9B::010",
+    "topic": "9B",
+    "kind": "probe",
+    "difficulty": 0.458
+  },
+  {
+    "id": "study::9B::011",
+    "topic": "9B",
+    "kind": "probe",
+    "difficulty": 0.3116
+  },
+  {
+    "id": "study::9B::012",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.4011
+  },
+  {
+    "id": "study::9B::013",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.3379
+  },
+  {
+    "id": "study::9B::014",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.4078
+  },
+  {
+    "id": "study::9B::015",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.3784
+  },
+  {
+    "id": "study::9B::016",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.4829
+  },
+  {
+    "id": "study::9B::017",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.4443
+  },
+  {
+    "id": "study::9B::018",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.2101
+  },
+  {
+    "id": "study::9B::019",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.7455
+  },
+  {
+    "id": "study::9B::020",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.2245
+  },
+  {
+    "id": "study::9B::021",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.5466
+  },
+  {
+    "id": "study::9B::022",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.7351
+  },
+  {
+    "id": "study::9B::023",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.7612
+  },
+  {
+    "id": "study::9B::024",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.2184
+  },
+  {
+    "id": "study::9B::025",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.6998
+  },
+  {
+    "id": "study::9B::026",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.525
+  },
+  {
+    "id": "study::9B::027",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.443
+  },
+  {
+    "id": "study::9B::028",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.343
+  },
+  {
+    "id": "study::9B::029",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.3479
+  },
+  {
+    "id": "study::9B::030",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.4768
+  },
+  {
+    "id": "study::9B::031",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.5099
+  },
+  {
+    "id": "study::9B::032",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.7123
+  },
+  {
+    "id": "study::9B::033",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.7306
+  },
+  {
+    "id": "study::9B::034",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.4645
+  },
+  {
+    "id": "study::9B::035",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.3228
+  },
+  {
+    "id": "study::9B::036",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.6415
+  },
+  {
+    "id": "study::9B::037",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.6939
+  },
+  {
+    "id": "study::9B::038",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.3965
+  },
+  {
+    "id": "study::9B::039",
+    "topic": "9B",
+    "kind": "recall",
+    "difficulty": 0.3418
+  },
+  {
+    "id": "study::10A::000",
+    "topic": "10A",
+    "kind": "probe",
+    "difficulty": 0.5872
+  },
+  {
+    "id": "study::10A::001",
+    "topic": "10A",
+    "kind": "probe",
+    "difficulty": 0.3189
+  },
+  {
+    "id": "study::10A::002",
+    "topic": "10A",
+    "kind": "probe",
+    "difficulty": 0.517
+  },
+  {
+    "id": "study::10A::003",
+    "topic": "10A",
+    "kind": "probe",
+    "difficulty": 0.3308
+  },
+  {
+    "id": "study::10A::004",
+    "topic": "10A",
+    "kind": "probe",
+    "difficulty": 0.449
+  },
+  {
+    "id": "study::10A::005",
+    "topic": "10A",
+    "kind": "probe",
+    "difficulty": 0.3211
+  },
+  {
+    "id": "study::10A::006",
+    "topic": "10A",
+    "kind": "probe",
+    "difficulty": 0.6305
+  },
+  {
+    "id": "study::10A::007",
+    "topic": "10A",
+    "kind": "probe",
+    "difficulty": 0.3227
+  },
+  {
+    "id": "study::10A::008",
+    "topic": "10A",
+    "kind": "probe",
+    "difficulty": 0.2818
+  },
+  {
+    "id": "study::10A::009",
+    "topic": "10A",
+    "kind": "probe",
+    "difficulty": 0.7086
+  },
+  {
+    "id": "study::10A::010",
+    "topic": "10A",
+    "kind": "probe",
+    "difficulty": 0.4751
+  },
+  {
+    "id": "study::10A::011",
+    "topic": "10A",
+    "kind": "probe",
+    "difficulty": 0.5811
+  },
+  {
+    "id": "study::10A::012",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.3218
+  },
+  {
+    "id": "study::10A::013",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.504
+  },
+  {
+    "id": "study::10A::014",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.5975
+  },
+  {
+    "id": "study::10A::015",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.7221
+  },
+  {
+    "id": "study::10A::016",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.2519
+  },
+  {
+    "id": "study::10A::017",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.507
+  },
+  {
+    "id": "study::10A::018",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.6764
+  },
+  {
+    "id": "study::10A::019",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.3272
+  },
+  {
+    "id": "study::10A::020",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.6176
+  },
+  {
+    "id": "study::10A::021",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.4394
+  },
+  {
+    "id": "study::10A::022",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.6786
+  },
+  {
+    "id": "study::10A::023",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.2072
+  },
+  {
+    "id": "study::10A::024",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.53
+  },
+  {
+    "id": "study::10A::025",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.5043
+  },
+  {
+    "id": "study::10A::026",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.7183
+  },
+  {
+    "id": "study::10A::027",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.7844
+  },
+  {
+    "id": "study::10A::028",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.7096
+  },
+  {
+    "id": "study::10A::029",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.5347
+  },
+  {
+    "id": "study::10A::030",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.2604
+  },
+  {
+    "id": "study::10A::031",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.2372
+  },
+  {
+    "id": "study::10A::032",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.4429
+  },
+  {
+    "id": "study::10A::033",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.4477
+  },
+  {
+    "id": "study::10A::034",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.5266
+  },
+  {
+    "id": "study::10A::035",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.5559
+  },
+  {
+    "id": "study::10A::036",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.7619
+  },
+  {
+    "id": "study::10A::037",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.7893
+  },
+  {
+    "id": "study::10A::038",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.4449
+  },
+  {
+    "id": "study::10A::039",
+    "topic": "10A",
+    "kind": "recall",
+    "difficulty": 0.2771
+  }
+]

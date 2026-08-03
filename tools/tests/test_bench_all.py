@@ -175,11 +175,22 @@ def test_a_skipped_metric_does_not_fail_the_run():
 
 def test_ui_block_takes_the_worst_single_call_across_ui_thread_operations():
     a = ba.Metric("answer_card", "answer card", 50.0, [10.0, 12.0])
-    b = ba.Metric("dashboard_refresh", "dashboard refresh", 500.0, [40.0, 310.0])
+    b = ba.Metric("card_render", "card render", 100.0, [40.0, 310.0])
     ui = ba.derive_ui_block([a, b])
     assert ui.worst == 310.0
     assert ui.budget == 100.0
-    assert "dashboard refresh" in ui.note
+    assert "card render" in ui.note
+
+
+def test_ui_block_excludes_dashboard_scoring_because_it_is_backgrounded():
+    # qt/aqt/transfer.py computes scores via taskman.run_in_background. Pooling
+    # it here would report a UI freeze that does not happen. If that call ever
+    # goes back inline, this test is the thing that has to be changed with it.
+    on_thread = ba.Metric("answer_card", "answer card", 50.0, [10.0])
+    backgrounded = ba.Metric("dashboard_refresh", "dashboard refresh", 500.0, [500.0])
+    ui = ba.derive_ui_block([on_thread, backgrounded])
+    assert ui.worst == 10.0
+    assert "dashboard" in ui.note.lower()
 
 
 def test_ui_block_is_skipped_when_no_ui_thread_operation_was_measured():
@@ -198,7 +209,7 @@ def test_ui_block_ignores_operations_that_do_not_run_on_the_ui_thread():
 
 
 def test_ui_block_fails_when_a_single_call_blocks_too_long():
-    a = ba.Metric("dashboard_load", "dashboard first load", 1000.0, [820.0])
+    a = ba.Metric("card_render", "card question render", 100.0, [820.0])
     assert ba.derive_ui_block([a]).failed is True
 
 

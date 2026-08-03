@@ -1,0 +1,205 @@
+{
+  "grader": "heuristic",
+  "grades": {
+    "00971f125f9f513eca872a8f": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "0d4ba31ce9ec8621320258cc": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "144d24dee773c191398e2aeb": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "18d834992096b15c3bebc506": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "1b3ea3414df7abc9a61b2e86": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "1cf554f13e18a8068518b7e3": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "28ebbb3911f45e705badf044": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "2ca6497b1edfa31ba2c9381f": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "2f5758f912aad28bdcf9a4fb": {
+      "bucket": "correct-but-bad-teaching",
+      "reason": "the answer appears in the question, so the card tests nothing"
+    },
+    "3269b95591c0d63d252abd3a": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "38f0f209fd10c758d4c58194": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "390c2071888b0e263d099636": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "39ae577183da04816762444b": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "3f94eeaddd1ab69c1a094503": {
+      "bucket": "correct-but-bad-teaching",
+      "reason": "the stem opens with 'it' and never names its subject, so it can only be answered with the previous sentence in view"
+    },
+    "4164d46fcb91bef6480c98eb": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "50fb05aa09912cb675a6e75c": {
+      "bucket": "correct-but-bad-teaching",
+      "reason": "the stem opens with 'that' and never names its subject, so it can only be answered with the previous sentence in view"
+    },
+    "51cdaffee4d6ed69ada6459c": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "536338d2ddec4a9ec39af092": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "57cdd8c5475d048f2cf8d151": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "5b3aa171c67d6e095b36a58f": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "70915a60edb5c8db4d08b3cf": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "71fc461c1f3d24736eaef2e4": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "78c516ad36b20918a05b5037": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "7b6888bff3001dfa3444ee3c": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "873d5ca35da2af86a63b12a5": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "93b013d1c272cf33de573a5d": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "9e734c9c3fbd4ff7434d1f24": {
+      "bucket": "correct-but-bad-teaching",
+      "reason": "the answer appears in the question, so the card tests nothing"
+    },
+    "a171b672d86d2e954ed53b32": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "a34a24afebfecfcf82d82584": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "a38ac5598703c84b927c0af4": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "a46a722ced469e7b9312e5ce": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "a57d6cbfd2d569c752f45a92": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "adddb25df8f4d04a2e07feaa": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "b0539925e3910d8cc5b160e3": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "b20b12fdc59544add5d35b9d": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "b225310ad39031a3be135e0c": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "b2c64aad04cb93fe8c8dea5e": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "c9dc658ecedc2697f393f546": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "d63e65e72e791d4fba7cf6e5": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "d698e3c6f9a97d9f30f61520": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "dc114bda9ae9496caad88c58": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "e54a20af370783326ce8678a": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "e736525ef995f9dfd21bbca5": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "eef76b247d2842b7457c69b1": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "f4e71efc064a48bff9f5c719": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "f5844dd218d9b91b764d9d65": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "f9d098c805c18e2eadf79cff": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "fad3ce6cd8fc6254baf6c5b4": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "feed187aae6601612099ab49": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    },
+    "ff307948558a0424ce57b120": {
+      "bucket": "correct-and-useful",
+      "reason": "passes every mechanical check applied"
+    }
+  }
+}
