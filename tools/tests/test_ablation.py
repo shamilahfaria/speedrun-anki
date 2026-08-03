@@ -22,9 +22,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-import pytest
-
 import ablation
+import pytest
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
@@ -368,6 +367,33 @@ def test_different_seeds_give_different_results():
     assert a.arms[ablation.ARM_FULL].accuracy != b.arms[ablation.ARM_FULL].accuracy
 
 
+def test_determinism_holds_ACROSS_PROCESSES_not_just_within_one():
+    """The in-process determinism test above cannot catch a stable-hash bug.
+
+    Python randomises hash() of str per interpreter, so anything seeded from
+    hash("full") is reproducible within a run and different between runs. That
+    is exactly the failure this catches: two separate processes, same seed,
+    byte-identical output including every bootstrap interval.
+    """
+    a = _cli("--learners", "8", "--reviews", "2000", "--seed", "77")
+    b = _cli("--learners", "8", "--reviews", "2000", "--seed", "77")
+    assert a.returncode == 0 and b.returncode == 0, (a.stderr, b.stderr)
+    assert a.stdout == b.stdout, "same seed, two processes, different output"
+
+
+def test_determinism_survives_a_hostile_hash_seed():
+    import os
+
+    env = dict(os.environ, PYTHONHASHSEED="0")
+    env2 = dict(os.environ, PYTHONHASHSEED="12345")
+    cmd = [sys.executable, str(REPO_ROOT / "tools" / "ablation.py"),
+           "--learners", "8", "--reviews", "2000", "--seed", "77"]
+    a = subprocess.run(cmd, check=False, capture_output=True, text=True, cwd=REPO_ROOT, env=env)
+    b = subprocess.run(cmd, check=False, capture_output=True, text=True, cwd=REPO_ROOT, env=env2)
+    assert a.returncode == 0 and b.returncode == 0
+    assert a.stdout == b.stdout, "output depends on PYTHONHASHSEED"
+
+
 def test_the_seed_and_the_data_cutoff_are_printed():
     trial = ablation.run_trial(seed=41, **SMALL)
     report = ablation.render_report(trial)
@@ -382,7 +408,7 @@ def test_the_seed_and_the_data_cutoff_are_printed():
 def _cli(*args: str) -> subprocess.CompletedProcess:
     return subprocess.run(
         [sys.executable, str(REPO_ROOT / "tools" / "ablation.py"), *args],
-        capture_output=True,
+        check=False, capture_output=True,
         text=True,
         cwd=REPO_ROOT,
     )

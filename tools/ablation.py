@@ -83,7 +83,7 @@ import json
 import math
 import random
 import sys
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Sequence, Tuple
 
@@ -339,6 +339,20 @@ def u01(*parts: int) -> float:
 
 def sha256_of(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def stable_key(*parts: str) -> int:
+    """A reproducible integer from strings.
+
+    NOT builtin hash(). Python randomises hash() of str per interpreter unless
+    PYTHONHASHSEED is pinned, so seeding a bootstrap from hash("full") gives
+    output that is reproducible within one process and silently different
+    between two -- point estimates identical, every confidence interval moving.
+    Found exactly that way: two consecutive `make ablation-quick` runs agreed on
+    every mean and disagreed in the third decimal of every CI.
+    """
+    digest = hashlib.blake2b("\x1f".join(parts).encode(), digest_size=8).digest()
+    return int.from_bytes(digest, "big")
 
 
 # =============================================================================
@@ -809,7 +823,7 @@ class Trial:
             (x - y) * 100.0 for x, y in zip(ra.accuracy, rb.accuracy)
         )
         point = sum(diffs) / len(diffs)
-        lo, hi = bootstrap_ci(diffs, seed=self.seed ^ (hash((a, b)) & 0xFFFF))
+        lo, hi = bootstrap_ci(diffs, seed=self.seed ^ stable_key(a, b))
         return Contrast(
             label=f"{a} - {b}", point=point, lower=lo, upper=hi, per_learner=diffs
         )
@@ -994,8 +1008,10 @@ def _verdict(point: float, lo: float, hi: float) -> str:
     return "MISSED the declared range"
 
 
-def render_report(trial: Trial) -> str:
-    out: List[str] = []
+def _render_setup(trial: Trial, out: List[str]) -> None:
+    """Honesty notice, the declared prediction, the model, the arms, and the
+    two guarantees the whole comparison rests on: equal time and same
+    questions. Split out of render_report only to keep each piece readable."""
     w = out.append
     deck = load_deck()
 
@@ -1103,6 +1119,12 @@ def render_report(trial: Trial) -> str:
     w("  the feature barely ran and any difference below is noise.")
     w("")
 
+
+def _render_results(trial: Trial, out: List[str]) -> None:
+    """The numbers, their intervals, and whether they mean anything."""
+    w = out.append
+    deck = load_deck()
+
     # --- results ------------------------------------------------------------
     w("RESULT -- held-out probe accuracy")
     w(THIN)
@@ -1110,7 +1132,7 @@ def render_report(trial: Trial) -> str:
     for arm in trial.arms_requested:
         r = trial.arms[arm]
         vals = [a * 100.0 for a in r.accuracy]
-        lo, hi = bootstrap_ci(vals, seed=trial.seed ^ (hash(arm) & 0xFFFF))
+        lo, hi = bootstrap_ci(vals, seed=trial.seed ^ stable_key(arm))
         w(f"  {arm:<10} {r.mean_accuracy * 100:>13.2f}% "
           f"{f'[{lo:.2f}%, {hi:.2f}%]':>32}")
     w("")
@@ -1181,8 +1203,8 @@ def render_report(trial: Trial) -> str:
           f"[{PREDICTED_ARM1_MINUS_ARM3_LOW:+.1f}, "
           f"{PREDICTED_ARM1_MINUS_ARM3_HIGH:+.1f}]"
           f"   observed {c.point:+.2f} pp   -> {v}")
-        w(f"                as a scale-score equivalent through the linear "
-          f"placeholder map in")
+        w("                as a scale-score equivalent through the linear "
+          "placeholder map in")
         w(f"                rslib/src/transfer/scale.rs: "
           f"{c.scaled_equivalent():+.2f} points on 472-528.")
         w("                That map is a documented placeholder, not a fitted")
@@ -1202,7 +1224,12 @@ def render_report(trial: Trial) -> str:
     w("  after a run; git history is the audit trail.")
     w("")
 
-    w(HONESTY_BOTTOM)
+
+def render_report(trial: Trial) -> str:
+    out: List[str] = []
+    _render_setup(trial, out)
+    _render_results(trial, out)
+    out.append(HONESTY_BOTTOM)
     return "\n".join(out)
 
 
@@ -1243,7 +1270,7 @@ def render_sweep(sweep: SweepResult) -> str:
     w("")
     if sweep.break_even is None:
         w("  WHERE THE FEATURE STOPS PAYING: nowhere in this sweep -- the")
-        w(f"  governing contrast never crosses zero across the whole swept range.")
+        w("  governing contrast never crosses zero across the whole swept range.")
         w("  Treat that as a reason to distrust the harness on this axis, not as")
         w("  a result about the feature.")
     else:
@@ -1257,7 +1284,7 @@ def render_sweep(sweep: SweepResult) -> str:
         w("  product's premise is the claim that the real world sits on the other")
         w("  side of it, and nothing in this file establishes that it does.")
     w("")
-    w(f"  'detectable, negligible' means the CI excludes zero but the effect is")
+    w("  'detectable, negligible' means the CI excludes zero but the effect is")
     w(f"  under {PRACTICAL_FLOOR_PP:.2f} pp -- less than one point on 472-528, "
       f"inside the real")
     w("  exam's own reported confidence band. It is not an improvement anyone")

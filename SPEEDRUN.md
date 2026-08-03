@@ -108,7 +108,7 @@ Not yet true, and listed here rather than omitted:
 | The iOS app **displays** the three scores | **Not implemented.** The request factory and domain types exist; no SwiftUI surface calls them yet. |
 | Readiness is **weighted** by the outline's own section percentages | **Partial.** Coverage is now measured against all 31 official content categories and the projection refuses below 50% coverage — but the score is not yet weighted by AAMC's published per-concept percentages. |
 | Models are calibrated (Brier / log loss on held-back data) | **Not started.** This is the largest remaining gap: we report intervals nobody has checked for calibration. |
-| Ablation test validating the thesis | **Harness only.** Three arms are built and the failure modes were stated in advance in `BRAINLIFT.md`, but there are no human subjects, so the responder is simulated and the numbers are not evidence about learners. |
+| Ablation test validating the thesis | **Run, and it did not support the thesis.** Declared +1.5 pp in advance, observed **+0.09 pp**; the scheduling-vs-display contrast was **+0.04 pp, CI spanning zero**. Sweep shows settings where the feature loses outright. Simulated responder — not evidence about learners. |
 
 | Dashboard refresh inside its 500 ms budget | **Not met.** Passes on an idle-ish run and fails under load — 3 of 6 runs exceeded budget. Recorded rather than reported as a pass. |
 
